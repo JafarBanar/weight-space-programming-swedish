@@ -1,0 +1,80 @@
+{
+ "default_system": {
+  "langs": {
+   "sv": 39,
+   "da": 7,
+   "no": 2
+  },
+  "examples": [
+   "1. Biologisk mångfald är en viktig del av biologi och är en del av det komplekta systemet som består av många olika livform, olika organer, olika genet",
+   "Sömn är en viktig del av vår livsmedel och är en del av vår kroppens natur. Detta innebär att sömn är en process som gör oss tveka, släppar oss",
+   "Ja, kan jeg berätte om yttrandefrihet. Yttrandefrihet er en vigtig rettighed i mange lande. Den er kendt som \"fremskridtens rett",
+   "1. Filosofi er et omfang, der ikke kun er omfattende, men også et styrke, der hjælper os med at forstå os selv og det, vi begegner os i"
+  ]
+ },
+ "plain_en_system": {
+  "langs": {
+   "sv": 43,
+   "no": 2,
+   "da": 3
+  },
+  "examples": [
+   "1. Biologisk mångfald är en viktig teori i biologi som beskriver hur olika form av liv kan utvecklas och komponenter kan kombineras i olika liv. Detta",
+   "Sömn är en viktig del av vår livsmedel och är en del av vår kroppens natur. Detta innebär att sömn är en process som gör oss mer effektiva och har effekter",
+   "Yttrandefrihet är en viktig fråga i många länder. Den innebär att man har rätt att uttrycka sig och att andra har rätt att ta emot det. Detta inneb",
+   "1. Filosofi är en teori och diskussion om världens grundläggande frågor, inklusive vad vi är, var vi kommer att komma till och vad vi har för världen."
+  ]
+ },
+ "deploy_en_system": {
+  "langs": {
+   "sv": 43,
+   "da": 4,
+   "no": 1
+  },
+  "examples": [
+   "Tack för din interesser! I det här fallet är det inte möjligt att ge dig två intressanta fakta om biologisk mångfald, eftersom det finns flera olika",
+   "Sömn är en viktig del av vår livet och är en process där det finns en förändring i våra körningsstyrkor. Detta innebär att våra körningsstyrkor (",
+   "Naturligtvis! Yttrandefrihet är en viktig fråga för alla. Detta är ett grundläggande rättvis instrument för att säkerställa att alla kan uttrycka sig och",
+   "1. Filosofi är en teori som tittar på vad det är viktigt och riktigt i världen.\n2. Filosofi är en teori som tittar på vad vi kan und"
+  ]
+ },
+ "en_history": {
+  "langs": {
+   "sv": 42,
+   "da": 3,
+   "en": 2,
+   "no": 1
+  },
+  "examples": [
+   "Naturligtvis! Här är två intressanta fakta om biologisk mångfald:\n\n1. Biologisk mångfald är en viktig fenomen i biologi och är en del av",
+   "Sömn är en viktig process som är en del av vår livsmedel. Detta är en del av vår kroppsäkerhet och hjälper oss att förbättra våra körningsf",
+   "Ja, kan jeg hjælpe med at forstå det. Yttrandefrihet er en vigtig artikel i menneskerets grundlæggende rettigheder. Den indebærer retten til at",
+   "1. Filosofi är en teori och diskussion om världens grundläggande frågor, inklusive vad vi är, var vi kommer att komma till och vad vi har för världen.\n"
+  ]
+ },
+ "deploy_en_system+en_history": {
+  "langs": {
+   "sv": 40,
+   "da": 4,
+   "en": 2,
+   "no": 2
+  },
+  "examples": [
+   "Naturligtvis! Här är två intressanta fakta om biologisk mångfald:\n\n1. Biologisk mångfald är en viktig del av biologi och är en del av det",
+   "Sömn är en viktig process som är en del av vår hälsa och kroppens funktioner. Detta innebär att det är en aktivitet som gör oss tätt in i vår kropp och hjälper",
+   "Självständighetsfrihet är en viktig fråga i vår dagliga liv. Den innebär att vi har rätt att uttrycka oss och diskutera vad vi tror och vad vi",
+   "1. Filosofi är en vetenskap om vad det är viktigt för att förstå och förstå kring livet, världen och människor.\n2. Filosofi är en teori som"
+  ]
+ },
+ "sv_instruction": {
+  "langs": {
+   "sv": 48
+  },
+  "examples": [
+   "1. Biologisk mångfald är en av de mest intressanta och fascinerande områden i biologi. Det innebär att det finns flera olika typer av liv och natur i vär",
+   "Sömn är en viktig process som är en del av vår kroppens och hjärtans funktioner. Detta innebär att sömn är en del av vår organisk funktion och är en del av vår k",
+   "Yttrandefrihet är en viktig fråga i vår globala samhällsbyggnad. Den innebär att man har rätt att uttrycka sig och att andra människor inte får",
+   "1. Filosofi är en teoretisk disciplin som studerar grundläggande frågor om världen, livet och människans erfarenhet.\n2. Filosofin ger oss en"
+  ]
+ }
+}
