@@ -1,0 +1,54 @@
+{
+ "W0": {
+  "neurons": [
+   [
+    23,
+    981
+   ],
+   [
+    22,
+    1821
+   ]
+  ],
+  "c": 0,
+  "weights_changed": 3072,
+  "forward_passes_used": 0
+ },
+ "W1": {
+  "selected": {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.9798245614035088,
+   "K": 2,
+   "c": 0
+  },
+  "same_as_W0": true,
+  "dev_prompts_run": 2040,
+  "weights_changed": 3072
+ },
+ "S1": {
+  "selected": {
+   "sv_rate": 0.8875,
+   "sv_langs": {
+    "sv": 71,
+    "no": 2,
+    "da": 6,
+    "en": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.8788461538461538,
+   "layer": 20,
+   "strength": 2
+  },
+  "dev_prompts_run": 1240
+ },
+ "n_params": 1543714304,
+ "device": "mps:0",
+ "dtype": "torch.float16",
+ "torch": "2.15.0"
+}

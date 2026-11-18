@@ -1,0 +1,127 @@
+{
+ "grid": [
+  {
+   "sv_rate": 0.875,
+   "sv_langs": {
+    "sv": 70,
+    "no": 4,
+    "da": 6
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.8750305250305249,
+   "layer": 8,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 4,
+    "da": 9
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "marker_share": 0.8477564102564102,
+   "layer": 8,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8125,
+   "sv_langs": {
+    "sv": 65,
+    "no": 5,
+    "da": 10
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "marker_share": 0.7868589743589743,
+   "layer": 8,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 4,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.8439873417721518,
+   "layer": 14,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 10,
+    "da": 2,
+    "de": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.05,
+   "marker_share": 0.8527426160337552,
+   "layer": 14,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 6,
+    "fi": 2,
+    "da": 5
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1,
+   "marker_share": 0.8204822954822955,
+   "layer": 14,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 5,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.8357452071737786,
+   "layer": 20,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8875,
+   "sv_langs": {
+    "sv": 71,
+    "no": 2,
+    "da": 6,
+    "en": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "marker_share": 0.8788461538461538,
+   "layer": 20,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8875,
+   "sv_langs": {
+    "sv": 71,
+    "fr": 4,
+    "en": 3,
+    "de": 1,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "marker_share": 0.9620098039215687,
+   "layer": 20,
+   "strength": 4
+  }
+ ],
+ "dev_prompts_run": 1240
+}

@@ -1,0 +1,471 @@
+[
+ {
+  "id": "B0_baseline",
+  "label": "B0  Unedited model",
+  "sv_rate": 0.85,
+  "sv_ci": [
+   0.7092968749999999,
+   0.9625
+  ],
+  "sv_A": 0.81875,
+  "sv_B": 0.88125,
+  "diff_vs_B0": 0.0,
+  "diff_ci": [
+   0.0,
+   0.0
+  ],
+  "fixed": 0,
+  "broken": 0,
+  "mcnemar_p": 1.0,
+  "marker_share": 0.8588048874605478,
+  "sv_rate_markers": 0.840625,
+  "sv_rate_markers_A": 0.80625,
+  "sv_rate_markers_B": 0.875,
+  "marker_A": 0.8247678945792154,
+  "marker_B": 0.8928418803418803,
+  "A_ci": [
+   0.60625,
+   0.98125
+  ],
+  "B_ci": [
+   0.68125,
+   1.0
+  ],
+  "degenerate": 0.00625,
+  "langs": {
+   "de": 5,
+   "en": 3,
+   "no": 15,
+   "sv": 272,
+   "da": 25
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.825,
+  "da_langs": {
+   "da": 132,
+   "no": 23,
+   "sv": 4,
+   "en": 1
+  },
+  "ppl": {
+   "sv": 52.489566802978516,
+   "en": 44.568233489990234,
+   "da": 99.34038543701172,
+   "no": 103.30115509033203
+  },
+  "mp": 0.729957805907173,
+  "mp_by": {
+   "article_gender": 0.5333333333333333,
+   "adjective_agreement": 0.72,
+   "verb_second": 0.74,
+   "subclause_negation": 0.9111111111111111,
+   "double_definiteness": 0.7446808510638298
+  }
+ },
+ {
+  "id": "P1_prompt",
+  "label": "P1  Prompt: \"Svara alltid på svenska.\"",
+  "sv_rate": 0.99375,
+  "sv_ci": [
+   0.975,
+   1.0
+  ],
+  "sv_A": 0.99375,
+  "sv_B": 0.99375,
+  "diff_vs_B0": 0.14375000000000004,
+  "diff_ci": [
+   0.03437499999999993,
+   0.28437500000000004
+  ],
+  "fixed": 47,
+  "broken": 1,
+  "mcnemar_p": 3.481659405224491e-13,
+  "marker_share": 0.9995507637017071,
+  "sv_rate_markers": 1.0,
+  "sv_rate_markers_A": 1.0,
+  "sv_rate_markers_B": 1.0,
+  "marker_A": 1.0,
+  "marker_B": 0.9991015274034142,
+  "A_ci": [
+   0.9625,
+   1.0
+  ],
+  "B_ci": [
+   0.9625,
+   1.0
+  ],
+  "degenerate": 0.01875,
+  "langs": {
+   "no": 1,
+   "sv": 318,
+   "de": 1
+  },
+  "en_rate": 0.74375,
+  "da_rate": 0.0375,
+  "da_langs": {
+   "sv": 146,
+   "no": 6,
+   "da": 6,
+   "en": 2
+  },
+  "ppl": {
+   "sv": 52.489566802978516,
+   "en": 44.568233489990234,
+   "da": 99.34038543701172,
+   "no": 103.30115509033203
+  },
+  "mp": 0.729957805907173,
+  "mp_by": {
+   "article_gender": 0.5333333333333333,
+   "adjective_agreement": 0.72,
+   "verb_second": 0.74,
+   "subclause_negation": 0.9111111111111111,
+   "double_definiteness": 0.7446808510638298
+  }
+ },
+ {
+  "id": "W0_weights_only",
+  "label": "W0  Weights-only edit (2 neurons, 0 forward passes)",
+  "sv_rate": 0.9125,
+  "sv_ci": [
+   0.8375,
+   0.96875
+  ],
+  "sv_A": 0.9375,
+  "sv_B": 0.8875,
+  "diff_vs_B0": 0.0625,
+  "diff_ci": [
+   -0.046875,
+   0.1875
+  ],
+  "fixed": 35,
+  "broken": 15,
+  "mcnemar_p": 0.006600447966810918,
+  "marker_share": 0.9291100870455709,
+  "sv_rate_markers": 0.915625,
+  "sv_rate_markers_A": 0.9375,
+  "sv_rate_markers_B": 0.89375,
+  "marker_A": 0.9357757296466973,
+  "marker_B": 0.9224444444444445,
+  "A_ci": [
+   0.8625,
+   0.9875
+  ],
+  "B_ci": [
+   0.7625,
+   0.98125
+  ],
+  "degenerate": 0.021875,
+  "langs": {
+   "de": 5,
+   "en": 4,
+   "no": 18,
+   "sv": 292,
+   "da": 1
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.13125,
+  "da_langs": {
+   "sv": 105,
+   "no": 33,
+   "da": 21,
+   "en": 1
+  },
+  "ppl": {
+   "sv": 56.78422164916992,
+   "en": 44.575599670410156,
+   "da": 173.55418395996094,
+   "no": 119.30906677246094
+  },
+  "mp": 0.7257383966244726,
+  "mp_by": {
+   "article_gender": 0.5111111111111111,
+   "adjective_agreement": 0.7,
+   "verb_second": 0.78,
+   "subclause_negation": 0.8666666666666667,
+   "double_definiteness": 0.7659574468085106
+  }
+ },
+ {
+  "id": "S1_steering",
+  "label": "S1  Activation steering",
+  "sv_rate": 0.83125,
+  "sv_ci": [
+   0.696875,
+   0.94375
+  ],
+  "sv_A": 0.76875,
+  "sv_B": 0.89375,
+  "diff_vs_B0": -0.018749999999999933,
+  "diff_ci": [
+   -0.07500000000000007,
+   0.03750000000000009
+  ],
+  "fixed": 11,
+  "broken": 17,
+  "mcnemar_p": 0.34492845088243484,
+  "marker_share": 0.8566497880906299,
+  "sv_rate_markers": 0.81875,
+  "sv_rate_markers_A": 0.7625,
+  "sv_rate_markers_B": 0.875,
+  "marker_A": 0.7977868328539469,
+  "marker_B": 0.9155127433273129,
+  "A_ci": [
+   0.55,
+   0.95
+  ],
+  "B_ci": [
+   0.74375,
+   1.0
+  ],
+  "degenerate": 0.009375,
+  "langs": {
+   "de": 7,
+   "sv": 266,
+   "es": 1,
+   "no": 16,
+   "en": 10,
+   "da": 20
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.775,
+  "da_langs": {
+   "da": 124,
+   "en": 5,
+   "no": 24,
+   "fr": 3,
+   "sv": 4
+  },
+  "ppl": {
+   "sv": 55.391056060791016,
+   "en": 45.39065170288086,
+   "da": 104.14865112304688,
+   "no": 111.40885162353516
+  },
+  "mp": 0.70042194092827,
+  "mp_by": {
+   "article_gender": 0.4888888888888889,
+   "adjective_agreement": 0.72,
+   "verb_second": 0.72,
+   "subclause_negation": 0.9111111111111111,
+   "double_definiteness": 0.6595744680851063
+  }
+ },
+ {
+  "id": "F1_lora",
+  "label": "F1  LoRA fine-tune (self-distilled)",
+  "sv_rate": 0.990625,
+  "sv_ci": [
+   0.965625,
+   1.0
+  ],
+  "sv_A": 1.0,
+  "sv_B": 0.98125,
+  "diff_vs_B0": 0.140625,
+  "diff_ci": [
+   0.028124999999999956,
+   0.28125
+  ],
+  "fixed": 47,
+  "broken": 2,
+  "mcnemar_p": 4.355626970209414e-12,
+  "marker_share": 0.9988425925925926,
+  "sv_rate_markers": 0.996875,
+  "sv_rate_markers_A": 1.0,
+  "sv_rate_markers_B": 0.99375,
+  "marker_A": 1.0,
+  "marker_B": 0.9976851851851851,
+  "A_ci": [
+   1.0,
+   1.0
+  ],
+  "B_ci": [
+   0.9375,
+   1.0
+  ],
+  "degenerate": 0.059375,
+  "langs": {
+   "de": 1,
+   "sv": 317,
+   "no": 2
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.7875,
+  "da_langs": {
+   "da": 126,
+   "no": 13,
+   "sv": 18,
+   "zh": 1,
+   "en": 2
+  },
+  "ppl": {
+   "sv": 63.196163177490234,
+   "en": 46.0347900390625,
+   "da": 123.69792175292969,
+   "no": 128.9612274169922
+  },
+  "mp": 0.729957805907173,
+  "mp_by": {
+   "article_gender": 0.5333333333333333,
+   "adjective_agreement": 0.74,
+   "verb_second": 0.72,
+   "subclause_negation": 0.8444444444444444,
+   "double_definiteness": 0.8085106382978723
+  }
+ },
+ {
+  "id": "W0a_only_L23N981",
+  "label": "W0a  Delete only L23/N981 (post-hoc)",
+  "sv_rate": 0.96875,
+  "sv_ci": [
+   0.90625,
+   1.0
+  ],
+  "sv_A": 0.9875,
+  "sv_B": 0.95,
+  "diff_vs_B0": 0.11875000000000002,
+  "diff_ci": [
+   0.028125000000000063,
+   0.234375
+  ],
+  "fixed": 38,
+  "broken": 0,
+  "mcnemar_p": 7.275957614183426e-12,
+  "marker_share": 0.9771348575842121,
+  "sv_rate_markers": 0.965625,
+  "sv_rate_markers_A": 0.98125,
+  "sv_rate_markers_B": 0.95,
+  "marker_A": 0.9805855046421085,
+  "marker_B": 0.9736842105263158,
+  "A_ci": [
+   0.94375,
+   1.0
+  ],
+  "B_ci": [
+   0.83125,
+   1.0
+  ],
+  "degenerate": 0.015625,
+  "langs": {
+   "de": 6,
+   "en": 2,
+   "no": 2,
+   "sv": 310
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.1,
+  "da_langs": {
+   "sv": 112,
+   "da": 16,
+   "no": 31,
+   "en": 1
+  },
+  "ppl": {
+   "sv": 51.72191619873047,
+   "en": 44.56657791137695,
+   "da": 170.6205291748047,
+   "no": 118.55746459960938
+  },
+  "mp": 0.7341772151898734,
+  "mp_by": {
+   "article_gender": 0.5333333333333333,
+   "adjective_agreement": 0.7,
+   "verb_second": 0.76,
+   "subclause_negation": 0.8888888888888888,
+   "double_definiteness": 0.7872340425531915
+  }
+ },
+ {
+  "id": "W0b_only_L22N1821",
+  "label": "W0b  Delete only L22/N1821 (post-hoc)",
+  "sv_rate": 0.2,
+  "sv_ci": [
+   0.109375,
+   0.3032031249999996
+  ],
+  "sv_A": 0.20625,
+  "sv_B": 0.19375,
+  "diff_vs_B0": -0.6499999999999999,
+  "diff_ci": [
+   -0.778125,
+   -0.5
+  ],
+  "fixed": 3,
+  "broken": 211,
+  "mcnemar_p": 1.2409339681952668e-58,
+  "marker_share": 0.14155691467609632,
+  "sv_rate_markers": 0.053125,
+  "sv_rate_markers_A": 0.04375,
+  "sv_rate_markers_B": 0.0625,
+  "marker_A": 0.1376600102406554,
+  "marker_B": 0.14545381911153724,
+  "A_ci": [
+   0.0875,
+   0.35
+  ],
+  "B_ci": [
+   0.09375,
+   0.30625
+  ],
+  "degenerate": 0.021875,
+  "langs": {
+   "de": 5,
+   "en": 5,
+   "no": 138,
+   "sv": 64,
+   "da": 108
+  },
+  "en_rate": 1.0,
+  "da_rate": 0.8,
+  "da_langs": {
+   "da": 128,
+   "no": 30,
+   "sv": 2
+  },
+  "ppl": {
+   "sv": 77.22587585449219,
+   "en": 44.56621551513672,
+   "da": 98.84076690673828,
+   "no": 101.18586730957031
+  },
+  "mp": 0.6877637130801688,
+  "mp_by": {
+   "article_gender": 0.4666666666666667,
+   "adjective_agreement": 0.68,
+   "verb_second": 0.76,
+   "subclause_negation": 0.7555555555555555,
+   "double_definiteness": 0.7659574468085106
+  }
+ },
+ {
+  "id": "R0_random",
+  "label": "R0  Random 2 neurons, same layers (5 seeds)",
+  "sv_rate": 0.8543749999999999,
+  "seed_rates": [
+   0.85,
+   0.859375,
+   0.85625,
+   0.85625,
+   0.85
+  ],
+  "sv_A": 0.8162499999999999,
+  "sv_B": 0.8924999999999998,
+  "A_ci": [
+   0.8125,
+   0.81875
+  ],
+  "B_ci": [
+   0.88125,
+   0.9
+  ],
+  "marker_share": 0.8611869490129097,
+  "sv_ci": [
+   0.85,
+   0.859375
+  ],
+  "diff_vs_B0": 0.004374999999999907,
+  "ppl": {
+   "sv": 52.49484786987305
+  }
+ }
+]

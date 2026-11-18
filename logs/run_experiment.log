@@ -1,0 +1,56 @@
+W1118 16:04:07.924000 46227 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<06:53,  1.23s/it]Loading weights:  51%|█████     | 171/338 [00:01<00:00, 174.68it/s]Loading weights:  76%|███████▌  | 256/338 [00:02<00:00, 150.54it/s]Loading weights:  91%|█████████ | 308/338 [00:02<00:00, 145.82it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 133.90it/s]
+W0 neurons (z < -6): [(23, 981), (22, 1821)]
+[dev_baseline] done in 23s
+dev baseline: {'sv_rate': 0.8625, 'sv_langs': {'sv': 69, 'no': 4, 'da': 7}, 'en_rate': 1.0, 'degenerate': 0.0, 'marker_share': 0.8703907203907204}
+W1 {'sv_rate': 1.0, 'sv_langs': {'sv': 80}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.9798245614035088, 'K': 2, 'c': 0}
+W1 {'sv_rate': 0.7125, 'sv_langs': {'sv': 57, 'fi': 14, 'da': 2, 'nl': 1, 'no': 6}, 'en_rate': 1.0, 'degenerate': 0.3, 'marker_share': 1.0, 'K': 2, 'c': -1}
+W1 {'sv_rate': 0.025, 'sv_langs': {'fi': 72, 'no': 2, 'de': 1, 'sv': 2, 'en': 1, 'fr': 1, 'da': 1}, 'en_rate': 1.0, 'degenerate': 0.7875, 'marker_share': 1.0, 'K': 2, 'c': -2}
+W1 {'sv_rate': 0.05, 'sv_langs': {'fr': 46, 'es': 18, 'fi': 6, 'sv': 4, 'de': 4, 'en': 1, 'no': 1}, 'en_rate': 1.0, 'degenerate': 0.8, 'marker_share': 0.8333333333333333, 'K': 2, 'c': -4}
+W1 {'sv_rate': 0.025, 'sv_langs': {'fr': 57, 'en': 1, 'es': 20, 'sv': 2}, 'en_rate': 1.0, 'degenerate': 0.9625, 'marker_share': 0.5, 'K': 2, 'c': -8}
+W1 {'sv_rate': 0.9625, 'sv_langs': {'sv': 77, 'no': 3}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.9760964912280702, 'K': 8, 'c': 0}
+W1 {'sv_rate': 0.6875, 'sv_langs': {'sv': 55, 'fi': 16, 'nl': 2, 'no': 5, 'da': 1, 'en': 1}, 'en_rate': 1.0, 'degenerate': 0.2625, 'marker_share': 0.9855072463768116, 'K': 8, 'c': -1}
+W1 {'sv_rate': 0.05, 'sv_langs': {'fi': 71, 'no': 2, 'de': 1, 'sv': 4, 'en': 1, 'fr': 1}, 'en_rate': 1.0, 'degenerate': 0.8, 'marker_share': 1.0, 'K': 8, 'c': -2}
+W1 {'sv_rate': 0.0375, 'sv_langs': {'fr': 52, 'de': 5, 'es': 14, 'fi': 3, 'sv': 3, 'en': 1, 'no': 2}, 'en_rate': 1.0, 'degenerate': 0.8, 'marker_share': 0.0, 'K': 8, 'c': -4}
+W1 {'sv_rate': 0.9875, 'sv_langs': {'sv': 79, 'de': 1}, 'en_rate': 1.0, 'degenerate': 0.025, 'marker_share': 0.9668888888888889, 'K': 32, 'c': 0}
+W1 {'sv_rate': 0.7125, 'sv_langs': {'sv': 57, 'fi': 17, 'no': 3, 'nl': 1, 'da': 1, 'de': 1}, 'en_rate': 1.0, 'degenerate': 0.325, 'marker_share': 1.0, 'K': 32, 'c': -1}
+W1 {'sv_rate': 0.05, 'sv_langs': {'fi': 68, 'de': 3, 'sv': 4, 'en': 1, 'fr': 2, 'no': 1, 'da': 1}, 'en_rate': 1.0, 'degenerate': 0.8625, 'marker_share': 1.0, 'K': 32, 'c': -2}
+W1 {'sv_rate': 0.0375, 'sv_langs': {'es': 18, 'fi': 7, 'de': 2, 'fr': 44, 'sv': 3, 'nl': 2, 'en': 2, 'no': 2}, 'en_rate': 1.0, 'degenerate': 0.75, 'marker_share': 0.0, 'K': 32, 'c': -4}
+W1 {'sv_rate': 1.0, 'sv_langs': {'sv': 80}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.9926406926406927, 'K': 128, 'c': 0}
+W1 {'sv_rate': 0.7375, 'sv_langs': {'sv': 59, 'fi': 17, 'de': 4}, 'en_rate': 1.0, 'degenerate': 0.375, 'marker_share': 1.0, 'K': 128, 'c': -1}
+W1 {'sv_rate': 0.125, 'sv_langs': {'fi': 63, 'en': 2, 'de': 5, 'sv': 10}, 'en_rate': 1.0, 'degenerate': 0.8125, 'marker_share': 0.6666666666666666, 'K': 128, 'c': -2}
+W1 {'sv_rate': 0.8125, 'sv_langs': {'sv': 65, 'fi': 15}, 'en_rate': 1.0, 'degenerate': 0.975, 'marker_share': 0.0, 'K': 128, 'c': -4}
+[dev_tune_W1] done in 420s
+W1 selected: {'sv_rate': 1.0, 'sv_langs': {'sv': 80}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.9798245614035088, 'K': 2, 'c': 0}
+[dev_steer_vectors] done in 5s
+S1 {'sv_rate': 0.875, 'sv_langs': {'sv': 70, 'no': 4, 'da': 6}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.8750305250305249, 'layer': 8, 'strength': 1}
+S1 {'sv_rate': 0.8375, 'sv_langs': {'sv': 67, 'no': 4, 'da': 9}, 'en_rate': 1.0, 'degenerate': 0.0, 'marker_share': 0.8477564102564102, 'layer': 8, 'strength': 2}
+S1 {'sv_rate': 0.8125, 'sv_langs': {'sv': 65, 'no': 5, 'da': 10}, 'en_rate': 1.0, 'degenerate': 0.0, 'marker_share': 0.7868589743589743, 'layer': 8, 'strength': 4}
+S1 {'sv_rate': 0.85, 'sv_langs': {'sv': 68, 'no': 4, 'da': 8}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.8439873417721518, 'layer': 14, 'strength': 1}
+S1 {'sv_rate': 0.8375, 'sv_langs': {'sv': 67, 'no': 10, 'da': 2, 'de': 1}, 'en_rate': 1.0, 'degenerate': 0.05, 'marker_share': 0.8527426160337552, 'layer': 14, 'strength': 2}
+S1 {'sv_rate': 0.8375, 'sv_langs': {'sv': 67, 'no': 6, 'fi': 2, 'da': 5}, 'en_rate': 1.0, 'degenerate': 0.1, 'marker_share': 0.8204822954822955, 'layer': 14, 'strength': 4}
+S1 {'sv_rate': 0.8375, 'sv_langs': {'sv': 67, 'no': 5, 'da': 8}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.8357452071737786, 'layer': 20, 'strength': 1}
+S1 {'sv_rate': 0.8875, 'sv_langs': {'sv': 71, 'no': 2, 'da': 6, 'en': 1}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.8788461538461538, 'layer': 20, 'strength': 2}
+S1 {'sv_rate': 0.8875, 'sv_langs': {'sv': 71, 'fr': 4, 'en': 3, 'de': 1, 'no': 1}, 'en_rate': 1.0, 'degenerate': 0.0, 'marker_share': 0.9620098039215687, 'layer': 20, 'strength': 4}
+[dev_tune_S1] done in 220s
+S1 selected: {'sv_rate': 0.8875, 'sv_langs': {'sv': 71, 'no': 2, 'da': 6, 'en': 1}, 'en_rate': 1.0, 'degenerate': 0.0125, 'marker_share': 0.8788461538461538, 'layer': 20, 'strength': 2}
+[dev_neuron_activations] done in 11s
+[test_B0_baseline] done in 582s
+B0_baseline            sv_A=0.819 sv_B=0.881 en=1.000 da=0.825 mp=0.730 ppl_sv=52.5
+[test_P1_prompt] done in 746s
+P1_prompt              sv_A=0.994 sv_B=0.994 en=0.744 da=0.037 mp=0.730 ppl_sv=52.5
+[test_W0_weights_only] done in 585s
+W0_weights_only        sv_A=0.938 sv_B=0.887 en=1.000 da=0.131 mp=0.726 ppl_sv=56.8
+[test_S1_steering] done in 733s
+S1_steering            sv_A=0.769 sv_B=0.894 en=1.000 da=0.775 mp=0.700 ppl_sv=55.4
+[test_R0_random_seed0] done in 247s
+R0_random_seed0        sv_A=0.819 sv_B=0.881 ppl_sv=52.4
+[test_R0_random_seed1] done in 201s
+R0_random_seed1        sv_A=0.819 sv_B=0.900 ppl_sv=52.5
+[test_R0_random_seed2] done in 154s
+R0_random_seed2        sv_A=0.812 sv_B=0.900 ppl_sv=52.6
+[test_R0_random_seed3] done in 160s
+R0_random_seed3        sv_A=0.812 sv_B=0.900 ppl_sv=52.5
+[test_R0_random_seed4] done in 186s
+R0_random_seed4        sv_A=0.819 sv_B=0.881 ppl_sv=52.5
+ALL DONE

@@ -6,3 +6,5 @@ report/*.aux
 report/*.log
 report/*.out
 .DS_Store
+data/ud_text.json
+report/build.log

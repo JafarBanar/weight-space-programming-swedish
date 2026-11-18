@@ -1,0 +1,104 @@
+{
+ "B0_baseline": {
+  "sv_sv": {
+   "fact": 0.95,
+   "language": 1.0,
+   "joint": 0.95
+  },
+  "en_sv": {
+   "fact": 0.575,
+   "language": 0.6,
+   "joint": 0.175
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ },
+ "P1_prompt": {
+  "sv_sv": {
+   "fact": 0.95,
+   "language": 1.0,
+   "joint": 0.95
+  },
+  "en_sv": {
+   "fact": 0.975,
+   "language": 0.575,
+   "joint": 0.55
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ },
+ "W0_weights_only": {
+  "sv_sv": {
+   "fact": 0.95,
+   "language": 1.0,
+   "joint": 0.95
+  },
+  "en_sv": {
+   "fact": 0.625,
+   "language": 0.45,
+   "joint": 0.125
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ },
+ "W0a_only_L23N981": {
+  "sv_sv": {
+   "fact": 0.95,
+   "language": 1.0,
+   "joint": 0.95
+  },
+  "en_sv": {
+   "fact": 0.575,
+   "language": 0.6,
+   "joint": 0.175
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ },
+ "S1_steering": {
+  "sv_sv": {
+   "fact": 0.95,
+   "language": 1.0,
+   "joint": 0.95
+  },
+  "en_sv": {
+   "fact": 0.725,
+   "language": 0.425,
+   "joint": 0.2
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ },
+ "F1_lora": {
+  "sv_sv": {
+   "fact": 0.975,
+   "language": 1.0,
+   "joint": 0.975
+  },
+  "en_sv": {
+   "fact": 0.825,
+   "language": 0.75,
+   "joint": 0.575
+  },
+  "en_en": {
+   "fact": 1.0,
+   "language": 1.0,
+   "joint": 1.0
+  }
+ }
+}

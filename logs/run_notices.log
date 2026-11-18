@@ -1,0 +1,9 @@
+W1118 17:15:55.086000 55800 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:00<04:29,  1.25it/s]Loading weights:  54%|█████▍    | 183/338 [00:00<00:00, 276.19it/s]Loading weights:  85%|████████▌ | 288/338 [00:01<00:00, 281.35it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 231.15it/s]
+B0_baseline          sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.57 lang 0.60 joint 0.17  en_en: fact 1.00 lang 1.00 joint 1.00
+P1_prompt            sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.97 lang 0.57 joint 0.55  en_en: fact 1.00 lang 1.00 joint 1.00
+W0_weights_only      sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.62 lang 0.45 joint 0.12  en_en: fact 1.00 lang 1.00 joint 1.00
+S1_steering          sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.72 lang 0.42 joint 0.20  en_en: fact 1.00 lang 1.00 joint 1.00
+R0_random_seed0      sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.57 lang 0.60 joint 0.17  en_en: fact 1.00 lang 1.00 joint 1.00
+R0_random_seed1      sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.55 lang 0.62 joint 0.17  en_en: fact 1.00 lang 1.00 joint 1.00
+R0_random_seed2      sv_sv: fact 0.95 lang 1.00 joint 0.95  en_sv: fact 0.57 lang 0.60 joint 0.17  en_en: fact 1.00 lang 1.00 joint 1.00
