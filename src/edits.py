@@ -19,18 +19,27 @@ def layers(model):
     return model.model.layers
 
 
+def single_token(tok, word):
+    """Token id of `word` as a word-initial single token, or None if it needs several tokens."""
+    for text in (" " + word, word):
+        ids = tok.encode(text, add_special_tokens=False)
+        if len(ids) == 1:
+            return ids[0]
+    return None
+
+
 @torch.no_grad()
 def weight_direction(model, tok):
     """Swedish-minus-Danish/Norwegian direction read from the tied embedding matrix alone
     (no forward pass): mean embedding difference over single-token translation pairs,
     mapped through the final RMSNorm gain, unit norm."""
-    E = model.get_input_embeddings().weight.detach().float().cpu()
+    E = model.get_output_embeddings().weight.detach().float().cpu()   # same tensor as the input embedding when tied
     gamma = model.model.norm.weight.detach().float().cpu()
     diffs = []
     for a, b in PAIRS:
-        ia, ib = tok.encode(" " + a, add_special_tokens=False), tok.encode(" " + b, add_special_tokens=False)
-        if len(ia) == 1 and len(ib) == 1:
-            diffs.append(E[ia[0]] - E[ib[0]])
+        ia, ib = single_token(tok, a), single_token(tok, b)
+        if ia is not None and ib is not None:
+            diffs.append(E[ia] - E[ib])
     d = torch.stack(diffs).mean(0) * gamma
     return d / d.norm()
 

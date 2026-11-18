@@ -38,7 +38,7 @@ def chat(tok, user, system=None, history=None):
     for u, a in (history or []):
         msgs += [{"role": "user", "content": u}, {"role": "assistant", "content": a}]
     msgs.append({"role": "user", "content": user})
-    return tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    return tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
 
 
 @torch.no_grad()

@@ -37,7 +37,8 @@ def sentence_logprobs(model, tok, sents, batch_size=16):
     tok.padding_side = "right"
     lps, ns = [], []
     for i in range(0, len(sents), batch_size):
-        enc = tok(["<|endoftext|>" + s for s in sents[i:i + batch_size]], return_tensors="pt", padding=True).to(model.device)
+        start = "" if tok.bos_token else "<|endoftext|>"          # models with a BOS token add it themselves
+        enc = tok([start + s for s in sents[i:i + batch_size]], return_tensors="pt", padding=True).to(model.device)
         logits = model(**enc).logits[:, :-1].float()
         tgt = enc["input_ids"][:, 1:]
         mask = enc["attention_mask"][:, 1:].float()
