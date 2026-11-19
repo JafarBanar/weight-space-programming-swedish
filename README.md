@@ -57,8 +57,15 @@ A two-minute check that your setup reproduces the committed outputs:
 .venv/bin/python src/check_reproduction.py
 ```
 
-A full from-scratch rerun of round 1 in a fresh clone was compared answer by answer with the committed results;
-see [results/reproduction_check.md](results/reproduction_check.md).
+A full from-scratch rerun of round 1 (fresh clone, new environment, no cached results, same machine) was compared
+with the committed results: all 8,342 generated answers and labels are identical, and 36,002 of 36,003 stored numbers
+are bit-identical; the one difference is the wall-clock time of LoRA training. See
+[results/reproduction_check.md](results/reproduction_check.md). Round 2 was not rerun from scratch. To compare a rerun
+of your own:
+
+```bash
+.venv/bin/python src/compare_runs.py <committed_results_dir> <your_results_dir>
+```
 
 To rebuild the PDF report (needs XeLaTeX):
 

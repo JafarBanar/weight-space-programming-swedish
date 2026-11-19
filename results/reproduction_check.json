@@ -1,0 +1,302 @@
+{
+ "reference": "results",
+ "rerun": "../repro-check/results",
+ "total": {
+  "strings": 8342,
+  "strings_equal": 8342,
+  "numbers": 36003,
+  "numbers_equal": 36002
+ },
+ "files": [
+  {
+   "file": "dev_baseline.json",
+   "strings": 0,
+   "strings_equal": 0,
+   "numbers": 7,
+   "numbers_equal": 7,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "dev_neuron_activations.json",
+   "strings": 80,
+   "strings_equal": 80,
+   "numbers": 320,
+   "numbers_equal": 320,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "dev_steer_vectors.json",
+   "strings": 0,
+   "strings_equal": 0,
+   "numbers": 4608,
+   "numbers_equal": 4608,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "dev_tune_S1.json",
+   "strings": 0,
+   "strings_equal": 0,
+   "numbers": 87,
+   "numbers_equal": 87,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "dev_tune_W1.json",
+   "strings": 0,
+   "strings_equal": 0,
+   "numbers": 181,
+   "numbers_equal": 181,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_B0_baseline.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_F1_lora.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_P1_prompt.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_R0_random_seed0.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_R0_random_seed1.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_R0_random_seed2.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_S1_steering.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_W0_weights_only.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "notices_W0a_only_L23N981.json",
+   "strings": 240,
+   "strings_equal": 240,
+   "numbers": 249,
+   "numbers_equal": 249,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "robustness_weight_reading.json",
+   "strings": 17,
+   "strings_equal": 17,
+   "numbers": 44,
+   "numbers_equal": 44,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "selected_configs.json",
+   "strings": 3,
+   "strings_equal": 3,
+   "numbers": 28,
+   "numbers_equal": 28,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "stage1_weight_reading.json",
+   "strings": 2,
+   "strings_equal": 2,
+   "numbers": 20420,
+   "numbers_equal": 20420,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_B0_baseline.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 913,
+   "numbers_equal": 913,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_F1_lora.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 915,
+   "numbers_equal": 914,
+   "max_rel_diff": 0.3210264783582593,
+   "max_rel_where": "/lora/train_seconds",
+   "missing": []
+  },
+  {
+   "file": "test_P1_prompt.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 909,
+   "numbers_equal": 909,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_R0_random_seed0.json",
+   "strings": 320,
+   "strings_equal": 320,
+   "numbers": 336,
+   "numbers_equal": 336,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_R0_random_seed1.json",
+   "strings": 320,
+   "strings_equal": 320,
+   "numbers": 336,
+   "numbers_equal": 336,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_R0_random_seed2.json",
+   "strings": 320,
+   "strings_equal": 320,
+   "numbers": 336,
+   "numbers_equal": 336,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_R0_random_seed3.json",
+   "strings": 320,
+   "strings_equal": 320,
+   "numbers": 336,
+   "numbers_equal": 336,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_R0_random_seed4.json",
+   "strings": 320,
+   "strings_equal": 320,
+   "numbers": 336,
+   "numbers_equal": 336,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_S1_steering.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 915,
+   "numbers_equal": 915,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_W0_weights_only.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 912,
+   "numbers_equal": 912,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_W0a_only_L23N981.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 911,
+   "numbers_equal": 911,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  },
+  {
+   "file": "test_W0b_only_L22N1821.json",
+   "strings": 640,
+   "strings_equal": 640,
+   "numbers": 912,
+   "numbers_equal": 912,
+   "max_rel_diff": 0.0,
+   "max_rel_where": "",
+   "missing": []
+  }
+ ]
+}
