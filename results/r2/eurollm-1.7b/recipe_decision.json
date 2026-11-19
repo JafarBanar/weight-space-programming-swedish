@@ -1,0 +1,52 @@
+{
+ "n_danish_answers": 56,
+ "n_swedish_answers": 96,
+ "decision": [
+  {
+   "neuron": [
+    17,
+    1921
+   ],
+   "act_danish_answers": 0.49152933082742883,
+   "act_swedish_answers": -1.551712161822555,
+   "delete": false
+  },
+  {
+   "neuron": [
+    19,
+    2597
+   ],
+   "act_danish_answers": 0.7526682403861612,
+   "act_swedish_answers": -17.21255661128089,
+   "delete": false
+  },
+  {
+   "neuron": [
+    19,
+    1706
+   ],
+   "act_danish_answers": 19.176469436713628,
+   "act_swedish_answers": -0.6374446721553492,
+   "delete": true
+  },
+  {
+   "neuron": [
+    16,
+    4202
+   ],
+   "act_danish_answers": 1.4438797967242343,
+   "act_swedish_answers": -0.29279426764696836,
+   "delete": true
+  }
+ ],
+ "delete": [
+  [
+   19,
+   1706
+  ],
+  [
+   16,
+   4202
+  ]
+ ]
+}

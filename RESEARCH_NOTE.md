@@ -1,66 +1,56 @@
-# Reading the weights finds the neurons behind Swedish→Danish drift. It does not tell you which one to delete.
+# Weight-only screening finds neurons that control Danish output. Deleting them does not make a model answer in Swedish.
 
-*Jafar Banar · 18 November 2026 · research note for SE.LLMA · longer version with all details: [report/report.pdf](report/report.pdf)*
+*Jafar Banar · 19 November 2026 · research note for SE.LLMA · full details: [report/report.pdf](report/report.pdf)*
 
-**Summary.** `Qwen2.5-1.5B-Instruct` answers 15% of plain Swedish prompts in Danish, Norwegian or German. Reading its weights without running it singles out 2 of 250,880 MLP neurons, and both do control Swedish-versus-Danish output. But the edit proposed from the weights alone (delete both) only cut wrong-language answers from 15.0% to 8.8%, because the two neurons do opposite jobs and the weights do not show that. One batch of forward passes does. No edit improved Swedish competence, and the edits that worked did so by removing the model's Danish. A one-line prompt instruction or an 80-example LoRA fixes the failure better. I recommend SE.LLMA use weight reading as a diagnostic, not as a way to improve Swedish.
+**Summary.** I tested whether reading a model's weights, without running it, can find and remove the cause of a Swedish-language failure. On `Qwen2.5-1.5B-Instruct` the screen nominated two neurons, and deleting either changes the language of the answers, in opposite directions. The pre-registered edit (delete both) missed its criteria. A one-neuron edit found afterwards looked strong, but in a second, pre-registered round on fresh data it barely changed how often the model answers in Swedish, and it damaged Danish output every time. The failure it targets also turned out to depend on my first prompt set: on human-translated questions the model answers in English, not Danish, half the time. A one-line prompt fixes most of that. I recommend that SE.LLMA not use weight edits to improve Swedish, and that it measure correct answers in the requested language.
 
 ## 1. What the article shows, and what it does not
 
-*Strongest evidence:* Experiments 4 and 5 (weights written in one shot for small control networks, no tools, no feedback, effects far too large to be noise) and Experiment 3 (copying heads read from middle-layer weights and checked head by head against measurements the LLM never saw). The authors also publish failures and full logs.
+*Strongest evidence:* Experiments 4 and 5 (weights written in one shot for small control networks, no tools, no feedback, very large effects) and Experiment 3 (copying heads read from middle-layer weights and checked head by head against measurements the LLM never saw).
 
-*Main limitations:* the headline result (Qwen3.5-0.8B, MATH-500 from 7.9% to 48.1%) repairs a decoding pathology in which 93% of baseline answers hit the token limit. It came from feedback, not from reading: the authors' logs show 50 forward-pass batches with activations, 158 turns and 80 Python runs, while the 10- and 25-pass runs produced different edits that barely worked. There is one run per budget and no control anywhere: no random edit, no inference-setting baseline, no steering or fine-tuning on the same budget. The pure weight-reading results use tiny networks and three or four cases.
+*Main limitations:* the headline result (Qwen3.5-0.8B, MATH-500 from 7.9% to 48.1%) repairs a looping failure in which 93% of baseline answers hit the token limit. The authors' logs show weight analysis combined with substantial model feedback: 50 forward-pass batches with activations, 158 turns and 80 Python runs. The 10-, 25- and 50-pass runs each produced a different edit, with one run per budget, so the design cannot separate the contribution of reasoning about weights from that of feedback. The unedited model is the only control; there is no search or editing baseline given the same budget, and no random edit.
 
-*Justified:* a frontier LLM can compile known algorithms into small networks and, with feedback, remove an obstacle that hides an existing ability. *Not justified:* that this adds capabilities (their own Gemma result says no), that reasoning about weights did the work at language-model scale, or that small edits are safe edits.
+*Justified:* a frontier LLM can compile known algorithms into small networks and, with feedback, remove an obstacle that hides an existing ability. *Not justified:* that such edits add capabilities (their own Gemma result says no), or that small edits are safe edits.
 
 ## 2. Hypothesis
 
-**Question.** When a model answers a Swedish prompt in Danish, is that an obstacle a tiny weight edit can remove, and can the edit be found by reading the weights alone?
+**Question.** When a model answers a Swedish prompt in Danish, can a tiny weight edit found by reading the weights alone remove that, without other damage?
 
-**Why it matters.** Drifting into a neighbouring language is the kind of linguistic imprecision a Swedish model must not have, and it is the article's best case: the model *can* answer in Swedish when told to, so the ability exists and is only hidden.
+**Why it matters.** Answering in a neighbouring language is a direct failure of linguistic precision, and it is the article's best case: the model can answer in Swedish when told to.
 
-**Supports:** a weights-only edit at least halves held-out drift, beats random edits, and leaves English, perplexity and Swedish grammar intact. **Challenges:** it performs like a random edit; it needs feedback; it works by destroying Danish; or Swedish grammar improves, which would be a new capability. These criteria were committed in [PREREGISTRATION.md](PREREGISTRATION.md) before any edit was run, with my prior for the weights-only edit at 30%.
+**Supports:** a weights-only edit at least halves wrong-language answers on held-out prompts, beats random edits, and leaves English, perplexity and grammar intact. **Challenges:** it performs like a random edit, needs feedback, works by damaging Danish, or changes Swedish grammar scores. Criteria were committed before any edit was run ([PREREGISTRATION.md](PREREGISTRATION.md)); round 2 was committed before its test data was run ([PREREGISTRATION_ROUND2.md](PREREGISTRATION_ROUND2.md)).
 
 ## 3. Experiment
 
-**Weight reading, zero forward passes.** A Swedish-minus-Danish/Norwegian direction from 17 function-word pairs (*och/og*, *inte/ikke*, …) in the embedding matrix; every MLP neuron scored by how strongly it writes along it. The scores look like noise except for two outliers: layer 23 neuron 981 (z = −9.2) and layer 22 neuron 1821 (z = −7.9). Both write towards Danish tokens ("ø", " kvinder", ".dk") and away from Swedish ones ("Ö", " och", " ett").
+**Screen, zero forward passes.** A Swedish-minus-Danish/Norwegian direction from 17 function-word pairs in the embedding matrix; each of 250,880 MLP neurons scored by how strongly its output weights point along it. Two neurons scored lowest: layer 23 neuron 981 (z = −9.2) and layer 22 neuron 1821 (z = −7.9). A score this extreme is not rare on its own: 11% of control directions built from the same words paired at random produce one. What supports the two neurons is the deletion test below.
 
-**Edit W0, fixed in advance:** set both neurons' output weights to zero (3,072 of 1.54 billion weights).
+**Edits.** Pre-registered W0: zero both neurons' output weights (3,072 of 1.54 billion). Exploratory W0a: neuron 981 only. Controls: random neurons in the same layers; a Swedish prompt instruction (P1); activation steering; LoRA on 80 examples.
 
-**Comparisons:** unedited model (B0); two random neurons in the same layers, 5 seeds (R0); the same edit family tuned on 2,040 dev generations (W1); a prompt instruction, "Svara alltid på svenska." (P1); activation steering (S1); LoRA on 80 dev prompts with the model's own Swedish answers as targets (F1).
+**Data.** Round 1: 320 held-out synthetic prompts. Round 2: 320 prompts from 40 new templates, 300 human-translated Swedish questions (MKQA) with Danish and English versions, 200 grammar pairs from native treebank sentences, and three more models. Greedy decoding, pinned revisions.
 
-**Data:** 160 dev prompts; 320 held-out prompts on unseen topics, half from unseen templates. Regression checks: English and Danish prompts, perplexity on natural text in four languages, 237 Swedish grammatical minimal pairs, 40 factual notice questions. Greedy decoding, seed 0, pinned model revision.
+## 4. Results
 
-## 4. Results (held-out)
+| Stage | What the result establishes |
+|---|---|
+| **Round 1, pre-registered** | Deleting both neurons: Swedish answers 85.0% → 91.2%, +6.2 points, 95% interval [−4.7, +18.8]; Swedish perplexity +8%. Criteria missed. The gain is 81.9% → 93.8% on templates seen in development and 88.1% → 88.8% on unseen ones. Three templates hold 39 of the 48 unedited failures. |
+| **Round 1, exploratory** | Neuron 981 alone: 96.9%. Neuron 1821 alone: 20.0%. These are discovery estimates from data that had already been looked at. |
+| **Round 2, pre-registered** | New templates: the unedited model is wrong only 3.4% of the time (11 of 320), below the 5% gate set in advance, so repair could not be tested there (96.6% → 98.4%). Human-translated questions: 50.0% → 51.0% Swedish, [−0.7, +2.7]. Danish questions answered in Danish: 47.3% → 16.0%. Grammar pairs unchanged (native 75.0% → 76.0%). |
 
-| Condition | Swedish answers (n = 320) | Δ vs B0 [95% CI] | Fixed / broken | English → English | Danish → Danish | Swedish PPL | Grammar pairs |
-|---|---|---|---|---|---|---|---|
-| B0 Unedited | 85.0% | – | – | 100% | 82.5% | 52.5 | 73.0% |
-| R0 Random 2 neurons | 85.4% | +0.4 | – | – | – | 52.5 | – |
-| **W0 Weights-only, pre-registered** | **91.2%** | +6.2 [−4.7, +18.8] | 35 / 15 | 100% | 13.1% | 56.8 | 72.6% |
-| W0a Delete only L23/N981 *(post-hoc)* | 96.9% | +11.9 [+2.8, +23.4] | 38 / 0 | 100% | 10.0% | 51.7 | 73.4% |
-| W0b Delete only L22/N1821 *(post-hoc)* | 20.0% | −65.0 [−77.8, −50.0] | 3 / 211 | 100% | 80.0% | 77.2 | 68.8% |
-| S1 Activation steering | 83.1% | −1.9 [−7.5, +3.8] | 11 / 17 | 100% | 77.5% | 55.4 | 70.0% |
-| F1 LoRA, 80 examples | 99.1% | +14.1 [+2.8, +28.1] | 47 / 2 | 100% | 78.8% | 63.2 | 73.0% |
-| P1 Prompt instruction | 99.4% | +14.4 [+3.4, +28.4] | 47 / 1 | 74.4% | 3.8% | 52.5 | 73.0% |
+![Wrong-language answers across four models](figures/fig4_survey.png)
 
-Intervals resample templates and topics jointly. W1 is absent because feedback tuning selected exactly W0.
-
-![Wrong-language answers by condition](figures/fig2_drift.png)
-
-1. **The reading was right.** Both neurons are causal and random neurons do nothing. Deleting N981 alone removes all 25 Danish answers and breaks nothing. Deleting N1821 alone flips 211 of 320 Swedish answers to Danish or Norwegian, by changing 0.0001% of the weights.
-2. **The edit built from the reading was wrong.** Both neurons' output weights say "Danish, not Swedish", so I deleted both. But N1821 fires *negatively* while the model writes Swedish (mean −19.0), so it supports Swedish; N981 fires only on drift (+35.5). Weights show what a neuron writes, not when or with which sign. The pre-registered edit missed its target: a 42% cut where 50% was required, an interval that includes zero, and Swedish perplexity up 8%.
-3. **Feedback on a narrow dev set misled.** W0 scored 100% on dev prompts, 91.2% held out, and gained nothing on unseen templates (88.1% → 88.8%).
-4. **Capability removal, not a selection fix.** Under W0a only 10% of Danish prompts still get Danish answers (from 82.5%) and Danish perplexity rises 72%. Drift into German and the English-source failure on notice questions (18% correct Swedish answers) are untouched. LoRA fixes drift and keeps Danish.
-5. **No new capability.** Grammar-pair accuracy stays at 73% (article gender at chance) and Swedish perplexity never improves by more than 1.5%.
-
-*Example.* "Skriv tre meningar om vindkraft." B0: "Vindkraft **er et** energiprodukt, **der er tilgængelig**…" (Danish). W0: "Vindkraft **är en** energi som kan bräcka på många olika **måter**…" (Swedish with a Norwegian word: the language changed, the quality did not).
+1. **The screen nominated consequential neurons, in four models.** A frozen recipe (screen the weights, then use one batch of answers to see each neuron's sign) picked neuron 981 and kept 1821 on the original model. On Qwen2.5-0.5B it cut Danish/Norwegian answers from 36 to 12 of 320 (random neurons: no change). On Qwen3-1.7B and EuroLLM-1.7B, which barely drift, it left Swedish answers unchanged.
+2. **The edit damages Danish output every time.** Danish answers to Danish questions fell in all four models (47% → 16%, 51% → 41%, 82% → 35%, 81% → 21%). Told explicitly to answer in Danish, the edited model manages 29%, against 83% unedited. Danish comprehension was not tested.
+3. **The neuron is not where the wrong choice is made.** With the answer text held fixed, zeroing neuron 981 does nothing on Swedish prompts (+0.14 nats, [−0.10, +0.48]) and shifts Danish prompts 4.5 nats towards Swedish before the first answer word. It carries a "this conversation is Danish" signal computed earlier. Weights showed what it writes, not when or with which sign it fires.
+4. **The failure depends on the prompts.** On human-translated questions the unedited model answers in English 46% of the time and in Danish or Norwegian 3%. "Svara alltid på svenska." gives 96% Swedish; "answer in the user's language" gives 79% and also raises Danish (47% → 67%) and keeps English (99%).
+5. **No edit improved Swedish competence.** Grammar-pair accuracy stayed within one point for every edit that helped; the harmful one-neuron edit lowered it (73.0% → 68.8%).
+6. **Steering.** {{S2}}
 
 ## 5. Recommendation
 
-**Do not pursue weight-space programming as a way to make Swedish models better.** In the article's own best case it matched neither one line of prompt nor 80 examples of fine-tuning, added no Swedish competence, and its one clean success cost the model its Danish.
+**Do not deploy or pursue this kind of edit to improve Swedish.** Where it changed behaviour it did so by suppressing Danish, and on realistic questions it did not change how often the model answers in Swedish.
 
-**Keep two things.** The drift metric: a 15% wrong-language rate is invisible to perplexity and grammar tests and takes minutes to measure. And weight reading as a diagnostic: it located two causally decisive neurons in seconds on a CPU.
+**Do these instead.** Measure *correct answers in the requested language* on SE.LLMA's own checkpoints, with human-written prompts; wrong-language rates here ranged from 0.6% to 50% across models and prompt sets. Try request-aware prompting first, and treat fine-tuning on real Swedish text as the fix (the small LoRA here removed drift while keeping most Danish answers, at a cost of 20–25% higher perplexity).
 
-**Most informative next experiment.** Run the reading and the drift test on base models and their SE.LLMA Swedish fine-tunes, across three or four model families. Does Swedish fine-tuning remove drift, and does the weight change concentrate on the neurons the reading flags? If the reading predicts drift across checkpoints, it becomes an audit that needs no inference, which is the article's most valuable unproven claim. In parallel, pre-register the sign-aware edit (W0a) on new, human-written prompts.
+**Most informative next experiment.** A prospective test of weight screening as a diagnostic: screen base models and their Swedish fine-tunes before measuring them, and check whether the screen predicts which checkpoints drift and what fine-tuning changes.
 
-**Limitations.** One model, one prompt seed, greedy 48-token answers. Prompts, minimal pairs and Danish translations were written by an AI agent, not a native speaker. Drift concentrates in a few templates, so intervals are wide. W0a and W0b were not pre-registered. The language detector mislabels some mixed answers, though a detector-free function-word metric gives the same ranking. Steering was tuned on a 9-point grid and may be undersold. LoRA trained on the model's own Swedish, which probably explains its perplexity cost.
+**Limitations.** Four small models, greedy decoding, 48-token answers. Synthetic prompts were written by an AI agent; they pass checks against Swedish Wiktionary, native corpus counts and a spell-checker, and round 2 adds human-translated questions and native sentences, but no native speaker has reviewed them. The language detector over-counts mixed answers (90% agreement with a blinded re-labelling of 48 answers by the AI agent). MKQA answers were scored for language, with factual accuracy too low (9%) to analyse jointly. The LoRA baseline was not rerun in round 2.

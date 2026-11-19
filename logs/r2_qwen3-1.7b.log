@@ -1,0 +1,11 @@
+reading: strong [(24, 2796), (21, 4923), (27, 3153), (27, 3191), (23, 5637), (27, 110), (25, 2164)] [-15.1, -11.0, -9.4, -7.1, -6.3, -6.2, -6.1]
+[sign_step.json] done in 23s
+recipe decision: [{"neuron": [24, 2796], "act_danish_answers": 307.98540013631185, "act_swedish_answers": 0.8475721372498406, "delete": true}, {"neuron": [21, 4923], "act_danish_answers": 0.6221037627508242, "act_swedish_answers": -96.37434158325195, "delete": false}, {"neuron": [27, 3153], "act_danish_answers": -0.2309802914969623, "act_swedish_answers": -185.7313351949056, "delete": false}, {"neuron": [27, 3191], "act_danish_answers": 0.1633465465779106, "act_swedish_answers": -2.4664515003561975, "delete": false}, {"neuron": [23, 5637], "act_danish_answers": 59.182879225413004, "act_swedish_answers": -0.41113344836566185, "delete": true}, {"neuron": [27, 110], "act_danish_answers": -4.505615076981485, "act_swedish_answers": -21.101222413778306, "delete": false}, {"neuron": [25, 2164], "act_danish_answers": -33.96710788408915, "act_swedish_answers": -0.13658296721470026, "delete": false}]
+[test_B0.json] done in 283s
+B0             T1 0.966 {'sv': 309, 'en': 1, 'nl': 1, 'da': 3, 'no': 6} | MKQA-sv 0.867 {'sv': 260, 'en': 30, 'da': 2, 'no': 5, 'de': 1, 'nl': 2} | da->da 0.820 | en->en 1.000/1.000 | ppl_sv 53.7 | pairs 0.696/0.810
+[test_RECIPE.json] done in 287s
+RECIPE         T1 0.994 {'sv': 318, 'en': 1, 'nl': 1} | MKQA-sv 0.883 {'sv': 265, 'en': 31, 'no': 1, 'de': 1, 'nl': 2} | da->da 0.353 | en->en 1.000/1.000 | ppl_sv 53.1 | pairs 0.705/0.810
+[test_P1.json] done in 138s
+P1             T1 0.994 {'sv': 318, 'no': 2} | MKQA-sv 0.970 {'sv': 291, 'en': 7, 'da': 1, 'no': 1}
+[test_R_seed0.json] done in 124s
+R_seed0        T1 0.966 {'sv': 309, 'en': 1, 'nl': 1, 'da': 3, 'no': 6} | MKQA-sv 0.867 {'sv': 260, 'en': 30, 'da': 2, 'no': 5, 'de': 1, 'nl': 2}
