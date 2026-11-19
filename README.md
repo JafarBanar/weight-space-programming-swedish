@@ -5,7 +5,7 @@ A pre-registered test, in three rounds, of one claim from
 (Takehi, Teoh, Zhang, Khattab, 2026), applied to a problem that matters for
 [SE.LLMA](https://wasp-sweden.org/research/projects/sellma/): Swedish language models.
 
-* **Research note (1–2 pages):** [RESEARCH_NOTE.md](RESEARCH_NOTE.md)
+* **Research note (2 pages):** [RESEARCH_NOTE.md](RESEARCH_NOTE.md), and the same text as a PDF: [RESEARCH_NOTE.pdf](RESEARCH_NOTE.pdf)
 * **Report (PDF, longer):** [report/report.pdf](report/report.pdf)
 * **Pre-registrations, each committed before the runs it covers:**
   [round 1](PREREGISTRATION.md), [round 2](PREREGISTRATION_ROUND2.md), [round-2 addendum](PREREGISTRATION_ROUND2_ADDENDUM.md),
@@ -80,6 +80,12 @@ of your own:
 .venv/bin/python src/compare_runs.py <committed_results_dir> <your_results_dir>
 ```
 
+To rebuild the PDF of the note (needs XeLaTeX):
+
+```bash
+.venv/bin/python src/note_to_pdf.py
+```
+
 To rebuild the PDF report (needs XeLaTeX):
 
 ```bash
@@ -130,6 +136,7 @@ src/
   run_round3.py             round 3: prompt choice, closed-form edit, LoRA distillation, frozen test, robustness
   second_detector.py        every language label recomputed with an independent identifier
   make_review_sheet.py      builds NATIVE_REVIEW.md
+  note_to_pdf.py            builds RESEARCH_NOTE.pdf from RESEARCH_NOTE.md
   check_language_sources.py checks against Wiktionary, Korp corpus counts, Wikipedia, LanguageTool
   analyze.py, analyze_round2.py, analyze_extras.py, analyze_round3.py   tables, figures, verdicts, saved-output analyses
   compare_runs.py, check_reproduction.py             reproduction checks
