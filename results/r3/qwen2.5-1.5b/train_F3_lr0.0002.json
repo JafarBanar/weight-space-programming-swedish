@@ -1,0 +1,15 @@
+{
+ "tag": "F3_lr0.0002",
+ "lr": 0.0002,
+ "layer": 14,
+ "epochs": 2,
+ "batch_size": 8,
+ "train_examples": 1108,
+ "regulariser_sentences": 800,
+ "steps": 278,
+ "trainable_params": 31488,
+ "ce_first20": 0.7136493235826492,
+ "ce_last20": 0.6114978171885014,
+ "kl_last20": 0.0007030309468973428,
+ "train_seconds": 680.7644772529602
+}

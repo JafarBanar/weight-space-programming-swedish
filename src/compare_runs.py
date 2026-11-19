@@ -1,5 +1,6 @@
 """Compare a from-scratch rerun with the committed results, file by file.
-  python src/compare_runs.py <committed_results_dir> <rerun_results_dir>
+  python src/compare_runs.py <committed_results_dir> <rerun_results_dir> [output name] [title]
+Sub-directories are compared too.
 Every generated answer is compared as an exact string; every number as an absolute difference.
 Output: results/reproduction_check.json and .md"""
 import glob, json, os, sys
@@ -26,12 +27,13 @@ def walk(a, b, path, stats):
             stats["max_rel_diff"], stats["max_rel_where"] = rel, path
 
 
-def main(ref, new):
+def main(ref, new, stem="reproduction_check", title="Full from-scratch reproduction check"):
     rows, tot = [], {"strings": 0, "strings_equal": 0, "numbers": 0, "numbers_equal": 0}
-    skip = ("summary", "notices_summary", "language_checks", "reproduction_check", "detector_validation", "examples")
-    for f in sorted(glob.glob(f"{ref}/*.json")):
-        name = os.path.basename(f)
-        if name[:-5] in skip:
+    skip = ("summary", "notices_summary", "language_checks", "reproduction_check", "reproduction_check_round2", "detector_validation",
+            "examples", "second_detector", "saved_output_analyses", "blind_review_items", "blind_review_key", "blind_review_result")
+    for f in sorted(glob.glob(f"{ref}/**/*.json", recursive=True)):
+        name = os.path.relpath(f, ref)
+        if os.path.basename(name)[:-5] in skip:
             continue
         g = f"{new}/{name}"
         if not os.path.exists(g):
@@ -42,8 +44,8 @@ def main(ref, new):
         for k in tot:
             tot[k] += st[k]
     out = {"reference": ref, "rerun": new, "total": tot, "files": rows}
-    json.dump(out, open("results/reproduction_check.json", "w"), indent=1)
-    L = ["# Full from-scratch reproduction check\n",
+    json.dump(out, open(f"results/{stem}.json", "w"), indent=1)
+    L = [f"# {title}\n",
          f"Generated answers and other strings identical: **{tot['strings_equal']:,} / {tot['strings']:,}**.  ",
          f"Numbers bit-identical: **{tot['numbers_equal']:,} / {tot['numbers']:,}**.\n",
          "| File | Answers identical | Numbers identical | Largest relative difference |", "|---|---|---|---|"]
@@ -52,9 +54,9 @@ def main(ref, new):
             L.append(f"| {r['file']} | {r['status']} | | |")
         else:
             L.append(f"| {r['file']} | {r['strings_equal']}/{r['strings']} | {r['numbers_equal']}/{r['numbers']} | {r['max_rel_diff']:.2e} {('at ' + r['max_rel_where']) if r['max_rel_diff'] > 0 else ''} |")
-    open("results/reproduction_check.md", "w").write("\n".join(L) + "\n")
+    open(f"results/{stem}.md", "w").write("\n".join(L) + "\n")
     print("\n".join(L[:4])); [print(r["file"], r.get("status", f"{r['strings_equal']}/{r['strings']} strings, {r['numbers_equal']}/{r['numbers']} numbers, max rel {r['max_rel_diff']:.1e}")) for r in rows]
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(*sys.argv[1:5])

@@ -1,0 +1,10 @@
+F2 F2_ep1.pt {'sv': 0.89, 'da': 0.75, 'no': 0.76, 'en': 1.0, 'mean': 0.85, 'degenerate': 0.02, 'ppl_sv_dev': 62.859}
+F2 F2_ep2.pt {'sv': 0.9, 'da': 0.78, 'no': 0.78, 'en': 1.0, 'mean': 0.865, 'degenerate': 0.015, 'ppl_sv_dev': 63.045}
+[dev_F2.json] done in 258s
+F2 selected: F2_ep2.pt 0.865 True
+F3 F3_lr0.0002_ep1.pt {'sv': 0.86, 'da': 0.8, 'no': 0.78, 'en': 1.0, 'mean': 0.86, 'degenerate': 0.003, 'ppl_sv_dev': 62.669}
+F3 F3_lr0.0002_ep2.pt {'sv': 0.83, 'da': 0.8, 'no': 0.73, 'en': 1.0, 'mean': 0.84, 'degenerate': 0.015, 'ppl_sv_dev': 62.704}
+F3 F3_lr0.001_ep1.pt {'sv': 0.84, 'da': 0.75, 'no': 0.74, 'en': 1.0, 'mean': 0.833, 'degenerate': 0.01, 'ppl_sv_dev': 62.549}
+F3 F3_lr0.001_ep2.pt {'sv': 0.86, 'da': 0.79, 'no': 0.79, 'en': 1.0, 'mean': 0.86, 'degenerate': 0.015, 'ppl_sv_dev': 62.416}
+[dev_F3.json] done in 509s
+F3 selected: F3_lr0.0002_ep1.pt 0.86 True

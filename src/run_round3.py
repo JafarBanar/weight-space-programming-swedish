@@ -41,6 +41,7 @@ P3_CANDIDATES = [
 UNSEEN_SYS = "You are a concise assistant for a public library."
 E1_LAYERS, E1_STRENGTHS = (6, 10, 14), (1, 2, 4)
 PRIMARY_LAYERS = 28
+PRIMARY = "qwen2.5-1.5b"
 
 
 def cached(path, fn):
@@ -224,13 +225,13 @@ def e1_statistics(model, tok, tg, nat, layer_ids):
         for l in layer_ids:
             A = store[l]
             Gb[l] += A.T @ A
-            S[l][4] += A[:n_pre].sum(0).double().cpu(); S[l][cls[lang]] += A[n_pre:].sum(0).double().cpu()
+            S[l][4] += A[:n_pre].sum(0).cpu().double(); S[l][cls[lang]] += A[n_pre:].sum(0).cpu().double()
             if T > n_p:
                 k = (l, lang, alang)
-                resid[k] = resid.get(k, 0) + hs[l + 1][0, n_p:].float().mean(0).double().cpu(); cnt[k] = cnt.get(k, 0) + 1
+                resid[k] = resid.get(k, 0) + hs[l + 1][0, n_p:].float().mean(0).cpu().double(); cnt[k] = cnt.get(k, 0) + 1
         if i % 50 == 49 or i == len(seqs) - 1:
             for l in layer_ids:
-                G[l] += Gb[l].double().cpu(); Gb[l].zero_()
+                G[l] += Gb[l].cpu().double(); Gb[l].zero_()
             free_memory()
     for h in hooks:
         h.remove()
@@ -255,7 +256,7 @@ def e1_delta(model, layer, P, V, alpha):
     return {f"model.layers.{layer}.mlp.down_proj": alpha * (V.T @ P)}
 
 
-def e1(model, tok, tg, nat, dev, ud, out, base):
+def e1(model, tok, tg, nat, dev, ud, out, base, copy_from=None):
     layer_ids = e1_layers(model)
     path = f"{out}/e1_edit.pt"
     if not os.path.exists(path):
@@ -270,6 +271,13 @@ def e1(model, tok, tg, nat, dev, ud, out, base):
     for l in layer_ids:
         print(f"E1 layer {l}: mean probe output (rows sv/da/no probe; cols sv/da/no/en/pre-user positions)",
               [[round(x, 2) for x in row] for row in info[str(l)]["mean_probe_output"]], flush=True)
+
+    if copy_from is not None:
+        l = round(copy_from["layer"] * len(edits.layers(model)) / PRIMARY_LAYERS)
+        sel = {"layer": l, "strength": copy_from["strength"], "copied_from": PRIMARY, "passed_dev_filter": None}
+        json.dump(sel, open(f"{out}/selected_E1.json", "w"), indent=1)
+        print("E1 copied from the primary model, no retuning:", sel, flush=True)
+        return sel
 
     def grid():
         rows = []
@@ -311,22 +319,28 @@ def train(key, out, tag, lr, layer=None, epochs=2, bs=8):
         order = torch.randperm(len(data), generator=g).tolist()
         rorder = torch.randperm(len(reg), generator=g).tolist()
         for i in range(0, len(order), bs):
-            batch = [data[j] for j in order[i:i + bs]]
-            enc = tok([p + t for p, t in batch], return_tensors="pt", padding=True).to(model.device)
-            labels = enc["input_ids"].clone(); labels[enc["attention_mask"] == 0] = -100
-            for b, (p, _) in enumerate(batch):                      # loss on the answer tokens only
-                labels[b, :len(tok(p)["input_ids"])] = -100
-            ce = pm(**enc, labels=labels).loss
-            rb = [reg[rorder[(i + j) % len(reg)]] for j in range(bs)]  # keep natural-text predictions close to the unedited model
-            er = tok(["<|endoftext|>" + s for s in rb], return_tensors="pt", padding=True).to(model.device)
-            with torch.no_grad(), pm.disable_adapter():
-                base_lp = torch.log_softmax(pm(**er).logits, -1)
-            lp = torch.log_softmax(pm(**er).logits, -1)
-            m = er["attention_mask"].float()
-            kl = ((base_lp.exp() * (base_lp - lp)).sum(-1) * m).sum() / m.sum()
-            (ce + kl).backward(); opt.step(); opt.zero_grad()
-            log.append((ce.item(), kl.item())); step += 1
-            del base_lp, lp; free_memory()
+            # One update per `bs` examples. To fit a laptop, the batch is processed in chunks of 4 whose gradients are
+            # accumulated, and each loss is back-propagated separately; the update equals that of one batch of `bs`.
+            idx = order[i:i + bs]; ce_sum = kl_sum = 0.0; n_chunks = (len(idx) + 3) // 4
+            for c in range(0, len(idx), 4):
+                batch = [data[j] for j in idx[c:c + 4]]
+                enc = tok([p + t for p, t in batch], return_tensors="pt", padding=True).to(model.device)
+                labels = enc["input_ids"].clone(); labels[enc["attention_mask"] == 0] = -100
+                for b, (p, _) in enumerate(batch):                  # loss on the answer tokens only
+                    labels[b, :len(tok(p)["input_ids"])] = -100
+                ce = pm(**enc, labels=labels).loss / n_chunks
+                ce.backward(); ce_sum += ce.item(); del ce, enc, labels
+                rb = [reg[rorder[(i + c + j) % len(reg)]] for j in range(4)]   # keep natural-text predictions close to the unedited model
+                er = tok(["<|endoftext|>" + s for s in rb], return_tensors="pt", padding=True, truncation=True, max_length=64).to(model.device)
+                with torch.no_grad(), pm.disable_adapter():
+                    base_lp = torch.log_softmax(pm(**er).logits, -1)
+                lp = torch.log_softmax(pm(**er).logits, -1)
+                m = er["attention_mask"].float()
+                kl = (torch.nn.functional.kl_div(lp, base_lp, log_target=True, reduction="none").sum(-1) * m).sum() / m.sum() / n_chunks
+                kl.backward(); kl_sum += kl.item(); del kl, lp, base_lp, er
+                free_memory()
+            opt.step(); opt.zero_grad()
+            log.append((ce_sum, kl_sum)); step += 1
             if step % 20 == 0:
                 print(f"{tag} epoch {epoch} step {step} ce {sum(x for x, _ in log[-20:]) / 20:.3f} kl {sum(x for _, x in log[-20:]) / 20:.4f}", flush=True)
         state = {name.replace("base_model.model.", "", 1): (mod.lora_A["default"].weight.detach().cpu(),
@@ -365,7 +379,9 @@ def loradev(model, tok, dev, ud, out, base):
 def conditions(model, tok, key, out, frozen):
     """name -> (context manager factory, system prompt, light evaluation?)"""
     c = {"B0": (edits.no_edit, None, False)}
-    if key == "qwen2.5-1.5b":
+    if key != PRIMARY:
+        c["P3"] = (edits.no_edit, frozen["P3"]["system"], False)
+    if key == PRIMARY:
         c["P1"] = (edits.no_edit, SYS["sv"], False)
         c["P2"] = (edits.no_edit, P2, False)
         c["P3"] = (edits.no_edit, frozen["P3"]["system"], False)
@@ -427,8 +443,18 @@ def main():
         tag = sys.argv[3]
         if tag == "F2":
             return train(key, out, "F2", 2e-4)
-        lr = float(sys.argv[4]); layer = json.load(open(f"{out}/selected_E1.json"))["layer"]
+        layer = json.load(open(f"{out}/selected_E1.json"))["layer"]
+        if key != PRIMARY:                                      # same learning rate as the adapter frozen on the primary model
+            lr = float(json.load(open(f"results/r3/{PRIMARY}/frozen.json"))["F3"]["adapter"].split("_lr")[1].split("_ep")[0])
+        else:
+            lr = float(sys.argv[4])
         return train(key, out, f"F3_lr{lr:g}", lr, layer=layer)
+    if stage == "freeze" and key != PRIMARY:                    # replication: copy every choice from the primary model
+        pf = json.load(open(f"results/r3/{PRIMARY}/frozen.json"))
+        frozen = {"P3": pf["P3"], "E1": json.load(open(f"{out}/selected_E1.json")),
+                  "F3": {"adapter": pf["F3"]["adapter"]}, "F2": {"adapter": pf["F2"]["adapter"]}, "copied_from": PRIMARY}
+        json.dump(frozen, open(f"{out}/frozen.json", "w"), ensure_ascii=False, indent=1)
+        return print("frozen (copied from the primary model):", {k: v for k, v in frozen.items() if k != "P3"})
     if stage == "freeze":                                       # everything chosen on dev, written before the test stage
         frozen = {k: json.load(open(f"{out}/selected_{k}.json")) for k in ("P3", "E1", "F3", "F2") if os.path.exists(f"{out}/selected_{k}.json")}
         json.dump(frozen, open(f"{out}/frozen.json", "w"), ensure_ascii=False, indent=1)
@@ -444,7 +470,8 @@ def main():
         return p3(model, tok, dev, ud, out, base)
     if stage == "e1":
         tg = json.load(open(f"{out}/targets.json")); nat = json.load(open(f"{out}/natural_answers.json"))
-        return e1(model, tok, tg, nat, dev, ud, out, base)
+        copy = None if key == PRIMARY else json.load(open(f"results/r3/{PRIMARY}/frozen.json"))["E1"]
+        return e1(model, tok, tg, nat, dev, ud, out, base, copy_from=copy)
     if stage == "loradev":
         return loradev(model, tok, dev, ud, out, base)
     D = {"test": test_q, "t1": t1_prompts(), "ud": fetch_data.main(), "pairs": build_pairs(seed=SEED), "native": build_native()}

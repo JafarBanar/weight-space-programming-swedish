@@ -1,0 +1,207 @@
+[
+ {
+  "sv": 0.77,
+  "sv_langs": {
+   "sv": 77,
+   "en": 19,
+   "de": 1,
+   "fi": 1,
+   "no": 1,
+   "da": 1
+  },
+  "da": 0.73,
+  "da_langs": {
+   "da": 73,
+   "no": 9,
+   "en": 18
+  },
+  "no": 0.57,
+  "no_langs": {
+   "no": 57,
+   "da": 17,
+   "en": 23,
+   "nl": 1,
+   "sv": 2
+  },
+  "en": 0.99,
+  "en_langs": {
+   "en": 99,
+   "zh": 1
+  },
+  "mean": 0.765,
+  "degenerate": 0.0075,
+  "system": "You are a helpful assistant. Always answer in the same language as the user's message.",
+  "order": 0,
+  "ppl_sv_dev": 62.51932144165039
+ },
+ {
+  "sv": 0.91,
+  "sv_langs": {
+   "sv": 91,
+   "en": 6,
+   "no": 1,
+   "de": 1,
+   "da": 1
+  },
+  "da": 0.57,
+  "da_langs": {
+   "sv": 23,
+   "da": 57,
+   "no": 12,
+   "en": 7,
+   "de": 1
+  },
+  "no": 0.55,
+  "no_langs": {
+   "no": 55,
+   "sv": 26,
+   "da": 7,
+   "en": 12
+  },
+  "en": 0.94,
+  "en_langs": {
+   "en": 94,
+   "da": 2,
+   "sv": 3,
+   "de": 1
+  },
+  "mean": 0.7424999999999999,
+  "degenerate": 0.0125,
+  "system": "You are a helpful assistant. Reply in the language the user writes in. If the user writes in Swedish, reply in Swedish; in Danish, reply in Danish; in Norwegian, reply in Norwegian.",
+  "order": 1,
+  "ppl_sv_dev": 62.51932144165039
+ },
+ {
+  "sv": 0.89,
+  "sv_langs": {
+   "sv": 89,
+   "en": 4,
+   "da": 2,
+   "no": 3,
+   "es": 1,
+   "de": 1
+  },
+  "da": 0.7,
+  "da_langs": {
+   "sv": 5,
+   "da": 70,
+   "no": 17,
+   "en": 8
+  },
+  "no": 0.62,
+  "no_langs": {
+   "no": 62,
+   "da": 11,
+   "en": 13,
+   "sv": 12,
+   "nl": 1,
+   "fr": 1
+  },
+  "en": 0.98,
+  "en_langs": {
+   "en": 98,
+   "sv": 2
+  },
+  "mean": 0.7975,
+  "degenerate": 0.0125,
+  "system": "You are a helpful assistant. Svara på samma språk som användaren skriver på.",
+  "order": 2,
+  "ppl_sv_dev": 62.51932144165039
+ },
+ {
+  "sv": 0.06,
+  "sv_langs": {
+   "sv": 6,
+   "en": 94
+  },
+  "da": 0.07,
+  "da_langs": {
+   "en": 92,
+   "da": 7,
+   "no": 1
+  },
+  "no": 0.11,
+  "no_langs": {
+   "no": 11,
+   "en": 89
+  },
+  "en": 0.93,
+  "en_langs": {
+   "en": 93,
+   "none": 6,
+   "fr": 1
+  },
+  "mean": 0.29250000000000004,
+  "degenerate": 0.005,
+  "system": "You are a helpful assistant. Detect the language of the user's message and write your entire answer in that language. Do not answer in English unless the user writes in English.",
+  "order": 3,
+  "ppl_sv_dev": 62.51932144165039
+ },
+ {
+  "sv": 0.76,
+  "sv_langs": {
+   "sv": 76,
+   "en": 11,
+   "no": 7,
+   "da": 6
+  },
+  "da": 0.76,
+  "da_langs": {
+   "da": 76,
+   "en": 9,
+   "no": 14,
+   "sv": 1
+  },
+  "no": 0.59,
+  "no_langs": {
+   "no": 59,
+   "da": 28,
+   "en": 10,
+   "sv": 3
+  },
+  "en": 0.99,
+  "en_langs": {
+   "en": 99,
+   "no": 1
+  },
+  "mean": 0.775,
+  "degenerate": 0.0075,
+  "system": "You are a helpful assistant. Answer in the user's language. Svara på användarens språk. Svar på brugerens sprog. Svar på brukerens språk.",
+  "order": 4,
+  "ppl_sv_dev": 62.51932144165039
+ },
+ {
+  "sv": 0.87,
+  "sv_langs": {
+   "sv": 87,
+   "en": 8,
+   "da": 4,
+   "no": 1
+  },
+  "da": 0.73,
+  "da_langs": {
+   "da": 73,
+   "en": 9,
+   "no": 18
+  },
+  "no": 0.64,
+  "no_langs": {
+   "no": 64,
+   "sv": 8,
+   "da": 15,
+   "en": 12,
+   "fr": 1
+  },
+  "en": 0.98,
+  "en_langs": {
+   "en": 98,
+   "sv": 1,
+   "de": 1
+  },
+  "mean": 0.8049999999999999,
+  "degenerate": 0.0075,
+  "system": "You are a helpful assistant. The user may write in any language, including Swedish, Danish and Norwegian. Never translate your answer into English; respond in the user's own language.",
+  "order": 5,
+  "ppl_sv_dev": 62.51932144165039
+ }
+]

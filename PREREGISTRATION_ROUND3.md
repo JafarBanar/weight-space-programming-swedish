@@ -105,3 +105,26 @@ weight-changing method passes: 60%.
 If a weight-changing method passes G1–G5 and replicates on the second model, the recommendation gains a tested fix,
 and the comparison E1 against F3 says how much gradient feedback buys over a closed-form construction of the same
 size. If only prompts pass, the recommendation stays "prompt first". If nothing passes, that is reported as it is.
+
+## Frozen before the test (added 2026-11-19, after development, before any test run)
+
+Chosen on the dev questions by the rule above (`results/r3/qwen2.5-1.5b/frozen.json`, dev scores in `dev_*.json`):
+
+| Method | Choice | Dev: sv / da / no / en right-language rate | Swedish dev perplexity |
+|---|---|---|---|
+| B0 unedited | – | 51 / 52 / 42 / 100 | 62.5 |
+| P3 | "The user may write in any language, including Swedish, Danish and Norwegian. Never translate your answer into English; respond in the user's own language." | 87 / 73 / 64 / 98 | 62.5 |
+| E1 | layer 14, strength 1 | 95 / 81 / 77 / 99 | 64.1 (+2.5%) |
+| F3 | learning rate 2e-4, epoch 1 | 86 / 80 / 78 / 100 | 62.7 (+0.2%) |
+| F2 | epoch 2 | 90 / 78 / 78 / 100 | 63.0 (+0.8%) |
+
+Deviations from the plan above, both made before any test run:
+
+* **Batch processing.** A batch of 8 with the regulariser did not fit in the laptop's memory. Each batch of 8 is processed
+  as two chunks of 4 whose gradients are accumulated before one optimiser step, and regulariser sentences are truncated
+  to 64 tokens. The update is that of a batch of 8.
+* **Second model.** All three weight methods (E1, F3, F2) will be rerun on `Qwen2.5-0.5B-Instruct` with the choices
+  above and no retuning, not only the best one.
+
+One observation from development, recorded here because it is a dev result and not a test result: one of the six
+candidate prompts ("...Do not answer in English unless the user writes in English.") lowered Swedish answers to 6%.
