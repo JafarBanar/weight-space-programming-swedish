@@ -1,3 +1,14 @@
 reading: weak [(21, 952), (10, 2976)] [-5.1, -4.7]
 [sign_step.json] done in 13s
 recipe decision: [{"neuron": [21, 952], "act_danish_answers": 17.763902217783826, "act_swedish_answers": -2.0614623721275063, "delete": true}, {"neuron": [10, 2976], "act_danish_answers": -0.10215256558892198, "act_swedish_answers": -0.09548965071209953, "delete": false}]
+[test_B0.json] done in 135s
+B0             T1 0.841 {'no': 20, 'sv': 269, 'nl': 2, 'en': 11, 'da': 16, 'de': 2} | MKQA-sv 0.693 {'sv': 208, 'en': 76, 'no': 13, 'de': 1, 'da': 2} | da->da 0.513 | en->en 1.000/1.000 | ppl_sv 136.1 | pairs 0.536/0.700
+[test_RECIPE.json] done in 217s
+RECIPE         T1 0.922 {'sv': 295, 'nl': 2, 'no': 10, 'en': 10, 'de': 1, 'da': 2} | MKQA-sv 0.727 {'sv': 218, 'no': 6, 'en': 73, 'da': 2, 'de': 1} | da->da 0.407 | en->en 1.000/1.000 | ppl_sv 133.8 | pairs 0.519/0.720
+[test_P1.json] done in 98s
+P1             T1 0.963 {'no': 11, 'sv': 308, 'fi': 1} | MKQA-sv 0.907 {'sv': 272, 'da': 1, 'no': 12, 'en': 13, 'es': 1, 'nl': 1}
+[test_R_seed0.json] done in 106s
+R_seed0        T1 0.841 {'no': 22, 'sv': 269, 'nl': 2, 'en': 11, 'da': 14, 'de': 2} | MKQA-sv 0.703 {'sv': 211, 'en': 75, 'no': 12, 'de': 1, 'da': 1}
+[test_R_seed1.json] done in 101s
+R_seed1        T1 0.841 {'no': 21, 'sv': 269, 'nl': 2, 'en': 11, 'da': 15, 'de': 2} | MKQA-sv 0.703 {'sv': 211, 'en': 76, 'no': 11, 'de': 1, 'da': 1}
+DONE qwen2.5-0.5b

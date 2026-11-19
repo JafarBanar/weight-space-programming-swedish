@@ -1,0 +1,416 @@
+{
+ "n_reviewed": 48,
+ "agreement_swedish_vs_not": 0.8958333333333334,
+ "note": "Labels assigned by the AI agent reading shuffled answers with condition and detector label hidden. Classes: sv, scand (Danish/Norwegian), mixed (Swedish mixed with Danish/Norwegian), en.",
+ "breakdown": {
+  "MKQA B0 labelled English | B0 | detector=not sv": {
+   "en": 7
+  },
+  "MKQA B0 labelled Swedish | B0 | detector=sv": {
+   "sv": 3
+  },
+  "round1 W0 broken | B0 | detector=sv": {
+   "sv": 6,
+   "mixed": 1
+  },
+  "round1 W0 broken | W0 | detector=not sv": {
+   "sv": 4,
+   "mixed": 2,
+   "en": 2
+  },
+  "round1 W0a fixed | B0 | detector=not sv": {
+   "mixed": 1,
+   "scand": 12,
+   "en": 1
+  },
+  "round1 W0a fixed | W0a | detector=sv": {
+   "sv": 9
+  }
+ },
+ "rows": [
+  {
+   "id": 0,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "sv",
+   "agree_swedish_or_not": false
+  },
+  {
+   "id": 1,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 2,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "mixed",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 3,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 4,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 5,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 6,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "sv",
+   "agree_swedish_or_not": false
+  },
+  {
+   "id": 7,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 8,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 9,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 10,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 11,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 12,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 13,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 14,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 15,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 16,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 17,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "mixed",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 18,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 19,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 20,
+   "source": "MKQA B0 labelled Swedish",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 21,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 22,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 23,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "mixed",
+   "agree_swedish_or_not": false
+  },
+  {
+   "id": 24,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 25,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 26,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "mixed",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 27,
+   "source": "MKQA B0 labelled Swedish",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 28,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 29,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "sv",
+   "agree_swedish_or_not": false
+  },
+  {
+   "id": 30,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 31,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "no",
+   "review": "sv",
+   "agree_swedish_or_not": false
+  },
+  {
+   "id": 32,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 33,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 34,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 35,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 36,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 37,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 38,
+   "source": "round1 W0 broken",
+   "condition": "W0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 39,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 40,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "no",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 41,
+   "source": "MKQA B0 labelled Swedish",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 42,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 43,
+   "source": "round1 W0 broken",
+   "condition": "B0",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 44,
+   "source": "round1 W0a fixed",
+   "condition": "W0a",
+   "detector": "sv",
+   "review": "sv",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 45,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 46,
+   "source": "MKQA B0 labelled English",
+   "condition": "B0",
+   "detector": "en",
+   "review": "en",
+   "agree_swedish_or_not": true
+  },
+  {
+   "id": 47,
+   "source": "round1 W0a fixed",
+   "condition": "B0",
+   "detector": "da",
+   "review": "scand",
+   "agree_swedish_or_not": true
+  }
+ ]
+}

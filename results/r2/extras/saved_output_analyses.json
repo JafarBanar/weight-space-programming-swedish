@@ -1,0 +1,264 @@
+{
+ "null_calibration": {
+  "real_z_L23N981": -9.200169563293457,
+  "real_z_L22N1821": -7.871490001678467,
+  "real_min_z": -9.200169563293457,
+  "null_min_z": {
+   "median": -6.434775114059448,
+   "most_extreme": -14.617033958435059,
+   "p5": -10.916173028945922
+  },
+  "null_absmax_z": {
+   "median": 6.842272996902466,
+   "max": 14.617033958435059
+  },
+  "share_of_null_directions_with_any_neuron_beyond_minus_7.9": 0.22,
+  "share_beyond_minus_9.2": 0.11,
+  "n_null": 200,
+  "consistency_t": {
+   "L23N981": -8.296355247497559,
+   "L22N1821": -7.403058052062988,
+   "real_min_t": -9.22400951385498,
+   "rank_L23N981": 7,
+   "rank_L22N1821": 19,
+   "null_min_t_median": -6.529395341873169,
+   "null_min_t_most_extreme": -11.371345520019531,
+   "share_null_beyond_L23N981": 0.06,
+   "share_null_beyond_L22N1821": 0.19
+  },
+  "pairs_with_danish_sign": {
+   "L23N981": 15,
+   "L22N1821": 17
+  }
+ },
+ "per_template_round1": [
+  {
+   "split": "sv_A",
+   "template": "Förklara kort vad {t} är.",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 2,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Skriv tre meningar om {t}.",
+   "baseline_failures": 13,
+   "W0_fixed": 11,
+   "W0_broken": 0,
+   "W0a_fixed": 12,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Vad är det viktigaste man bör veta om {t}?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 1,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Kan du berätta lite om {t}?",
+   "baseline_failures": 11,
+   "W0_fixed": 11,
+   "W0_broken": 0,
+   "W0a_fixed": 11,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Ge mig två intressanta fakta om {t}.",
+   "baseline_failures": 5,
+   "W0_fixed": 2,
+   "W0_broken": 0,
+   "W0a_fixed": 4,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Varför spelar {t} roll i samhället?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 0,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Hur skulle du förklara {t} för ett barn?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 0,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_A",
+   "template": "Sammanfatta kort historien bakom {t}.",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 2,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Vilka är för- och nackdelarna med {t}?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 0,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Skriv en kort dikt om {t}.",
+   "baseline_failures": 15,
+   "W0_fixed": 7,
+   "W0_broken": 0,
+   "W0a_fixed": 7,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Vad tänker du på när du hör ordet {t}?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 0,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Beskriv {t} med enkla ord.",
+   "baseline_failures": 3,
+   "W0_fixed": 3,
+   "W0_broken": 5,
+   "W0a_fixed": 3,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Jag vill lära mig mer om {t}. Var ska jag börja?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 1,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Vilka vanliga missförstånd finns det om {t}?",
+   "baseline_failures": 1,
+   "W0_fixed": 1,
+   "W0_broken": 2,
+   "W0a_fixed": 1,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Hur har synen på {t} förändrats de senaste hundra åren?",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 2,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  },
+  {
+   "split": "sv_B",
+   "template": "Nämn tre saker som hänger ihop med {t}.",
+   "baseline_failures": 0,
+   "W0_fixed": 0,
+   "W0_broken": 0,
+   "W0a_fixed": 0,
+   "W0a_broken": 0
+  }
+ ],
+ "grammar_pairs_equal_token_length": {
+  "synthetic_equal_length": 195,
+  "synthetic_total": 237,
+  "native_equal_length": 184,
+  "native_total": 200,
+  "conditions": {
+   "B0_baseline": {
+    "all": 0.729957805907173,
+    "equal_length": 0.717948717948718
+   },
+   "W0_weights_only": {
+    "all": 0.7257383966244726,
+    "equal_length": 0.7282051282051282
+   },
+   "W0a_only_L23N981": {
+    "all": 0.7341772151898734,
+    "equal_length": 0.7282051282051282
+   },
+   "W0b_only_L22N1821": {
+    "all": 0.6877637130801688,
+    "equal_length": 0.6820512820512821
+   },
+   "F1_lora": {
+    "all": 0.729957805907173,
+    "equal_length": 0.7076923076923077
+   },
+   "r2_native_B0": {
+    "all": 0.75,
+    "equal_length": 0.7880434782608695
+   },
+   "r2_native_W0a": {
+    "all": 0.76,
+    "equal_length": 0.7880434782608695
+   },
+   "r2_native_W0": {
+    "all": 0.75,
+    "equal_length": 0.7771739130434783
+   }
+  }
+ },
+ "mkqa_joint": {
+  "scorable_questions": 202,
+  "conditions": {
+   "B0": {
+    "fact": 0.0891089108910891,
+    "language": 0.4900990099009901,
+    "joint": 0.04950495049504951
+   },
+   "W0a": {
+    "fact": 0.0891089108910891,
+    "language": 0.49504950495049505,
+    "joint": 0.04455445544554455
+   },
+   "W0": {
+    "fact": 0.08415841584158416,
+    "language": 0.4504950495049505,
+    "joint": 0.034653465346534656
+   },
+   "P1": {
+    "fact": 0.09900990099009901,
+    "language": 0.9504950495049505,
+    "joint": 0.09405940594059406
+   }
+  }
+ },
+ "round1_danish_without_flagged_topics": {
+  "B0_baseline": {
+   "all_160": 0.825,
+   "without_flagged_136": 0.7941176470588235
+  },
+  "W0_weights_only": {
+   "all_160": 0.13125,
+   "without_flagged_136": 0.11029411764705882
+  },
+  "W0a_only_L23N981": {
+   "all_160": 0.1,
+   "without_flagged_136": 0.08088235294117647
+  },
+  "F1_lora": {
+   "all_160": 0.7875,
+   "without_flagged_136": 0.7647058823529411
+  }
+ },
+ "blind_review_items": 99
+}

@@ -1,0 +1,1914 @@
+{
+ "control_neuron": [
+  23,
+  8500
+ ],
+ "strength_N981": 33.7597770690918,
+ "strength_control": 29.751708984375,
+ "summary": {
+  "sv_prompt/neutral": {
+   "margin_base": {
+    "mean": 6.742508100911176,
+    "ci": [
+     3.369821749576035,
+     10.325332245385336
+    ]
+   },
+   "act_N981": {
+    "mean": -0.3466099330357143,
+    "ci": [
+     -0.7874097551618303,
+     0.1732696533203123
+    ]
+   },
+   "act_N1821": {
+    "mean": -15.524553571428571,
+    "ci": [
+     -18.003124999999997,
+     -12.93159877232143
+    ]
+   },
+   "delta_N981_position": {
+    "mean": 0.13605200023656444,
+    "ci": [
+     -0.10023549574959491,
+     0.47665980553387516
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": 0.14670501117195403,
+    "ci": [
+     -0.09649038161483725,
+     0.49544766487753217
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": -3.150153887358361,
+    "ci": [
+     -4.912376480999436,
+     -1.5195655846943352
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": -3.115605994293998,
+    "ci": [
+     -4.952782870467386,
+     -1.423359270097822
+    ]
+   },
+   "delta_control_position": {
+    "mean": -0.0889346141900335,
+    "ci": [
+     -0.5778024535992049,
+     0.35981861374540486
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": -0.08238054479339293,
+    "ci": [
+     -0.5578024834959902,
+     0.3568908387429214
+    ]
+   }
+  },
+  "sv_prompt/after_danish": {
+   "margin_base": {
+    "mean": 5.942130947186213,
+    "ci": [
+     3.025561206693861,
+     9.292689201567555
+    ]
+   },
+   "act_N981": {
+    "mean": 1.9884207589285714,
+    "ci": [
+     -0.08301653180803571,
+     4.451497977120534
+    ]
+   },
+   "act_N1821": {
+    "mean": -13.557477678571429,
+    "ci": [
+     -16.267717633928573,
+     -11.139453125000003
+    ]
+   },
+   "delta_N981_position": {
+    "mean": 0.0739400365356622,
+    "ci": [
+     -0.22233399937935505,
+     0.43501808170736406
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": 0.08090953469010335,
+    "ci": [
+     -0.21254381838786815,
+     0.4393134959657407
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": -3.224103691438878,
+    "ci": [
+     -4.514801246381415,
+     -1.9846957481827956
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": -3.2142678526496247,
+    "ci": [
+     -4.619992790555782,
+     -1.9614710002106481
+    ]
+   },
+   "delta_control_position": {
+    "mean": -0.09577092826865348,
+    "ci": [
+     -0.6342900964487593,
+     0.406775650252322
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": -0.10347408267469811,
+    "ci": [
+     -0.6538107251390881,
+     0.38024011620519854
+    ]
+   }
+  },
+  "sv_prompt/after_swedish": {
+   "margin_base": {
+    "mean": 6.6076026740982865,
+    "ci": [
+     3.6273657161280943,
+     9.897107190841256
+    ]
+   },
+   "act_N981": {
+    "mean": -0.7955845424107143,
+    "ci": [
+     -1.3686061314174107,
+     -0.20840148925781274
+    ]
+   },
+   "act_N1821": {
+    "mean": -18.079799107142858,
+    "ci": [
+     -20.51229073660714,
+     -15.799330357142859
+    ]
+   },
+   "delta_N981_position": {
+    "mean": -0.11970320059585252,
+    "ci": [
+     -0.2912940515471356,
+     0.04772654088488445
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": -0.11153284578384566,
+    "ci": [
+     -0.30295850397752866,
+     0.06479121208165965
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": -3.5504052885475437,
+    "ci": [
+     -5.060708935362554,
+     -2.0250412492256147
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": -3.5183379694520096,
+    "ci": [
+     -5.1359790154832545,
+     -2.015730265846443
+    ]
+   },
+   "delta_control_position": {
+    "mean": 0.04427173440178324,
+    "ci": [
+     -0.5235763928004807,
+     0.6684073132662367
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": 0.030850742178569947,
+    "ci": [
+     -0.549472284904914,
+     0.6157612730141927
+    ]
+   }
+  },
+  "da_prompt/neutral": {
+   "margin_base": {
+    "mean": -7.032668219147516,
+    "ci": [
+     -10.238750259686327,
+     -3.619509597097726
+    ]
+   },
+   "act_N981": {
+    "mean": 34.315848214285715,
+    "ci": [
+     28.98646763392857,
+     39.454659598214285
+    ]
+   },
+   "act_N1821": {
+    "mean": 0.9666573660714286,
+    "ci": [
+     0.7351553780691964,
+     1.2344360351562498
+    ]
+   },
+   "delta_N981_position": {
+    "mean": 4.538516305453543,
+    "ci": [
+     2.5962684797788302,
+     6.524887102188742
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": 4.606534935068339,
+    "ci": [
+     2.648868686384854,
+     6.6537634354384085
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": 0.37956449549113,
+    "ci": [
+     -0.07632001406912294,
+     0.790020879970065
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": 0.38901888352951836,
+    "ci": [
+     -0.04193854634982667,
+     0.7796774158986016
+    ]
+   },
+   "delta_control_position": {
+    "mean": -0.060843409903879674,
+    "ci": [
+     -0.6669086174241133,
+     0.49742357101557483
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": -0.09844363979729158,
+    "ci": [
+     -0.7294738555825981,
+     0.43024768493238014
+    ]
+   }
+  },
+  "da_prompt/after_danish": {
+   "margin_base": {
+    "mean": -5.819029817307767,
+    "ci": [
+     -7.727254814108268,
+     -4.124692130567774
+    ]
+   },
+   "act_N981": {
+    "mean": 40.31361607142857,
+    "ci": [
+     33.591015625,
+     47.74832589285714
+    ]
+   },
+   "act_N1821": {
+    "mean": 1.1975054059709822,
+    "ci": [
+     0.887732914515904,
+     1.4913312639508929
+    ]
+   },
+   "delta_N981_position": {
+    "mean": 4.74305971733494,
+    "ci": [
+     3.1253335880340143,
+     6.448888247885873
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": 4.810425944044255,
+    "ci": [
+     3.140434071780848,
+     6.468227243001038
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": 0.48765163860350313,
+    "ci": [
+     0.18207729524999325,
+     0.7512952191455822
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": 0.4845073735507737,
+    "ci": [
+     0.18731698097336838,
+     0.7585495079539083
+    ]
+   },
+   "delta_control_position": {
+    "mean": -0.2347000734714259,
+    "ci": [
+     -0.7415248155252941,
+     0.28198134930820956
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": -0.2616805284882763,
+    "ci": [
+     -0.7574721081972321,
+     0.242332728825775
+    ]
+   }
+  },
+  "da_prompt/after_swedish": {
+   "margin_base": {
+    "mean": -3.7604333699314987,
+    "ci": [
+     -5.842020991138166,
+     -1.688635790640756
+    ]
+   },
+   "act_N981": {
+    "mean": 28.016183035714285,
+    "ci": [
+     18.59150390625,
+     37.25291573660714
+    ]
+   },
+   "act_N1821": {
+    "mean": -2.115415300641741,
+    "ci": [
+     -5.29802360534668,
+     0.3497131347656246
+    ]
+   },
+   "delta_N981_position": {
+    "mean": 3.760828513602194,
+    "ci": [
+     1.9993314890057914,
+     5.7091382765198695
+    ]
+   },
+   "delta_N981_everywhere": {
+    "mean": 3.829409209961471,
+    "ci": [
+     1.9652421602181027,
+     5.871282729191755
+    ]
+   },
+   "delta_N1821_position": {
+    "mean": -0.5037675235653296,
+    "ci": [
+     -1.4775700757778916,
+     0.3353013378376739
+    ]
+   },
+   "delta_N1821_everywhere": {
+    "mean": -0.5165441304811144,
+    "ci": [
+     -1.46282491071948,
+     0.27974566717831656
+    ]
+   },
+   "delta_control_position": {
+    "mean": -0.08950717429563936,
+    "ci": [
+     -0.6440905662694214,
+     0.4585920110552769
+    ]
+   },
+   "delta_control_everywhere": {
+    "mean": -0.12311720997760338,
+    "ci": [
+     -0.7167841203510762,
+     0.4408955806616826
+    ]
+   }
+  }
+ },
+ "rows": [
+  {
+   "fact": 0,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vilken är huvudstaden i Frankrike?",
+   "prefix": "",
+   "sv_word": "Frankrikes",
+   "da_word": "Frankrigs",
+   "margin_base": -2.582332134246826,
+   "act_N981": -0.5908203125,
+   "act_N1821": -12.4453125,
+   "delta_N981_position": -0.47162437438964844,
+   "delta_N981_everywhere": -0.46005916595458984,
+   "delta_N1821_position": -1.2048869132995605,
+   "delta_N1821_everywhere": -1.1544654369354248,
+   "delta_control_position": 0.8255071640014648,
+   "delta_control_everywhere": 0.8614330291748047
+  },
+  {
+   "fact": 0,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vilken är huvudstaden i Frankrike?",
+   "prefix": "Frankrigs hovedstad",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": 8.459649085998535,
+   "act_N981": -2.611328125,
+   "act_N1821": -22.40625,
+   "delta_N981_position": -1.0560083389282227,
+   "delta_N981_everywhere": -1.0348377227783203,
+   "delta_N1821_position": -7.924022674560547,
+   "delta_N1821_everywhere": -7.986604690551758,
+   "delta_control_position": -1.7891645431518555,
+   "delta_control_everywhere": -1.9073305130004883
+  },
+  {
+   "fact": 0,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vilken är huvudstaden i Frankrike?",
+   "prefix": "Frankrikes huvudstad",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": 10.379618644714355,
+   "act_N981": -1.7939453125,
+   "act_N1821": -21.984375,
+   "delta_N981_position": -0.8758649826049805,
+   "delta_N981_everywhere": -0.8603229522705078,
+   "delta_N1821_position": -8.316764831542969,
+   "delta_N1821_everywhere": -8.371719360351562,
+   "delta_control_position": -1.9919919967651367,
+   "delta_control_everywhere": -2.084195137023926
+  },
+  {
+   "fact": 0,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad er hovedstaden i Frankrig?",
+   "prefix": "",
+   "sv_word": "Frankrikes",
+   "da_word": "Frankrigs",
+   "margin_base": -12.142134428024292,
+   "act_N981": 40.46875,
+   "act_N1821": 0.6708984375,
+   "delta_N981_position": 2.6472008228302,
+   "delta_N981_everywhere": 2.757554292678833,
+   "delta_N1821_position": 0.156937837600708,
+   "delta_N1821_everywhere": 0.17972731590270996,
+   "delta_control_position": 1.326629877090454,
+   "delta_control_everywhere": 1.2051761150360107
+  },
+  {
+   "fact": 0,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad er hovedstaden i Frankrig?",
+   "prefix": "Frankrigs hovedstad",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": -4.901607513427734,
+   "act_N981": 57.9375,
+   "act_N1821": 0.68701171875,
+   "delta_N981_position": 10.95759105682373,
+   "delta_N981_everywhere": 11.291173934936523,
+   "delta_N1821_position": 0.3807954788208008,
+   "delta_N1821_everywhere": 0.3886122703552246,
+   "delta_control_position": -1.4766063690185547,
+   "delta_control_everywhere": -1.5551791191101074
+  },
+  {
+   "fact": 0,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad er hovedstaden i Frankrig?",
+   "prefix": "Frankrikes huvudstad",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": -4.8662848472595215,
+   "act_N981": 55.5,
+   "act_N1821": 0.6767578125,
+   "delta_N981_position": 12.37154769897461,
+   "delta_N981_everywhere": 12.614378929138184,
+   "delta_N1821_position": 0.4162907600402832,
+   "delta_N1821_everywhere": 0.4172782897949219,
+   "delta_control_position": -1.4712767601013184,
+   "delta_control_everywhere": -1.5507087707519531
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Hur många dagar har en vecka?",
+   "prefix": "En",
+   "sv_word": " vecka",
+   "da_word": " uge",
+   "margin_base": 17.77451014891267,
+   "act_N981": -0.7255859375,
+   "act_N1821": -9.1171875,
+   "delta_N981_position": -0.1627031657844782,
+   "delta_N981_everywhere": -0.17655662633478642,
+   "delta_N1821_position": -1.9157086499035358,
+   "delta_N1821_everywhere": -1.4795462843030691,
+   "delta_control_position": -0.6515502519905567,
+   "delta_control_everywhere": -0.6447651144117117
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Hur många dagar har en vecka?",
+   "prefix": "En uge har syv",
+   "sv_word": " dagar",
+   "da_word": " dage",
+   "margin_base": 4.294864125549793,
+   "act_N981": -0.44140625,
+   "act_N1821": -11.375,
+   "delta_N981_position": 0.12240954488515854,
+   "delta_N981_everywhere": 0.14897455275058746,
+   "delta_N1821_position": -2.345834292471409,
+   "delta_N1821_everywhere": -2.2315807715058327,
+   "delta_control_position": 0.9694663174450397,
+   "delta_control_everywhere": 0.9606821089982986
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Hur många dagar har en vecka?",
+   "prefix": "En vecka har sju",
+   "sv_word": " dagar",
+   "da_word": " dage",
+   "margin_base": 5.545827247202396,
+   "act_N981": -1.513671875,
+   "act_N1821": -10.7890625,
+   "delta_N981_position": 0.05351017415523529,
+   "delta_N981_everywhere": 0.11182007193565369,
+   "delta_N1821_position": -2.8230194225907326,
+   "delta_N1821_everywhere": -2.60942430049181,
+   "delta_control_position": 1.215632800012827,
+   "delta_control_everywhere": 1.230765525251627
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvor mange dage har en uge?",
+   "prefix": "En",
+   "sv_word": " vecka",
+   "da_word": " uge",
+   "margin_base": -11.929517522454262,
+   "act_N981": 15.421875,
+   "act_N1821": 0.86181640625,
+   "delta_N981_position": 5.297717586159706,
+   "delta_N981_everywhere": 5.137182794511318,
+   "delta_N1821_position": 0.9373939074575901,
+   "delta_N1821_everywhere": 0.9609783552587032,
+   "delta_control_position": -0.5123617574572563,
+   "delta_control_everywhere": -0.3912560474127531
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvor mange dage har en uge?",
+   "prefix": "En uge har syv",
+   "sv_word": " dagar",
+   "da_word": " dage",
+   "margin_base": -3.4585933685302734,
+   "act_N981": 22.921875,
+   "act_N1821": 1.6015625,
+   "delta_N981_position": 5.334082365036011,
+   "delta_N981_everywhere": 5.2420090436935425,
+   "delta_N1821_position": 1.0458046793937683,
+   "delta_N1821_everywhere": 1.0309383869171143,
+   "delta_control_position": 0.5612086057662964,
+   "delta_control_everywhere": 0.4746739864349365
+  },
+  {
+   "fact": 1,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvor mange dage har en uge?",
+   "prefix": "En vecka har sju",
+   "sv_word": " dagar",
+   "da_word": " dage",
+   "margin_base": -4.861774355173111,
+   "act_N981": 19.203125,
+   "act_N1821": 1.2890625,
+   "delta_N981_position": 5.573614865541458,
+   "delta_N981_everywhere": 5.653697162866592,
+   "delta_N1821_position": 1.4572857916355133,
+   "delta_N1821_everywhere": 1.4618124663829803,
+   "delta_control_position": 0.8078729212284088,
+   "delta_control_everywhere": 0.8076371252536774
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vilken färg har himlen en klar dag?",
+   "prefix": "Himlen",
+   "sv_word": " blir",
+   "da_word": " bliver",
+   "margin_base": 5.533729076385498,
+   "act_N981": -1.1083984375,
+   "act_N1821": -23.03125,
+   "delta_N981_position": -0.14948415756225586,
+   "delta_N981_everywhere": -0.14917802810668945,
+   "delta_N1821_position": -4.290395736694336,
+   "delta_N1821_everywhere": -4.43501615524292,
+   "delta_control_position": 0.19831132888793945,
+   "delta_control_everywhere": 0.1592707633972168
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vilken färg har himlen en klar dag?",
+   "prefix": "Himlen bliver ofte blå når solen",
+   "sv_word": " skiner",
+   "da_word": " skinner",
+   "margin_base": -3.763546943664551,
+   "act_N981": 0.640625,
+   "act_N1821": -16.765625,
+   "delta_N981_position": 0.20733356475830078,
+   "delta_N981_everywhere": 0.1853494644165039,
+   "delta_N1821_position": 0.7881345748901367,
+   "delta_N1821_everywhere": 0.8937644958496094,
+   "delta_control_position": 0.9597969055175781,
+   "delta_control_everywhere": 1.0093107223510742
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vilken färg har himlen en klar dag?",
+   "prefix": "Himlen blir ofta blå när solen",
+   "sv_word": " skiner",
+   "da_word": " skinner",
+   "margin_base": -3.1761646270751953,
+   "act_N981": -1.4345703125,
+   "act_N1821": -17.140625,
+   "delta_N981_position": 0.46633243560791016,
+   "delta_N981_everywhere": 0.455963134765625,
+   "delta_N1821_position": 1.6241569519042969,
+   "delta_N1821_everywhere": 1.7665634155273438,
+   "delta_control_position": 1.2032461166381836,
+   "delta_control_everywhere": 1.2132568359375
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvilken farve har himlen på en klar dag?",
+   "prefix": "Himlen",
+   "sv_word": " blir",
+   "da_word": " bliver",
+   "margin_base": -0.7080564498901367,
+   "act_N981": 28.359375,
+   "act_N1821": 1.927734375,
+   "delta_N981_position": 2.3160347938537598,
+   "delta_N981_everywhere": 2.356996536254883,
+   "delta_N1821_position": 0.4215683937072754,
+   "delta_N1821_everywhere": 0.41541528701782227,
+   "delta_control_position": -0.32993316650390625,
+   "delta_control_everywhere": -0.3464641571044922
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvilken farve har himlen på en klar dag?",
+   "prefix": "Himlen bliver ofte blå når solen",
+   "sv_word": " skiner",
+   "da_word": " skinner",
+   "margin_base": -0.6226959228515625,
+   "act_N981": 33.65625,
+   "act_N1821": 1.51953125,
+   "delta_N981_position": 1.6633319854736328,
+   "delta_N981_everywhere": 1.6080436706542969,
+   "delta_N1821_position": 0.04673480987548828,
+   "delta_N1821_everywhere": 0.018072128295898438,
+   "delta_control_position": 0.34688758850097656,
+   "delta_control_everywhere": 0.36878204345703125
+  },
+  {
+   "fact": 2,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvilken farve har himlen på en klar dag?",
+   "prefix": "Himlen blir ofta blå när solen",
+   "sv_word": " skiner",
+   "da_word": " skinner",
+   "margin_base": 1.3338098526000977,
+   "act_N981": 10.8515625,
+   "act_N1821": -3.509765625,
+   "delta_N981_position": -0.1480712890625,
+   "delta_N981_everywhere": -0.19359683990478516,
+   "delta_N1821_position": -0.1938028335571289,
+   "delta_N1821_everywhere": -0.20058441162109375,
+   "delta_control_position": 1.1507692337036133,
+   "delta_control_everywhere": 1.2157039642333984
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vilket djur ger oss mjölk?",
+   "prefix": "",
+   "sv_word": "Kon",
+   "da_word": "Koen",
+   "margin_base": 6.338946342468262,
+   "act_N981": -1.39453125,
+   "act_N1821": -14.078125,
+   "delta_N981_position": 0.04110908508300781,
+   "delta_N981_everywhere": 0.025940895080566406,
+   "delta_N1821_position": -0.7465019226074219,
+   "delta_N1821_everywhere": -0.6824483871459961,
+   "delta_control_position": -0.1918935775756836,
+   "delta_control_everywhere": -0.2013998031616211
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vilket djur ger oss mjölk?",
+   "prefix": "Koen giver os",
+   "sv_word": " mjölk",
+   "da_word": " mælk",
+   "margin_base": 13.469711445271969,
+   "act_N981": -1.6240234375,
+   "act_N1821": -13.1328125,
+   "delta_N981_position": -0.24465439468622208,
+   "delta_N981_everywhere": -0.2029925286769867,
+   "delta_N1821_position": -3.795577935874462,
+   "delta_N1821_everywhere": -3.503971852362156,
+   "delta_control_position": -0.34485433250665665,
+   "delta_control_everywhere": -0.3422529920935631
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vilket djur ger oss mjölk?",
+   "prefix": "Kon ger oss",
+   "sv_word": " mjölk",
+   "da_word": " mælk",
+   "margin_base": 11.630177527666092,
+   "act_N981": -1.9365234375,
+   "act_N1821": -18.03125,
+   "delta_N981_position": -0.3968812823295593,
+   "delta_N981_everywhere": -0.3371420055627823,
+   "delta_N1821_position": -3.868672549724579,
+   "delta_N1821_everywhere": -3.5026792883872986,
+   "delta_control_position": -0.10632993280887604,
+   "delta_control_everywhere": -0.11226283013820648
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvilket dyr giver os mælk?",
+   "prefix": "",
+   "sv_word": "Kon",
+   "da_word": "Koen",
+   "margin_base": 4.70652961730957,
+   "act_N981": 34.03125,
+   "act_N1821": 0.4375,
+   "delta_N981_position": 1.1191186904907227,
+   "delta_N981_everywhere": 0.9566507339477539,
+   "delta_N1821_position": 0.06840229034423828,
+   "delta_N1821_everywhere": 0.04395580291748047,
+   "delta_control_position": 0.8219070434570312,
+   "delta_control_everywhere": 0.8246297836303711
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvilket dyr giver os mælk?",
+   "prefix": "Koen giver os",
+   "sv_word": " mjölk",
+   "da_word": " mælk",
+   "margin_base": -12.224225878715515,
+   "act_N981": 40.125,
+   "act_N1821": 0.99267578125,
+   "delta_N981_position": 4.996900856494904,
+   "delta_N981_everywhere": 5.061572015285492,
+   "delta_N1821_position": 1.1447825729846954,
+   "delta_N1821_everywhere": 1.1513450741767883,
+   "delta_control_position": -1.403557449579239,
+   "delta_control_everywhere": -1.409482166171074
+  },
+  {
+   "fact": 3,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvilket dyr giver os mælk?",
+   "prefix": "Kon ger oss",
+   "sv_word": " mjölk",
+   "da_word": " mælk",
+   "margin_base": -11.087855815887451,
+   "act_N981": 42.71875,
+   "act_N1821": 1.0322265625,
+   "delta_N981_position": 5.580890983343124,
+   "delta_N981_everywhere": 5.571733057498932,
+   "delta_N1821_position": 1.20378577709198,
+   "delta_N1821_everywhere": 1.1755430400371552,
+   "delta_control_position": -1.297861784696579,
+   "delta_control_everywhere": -1.3508217632770538
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vilken årstid kommer efter vintern?",
+   "prefix": "",
+   "sv_word": "Våren",
+   "da_word": "Foråret",
+   "margin_base": 3.719909191131592,
+   "act_N981": 0.720703125,
+   "act_N1821": -8.15625,
+   "delta_N981_position": 0.6275033950805664,
+   "delta_N981_everywhere": 0.6457300186157227,
+   "delta_N1821_position": -2.4349541664123535,
+   "delta_N1821_everywhere": -2.429752826690674,
+   "delta_control_position": 0.19640350341796875,
+   "delta_control_everywhere": 0.11864662170410156
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vilken årstid kommer efter vintern?",
+   "prefix": "Foråret kommer efter",
+   "sv_word": " vintern",
+   "da_word": " vinteren",
+   "margin_base": 7.031326411291957,
+   "act_N981": 5.1875,
+   "act_N1821": -8.375,
+   "delta_N981_position": -0.30553673580288887,
+   "delta_N981_everywhere": -0.3201577588915825,
+   "delta_N1821_position": -0.3931267559528351,
+   "delta_N1821_everywhere": -0.2974856961518526,
+   "delta_control_position": -1.3324185144156218,
+   "delta_control_everywhere": -1.23294348269701
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vilken årstid kommer efter vintern?",
+   "prefix": "Våren kommer efter",
+   "sv_word": " vintern",
+   "da_word": " vinteren",
+   "margin_base": 6.860436342656612,
+   "act_N981": -0.386474609375,
+   "act_N1821": -14.2734375,
+   "delta_N981_position": -0.1690203994512558,
+   "delta_N981_everywhere": -0.1366700641810894,
+   "delta_N1821_position": -0.30472106486558914,
+   "delta_N1821_everywhere": -0.2732801027595997,
+   "delta_control_position": -1.2039484344422817,
+   "delta_control_everywhere": -1.0294390246272087
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvilken årstid kommer efter vinteren?",
+   "prefix": "",
+   "sv_word": "Våren",
+   "da_word": "Foråret",
+   "margin_base": -3.5059738159179688,
+   "act_N981": 16.171875,
+   "act_N1821": 1.1689453125,
+   "delta_N981_position": 2.7141599655151367,
+   "delta_N981_everywhere": 2.7436294555664062,
+   "delta_N1821_position": 0.07214164733886719,
+   "delta_N1821_everywhere": 0.10902118682861328,
+   "delta_control_position": 0.43390750885009766,
+   "delta_control_everywhere": 0.4412097930908203
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvilken årstid kommer efter vinteren?",
+   "prefix": "Foråret kommer efter",
+   "sv_word": " vintern",
+   "da_word": " vinteren",
+   "margin_base": -3.0919918715953827,
+   "act_N981": 18.265625,
+   "act_N1821": 0.03460693359375,
+   "delta_N981_position": -0.46803728491067886,
+   "delta_N981_everywhere": -0.46801817417144775,
+   "delta_N1821_position": -0.109506756067276,
+   "delta_N1821_everywhere": -0.09387500584125519,
+   "delta_control_position": -1.0453030467033386,
+   "delta_control_everywhere": -1.0296301804482937
+  },
+  {
+   "fact": 4,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvilken årstid kommer efter vinteren?",
+   "prefix": "Våren kommer efter",
+   "sv_word": " vintern",
+   "da_word": " vinteren",
+   "margin_base": -3.295851156115532,
+   "act_N981": 13.6953125,
+   "act_N1821": -2.25,
+   "delta_N981_position": -0.6091234907507896,
+   "delta_N981_everywhere": -0.6247395649552345,
+   "delta_N1821_position": -0.21894213557243347,
+   "delta_N1821_everywhere": -0.20331504940986633,
+   "delta_control_position": -0.8583056628704071,
+   "delta_control_everywhere": -0.8894611597061157
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad heter den största staden i Sverige?",
+   "prefix": "Den",
+   "sv_word": " största",
+   "da_word": " største",
+   "margin_base": 8.902874241117388,
+   "act_N981": 1.2177734375,
+   "act_N1821": -9.78125,
+   "delta_N981_position": 2.0064014685340226,
+   "delta_N981_everywhere": 2.0991325192153454,
+   "delta_N1821_position": -4.269799856934696,
+   "delta_N1821_everywhere": -4.3807038073427975,
+   "delta_control_position": 0.5206726239994168,
+   "delta_control_everywhere": 0.45144379511475563
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad heter den största staden i Sverige?",
+   "prefix": "Den største by i Sverige",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": 7.208136320114136,
+   "act_N981": 13.5859375,
+   "act_N1821": -7.296875,
+   "delta_N981_position": 1.9256787300109863,
+   "delta_N981_everywhere": 1.9424128532409668,
+   "delta_N1821_position": -4.10575532913208,
+   "delta_N1821_everywhere": -4.205850839614868,
+   "delta_control_position": -1.7094550132751465,
+   "delta_control_everywhere": -1.7725067138671875
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad heter den största staden i Sverige?",
+   "prefix": "Den största staden i Sverige",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": 9.47865915298462,
+   "act_N981": 0.33203125,
+   "act_N1821": -14.21875,
+   "delta_N981_position": -0.6887903213500977,
+   "delta_N981_everywhere": -0.7013258934020996,
+   "delta_N1821_position": -5.93847131729126,
+   "delta_N1821_everywhere": -6.048595428466797,
+   "delta_control_position": -1.1643352508544922,
+   "delta_control_everywhere": -1.296597957611084
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad hedder den største by i Sverige?",
+   "prefix": "Den",
+   "sv_word": " största",
+   "da_word": " største",
+   "margin_base": -6.895325900055468,
+   "act_N981": 43.53125,
+   "act_N1821": 2.041015625,
+   "delta_N981_position": 5.0652359733358026,
+   "delta_N981_everywhere": 5.2010208973661065,
+   "delta_N1821_position": -1.6440106146037579,
+   "delta_N1821_everywhere": -1.6284174751490355,
+   "delta_control_position": -0.9629974095150828,
+   "delta_control_everywhere": -1.0580014856532216
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad hedder den største by i Sverige?",
+   "prefix": "Den største by i Sverige",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": -6.919892072677612,
+   "act_N981": 64.8125,
+   "act_N1821": 2.16796875,
+   "delta_N981_position": 7.330530643463135,
+   "delta_N981_everywhere": 7.671294212341309,
+   "delta_N1821_position": 0.6494075059890747,
+   "delta_N1821_everywhere": 0.6493780612945557,
+   "delta_control_position": -1.2898299098014832,
+   "delta_control_everywhere": -1.5008158683776855
+  },
+  {
+   "fact": 5,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad hedder den største by i Sverige?",
+   "prefix": "Den största staden i Sverige",
+   "sv_word": " heter",
+   "da_word": " hedder",
+   "margin_base": -3.8799701929092407,
+   "act_N981": 50.5625,
+   "act_N1821": 0.034088134765625,
+   "delta_N981_position": 7.001924395561218,
+   "delta_N981_everywhere": 7.303788065910339,
+   "delta_N1821_position": 0.016458511352539062,
+   "delta_N1821_everywhere": -0.04605543613433838,
+   "delta_control_position": -1.477683663368225,
+   "delta_control_everywhere": -1.7199448347091675
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad gör man med en bok?",
+   "prefix": "Man",
+   "sv_word": " läser",
+   "da_word": " læser",
+   "margin_base": 5.607637882232666,
+   "act_N981": -0.288330078125,
+   "act_N1821": -18.65625,
+   "delta_N981_position": -0.0401153564453125,
+   "delta_N981_everywhere": -0.050998687744140625,
+   "delta_N1821_position": -4.713489055633545,
+   "delta_N1821_everywhere": -5.014915943145752,
+   "delta_control_position": -1.0876774787902832,
+   "delta_control_everywhere": -1.0968356132507324
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad gör man med en bok?",
+   "prefix": "Man læser en",
+   "sv_word": " bok",
+   "da_word": " bog",
+   "margin_base": 11.74189351638779,
+   "act_N981": -2.29296875,
+   "act_N1821": -15.7890625,
+   "delta_N981_position": -0.3281112613622099,
+   "delta_N981_everywhere": -0.31248572189360857,
+   "delta_N1821_position": -2.882969898870215,
+   "delta_N1821_everywhere": -3.0079811504110694,
+   "delta_control_position": -1.2031912793172523,
+   "delta_control_everywhere": -1.187548735877499
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad gör man med en bok?",
+   "prefix": "Man läser en",
+   "sv_word": " bok",
+   "da_word": " bog",
+   "margin_base": 11.88257767423056,
+   "act_N981": -1.97265625,
+   "act_N1821": -18.203125,
+   "delta_N981_position": -0.26562545192427933,
+   "delta_N981_everywhere": -0.2734391165431589,
+   "delta_N1821_position": -2.476737689692527,
+   "delta_N1821_everywhere": -2.5861219295766205,
+   "delta_control_position": -1.1718918794067577,
+   "delta_control_everywhere": -1.148447300773114
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad gør man med en bog?",
+   "prefix": "Man",
+   "sv_word": " läser",
+   "da_word": " læser",
+   "margin_base": -4.479216575622559,
+   "act_N981": 46.0625,
+   "act_N1821": 0.80517578125,
+   "delta_N981_position": 6.117968559265137,
+   "delta_N981_everywhere": 6.453617095947266,
+   "delta_N1821_position": 0.28332996368408203,
+   "delta_N1821_everywhere": 0.3116016387939453,
+   "delta_control_position": -0.7568588256835938,
+   "delta_control_everywhere": -0.7937736511230469
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad gør man med en bog?",
+   "prefix": "Man læser en",
+   "sv_word": " bok",
+   "da_word": " bog",
+   "margin_base": -8.985702234553173,
+   "act_N981": 29.421875,
+   "act_N1821": 1.423828125,
+   "delta_N981_position": 5.056989985750988,
+   "delta_N981_everywhere": 5.1128175996709615,
+   "delta_N1821_position": 0.6944545197766274,
+   "delta_N1821_everywhere": 0.6601914411876351,
+   "delta_control_position": 0.5657848587725312,
+   "delta_control_everywhere": 0.5597594496794045
+  },
+  {
+   "fact": 6,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad gør man med en bog?",
+   "prefix": "Man läser en",
+   "sv_word": " bok",
+   "da_word": " bog",
+   "margin_base": -7.8954893567133695,
+   "act_N981": 26.015625,
+   "act_N1821": 1.7841796875,
+   "delta_N981_position": 4.0913946472574025,
+   "delta_N981_everywhere": 4.156678120838478,
+   "delta_N1821_position": 0.8192796830553561,
+   "delta_N1821_everywhere": 0.7910714859608561,
+   "delta_control_position": 0.29770116484723985,
+   "delta_control_everywhere": 0.30336336186155677
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad behöver växter för att växa?",
+   "prefix": "",
+   "sv_word": "Växter",
+   "da_word": "Planter",
+   "margin_base": 11.993794202804565,
+   "act_N981": -0.87548828125,
+   "act_N1821": -18.4375,
+   "delta_N981_position": -0.020312786102294922,
+   "delta_N981_everywhere": -0.005213618278503418,
+   "delta_N1821_position": 0.13363862037658691,
+   "delta_N1821_everywhere": -0.004474937915802002,
+   "delta_control_position": 0.30204296112060547,
+   "delta_control_everywhere": 0.27509164810180664
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad behöver växter för att växa?",
+   "prefix": "Planter behøver vand og",
+   "sv_word": " ljus",
+   "da_word": " lys",
+   "margin_base": 1.302720546722412,
+   "act_N981": 4.734375,
+   "act_N1821": -10.484375,
+   "delta_N981_position": 0.45093488693237305,
+   "delta_N981_everywhere": 0.45095109939575195,
+   "delta_N1821_position": -3.2692112922668457,
+   "delta_N1821_everywhere": -3.3711304664611816,
+   "delta_control_position": 0.7387552261352539,
+   "delta_control_everywhere": 0.747685432434082
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad behöver växter för att växa?",
+   "prefix": "Växter behöver vatten och",
+   "sv_word": " ljus",
+   "da_word": " lys",
+   "margin_base": 1.0063817501068115,
+   "act_N981": -1.3203125,
+   "act_N1821": -23.875,
+   "delta_N981_position": -0.1001741886138916,
+   "delta_N981_everywhere": -0.10016989707946777,
+   "delta_N1821_position": -3.2474005222320557,
+   "delta_N1821_everywhere": -3.294055461883545,
+   "delta_control_position": 1.9893317222595215,
+   "delta_control_everywhere": 2.0055580139160156
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad har planter brug for for at vokse?",
+   "prefix": "",
+   "sv_word": "Växter",
+   "da_word": "Planter",
+   "margin_base": -13.16994595527649,
+   "act_N981": 35.375,
+   "act_N1821": 0.609375,
+   "delta_N981_position": 5.878196716308594,
+   "delta_N981_everywhere": 5.851591229438782,
+   "delta_N1821_position": 0.6565660238265991,
+   "delta_N1821_everywhere": 0.6132302284240723,
+   "delta_control_position": 0.2928946018218994,
+   "delta_control_everywhere": 0.1951303482055664
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad har planter brug for for at vokse?",
+   "prefix": "Planter behøver vand og",
+   "sv_word": " ljus",
+   "da_word": " lys",
+   "margin_base": -5.965666770935059,
+   "act_N981": 59.65625,
+   "act_N1821": 0.52978515625,
+   "delta_N981_position": 6.498312950134277,
+   "delta_N981_everywhere": 6.566932678222656,
+   "delta_N1821_position": 0.4463930130004883,
+   "delta_N1821_everywhere": 0.4508376121520996,
+   "delta_control_position": 1.1984977722167969,
+   "delta_control_everywhere": 1.2587709426879883
+  },
+  {
+   "fact": 7,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad har planter brug for for at vokse?",
+   "prefix": "Växter behöver vatten och",
+   "sv_word": " ljus",
+   "da_word": " lys",
+   "margin_base": 2.1271438598632812,
+   "act_N981": -2.59375,
+   "act_N1821": -19.140625,
+   "delta_N981_position": -0.23212957382202148,
+   "delta_N981_everywhere": -0.1772480010986328,
+   "delta_N1821_position": -4.207787036895752,
+   "delta_N1821_everywhere": -4.192168235778809,
+   "delta_control_position": 1.8447909355163574,
+   "delta_control_everywhere": 1.8303775787353516
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad äter man ofta till frukost?",
+   "prefix": "",
+   "sv_word": "Många",
+   "da_word": "Mange",
+   "margin_base": 3.488734245300293,
+   "act_N981": -0.491943359375,
+   "act_N1821": -19.25,
+   "delta_N981_position": 0.21556854248046875,
+   "delta_N981_everywhere": 0.2222433090209961,
+   "delta_N1821_position": -6.562646389007568,
+   "delta_N1821_everywhere": -6.517282962799072,
+   "delta_control_position": 1.1199240684509277,
+   "delta_control_everywhere": 1.0891637802124023
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad äter man ofta till frukost?",
+   "prefix": "Mange spiser brød til",
+   "sv_word": " frukost",
+   "da_word": " morgenmad",
+   "margin_base": 21.35191335529089,
+   "act_N981": 3.6875,
+   "act_N1821": -9.6875,
+   "delta_N981_position": -0.2803371511399746,
+   "delta_N981_everywhere": -0.27664852514863014,
+   "delta_N1821_position": -1.2358885891735554,
+   "delta_N1821_everywhere": -1.0502913072705269,
+   "delta_control_position": 0.2524886913597584,
+   "delta_control_everywhere": 0.2564991358667612
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad äter man ofta till frukost?",
+   "prefix": "Många äter bröd till",
+   "sv_word": " frukost",
+   "da_word": " morgenmad",
+   "margin_base": 21.725854128599167,
+   "act_N981": 0.437744140625,
+   "act_N1821": -21.484375,
+   "delta_N981_position": -0.06743954122066498,
+   "delta_N981_everywhere": -0.0889358501881361,
+   "delta_N1821_position": -1.183756848797202,
+   "delta_N1821_everywhere": -0.8393890196457505,
+   "delta_control_position": 0.19031468778848648,
+   "delta_control_everywhere": 0.1715292874723673
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad spiser man ofte til morgenmad?",
+   "prefix": "",
+   "sv_word": "Många",
+   "da_word": "Mange",
+   "margin_base": -6.61427116394043,
+   "act_N981": 42.78125,
+   "act_N1821": 0.6376953125,
+   "delta_N981_position": 8.483942985534668,
+   "delta_N981_everywhere": 8.612454891204834,
+   "delta_N1821_position": 1.3582978248596191,
+   "delta_N1821_everywhere": 1.3699393272399902,
+   "delta_control_position": 1.1580924987792969,
+   "delta_control_everywhere": 1.0956883430480957
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad spiser man ofte til morgenmad?",
+   "prefix": "Mange spiser brød til",
+   "sv_word": " frukost",
+   "da_word": " morgenmad",
+   "margin_base": -12.283173374831676,
+   "act_N981": 32.9375,
+   "act_N1821": 1.1357421875,
+   "delta_N981_position": -0.35870247334241867,
+   "delta_N981_everywhere": -0.2271224930882454,
+   "delta_N1821_position": 0.22166688740253448,
+   "delta_N1821_everywhere": 0.2653963193297386,
+   "delta_control_position": -0.8954974040389061,
+   "delta_control_everywhere": -0.8409034311771393
+  },
+  {
+   "fact": 8,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad spiser man ofte til morgenmad?",
+   "prefix": "Många äter bröd till",
+   "sv_word": " frukost",
+   "da_word": " morgenmad",
+   "margin_base": -9.647192001342773,
+   "act_N981": 12.9375,
+   "act_N1821": -5.88671875,
+   "delta_N981_position": 0.38428497314453125,
+   "delta_N981_everywhere": 0.49240314960479736,
+   "delta_N1821_position": -0.41561394929885864,
+   "delta_N1821_everywhere": -0.4053688049316406,
+   "delta_control_position": -0.3643789291381836,
+   "delta_control_everywhere": -0.3793259859085083
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad använder man för att skriva?",
+   "prefix": "Man",
+   "sv_word": " använder",
+   "da_word": " bruger",
+   "margin_base": 12.231823399662971,
+   "act_N981": -0.27197265625,
+   "act_N1821": -20.09375,
+   "delta_N981_position": -0.052526459097862244,
+   "delta_N981_everywhere": -0.03344032168388367,
+   "delta_N1821_position": -5.815904870629311,
+   "delta_N1821_everywhere": -5.316095724701881,
+   "delta_control_position": -2.251681700348854,
+   "delta_control_everywhere": -2.043370470404625
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad använder man för att skriva?",
+   "prefix": "Man bruger en",
+   "sv_word": " penna",
+   "da_word": " pen",
+   "margin_base": -0.42212486267089844,
+   "act_N981": -2.103515625,
+   "act_N1821": -17.234375,
+   "delta_N981_position": -0.06280231475830078,
+   "delta_N981_everywhere": -0.05511331558227539,
+   "delta_N1821_position": -0.9145660400390625,
+   "delta_N1821_everywhere": -0.9461703300476074,
+   "delta_control_position": 0.5605807304382324,
+   "delta_control_everywhere": 0.5527844429016113
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad använder man för att skriva?",
+   "prefix": "Man använder en",
+   "sv_word": " penna",
+   "da_word": " pen",
+   "margin_base": 0.5016078948974609,
+   "act_N981": -2.30859375,
+   "act_N1821": -16.46875,
+   "delta_N981_position": -0.0472712516784668,
+   "delta_N981_everywhere": -0.0392460823059082,
+   "delta_N1821_position": -0.607459545135498,
+   "delta_N1821_everywhere": -0.6153554916381836,
+   "delta_control_position": 0.2851557731628418,
+   "delta_control_everywhere": 0.26176977157592773
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad bruger man til at skrive?",
+   "prefix": "Man",
+   "sv_word": " använder",
+   "da_word": " bruger",
+   "margin_base": -13.899867296218872,
+   "act_N981": 48.21875,
+   "act_N1821": 0.89013671875,
+   "delta_N981_position": 11.724550724029541,
+   "delta_N981_everywhere": 11.878462791442871,
+   "delta_N1821_position": 1.8617064356803894,
+   "delta_N1821_everywhere": 1.8446136713027954,
+   "delta_control_position": -2.974934697151184,
+   "delta_control_everywhere": -3.1940316557884216
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad bruger man til at skrive?",
+   "prefix": "Man bruger en",
+   "sv_word": " penna",
+   "da_word": " pen",
+   "margin_base": -1.526646614074707,
+   "act_N981": 38.25,
+   "act_N1821": 0.97705078125,
+   "delta_N981_position": 1.3579511642456055,
+   "delta_N981_everywhere": 1.3422613143920898,
+   "delta_N1821_position": 0.21750736236572266,
+   "delta_N1821_everywhere": 0.21408414840698242,
+   "delta_control_position": 1.4974212646484375,
+   "delta_control_everywhere": 1.4946656227111816
+  },
+  {
+   "fact": 9,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad bruger man til at skrive?",
+   "prefix": "Man använder en",
+   "sv_word": " penna",
+   "da_word": " pen",
+   "margin_base": -0.999845027923584,
+   "act_N981": 36.46875,
+   "act_N1821": 0.97265625,
+   "delta_N981_position": 1.5282306671142578,
+   "delta_N981_everywhere": 1.5670714378356934,
+   "delta_N1821_position": 0.26073741912841797,
+   "delta_N1821_everywhere": 0.2734065055847168,
+   "delta_control_position": 0.9931530952453613,
+   "delta_control_everywhere": 1.0124249458312988
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vilken månad är ofta kallast?",
+   "prefix": "",
+   "sv_word": "Januari",
+   "da_word": "Januar",
+   "margin_base": 4.076794147491455,
+   "act_N981": -1.0087890625,
+   "act_N1821": -14.8515625,
+   "delta_N981_position": -0.2187490463256836,
+   "delta_N981_everywhere": -0.21874666213989258,
+   "delta_N1821_position": -3.812272548675537,
+   "delta_N1821_everywhere": -3.7029242515563965,
+   "delta_control_position": 1.0630841255187988,
+   "delta_control_everywhere": 1.0474543571472168
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vilken månad är ofta kallast?",
+   "prefix": "Januar er ofte den koldeste",
+   "sv_word": " månaden",
+   "da_word": " måned",
+   "margin_base": 3.9329001903533936,
+   "act_N981": 5.2421875,
+   "act_N1821": -11.0,
+   "delta_N981_position": 0.2342367172241211,
+   "delta_N981_everywhere": 0.2498936653137207,
+   "delta_N1821_position": -1.8506677150726318,
+   "delta_N1821_everywhere": -1.6056016683578491,
+   "delta_control_position": 0.17146706581115723,
+   "delta_control_everywhere": 0.10939502716064453
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vilken månad är ofta kallast?",
+   "prefix": "Januari är ofta den kallaste",
+   "sv_word": " månaden",
+   "da_word": " måned",
+   "margin_base": 6.395989418029785,
+   "act_N981": -0.45263671875,
+   "act_N1821": -19.46875,
+   "delta_N981_position": -0.007754802703857422,
+   "delta_N981_everywhere": 0.00010347366333007812,
+   "delta_N1821_position": -3.018444299697876,
+   "delta_N1821_everywhere": -2.8258389234542847,
+   "delta_control_position": 0.13248324394226074,
+   "delta_control_everywhere": 0.054685354232788086
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvilken måned er ofte koldest?",
+   "prefix": "",
+   "sv_word": "Januari",
+   "da_word": "Januar",
+   "margin_base": -2.5355491638183594,
+   "act_N981": 26.3125,
+   "act_N1821": 1.435546875,
+   "delta_N981_position": 1.4388427734375,
+   "delta_N981_everywhere": 1.4229612350463867,
+   "delta_N1821_position": 0.23462772369384766,
+   "delta_N1821_everywhere": 0.26594066619873047,
+   "delta_control_position": 1.0326166152954102,
+   "delta_control_everywhere": 1.0324783325195312
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvilken måned er ofte koldest?",
+   "prefix": "Januar er ofte den koldeste",
+   "sv_word": " månaden",
+   "da_word": " måned",
+   "margin_base": -5.996067553758621,
+   "act_N981": 27.1875,
+   "act_N1821": 1.857421875,
+   "delta_N981_position": 5.068489819765091,
+   "delta_N981_everywhere": 4.6794494688510895,
+   "delta_N1821_position": 1.3178087770938873,
+   "delta_N1821_everywhere": 1.2090629637241364,
+   "delta_control_position": -0.7777667343616486,
+   "delta_control_everywhere": -0.8245450556278229
+  },
+  {
+   "fact": 10,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvilken måned er ofte koldest?",
+   "prefix": "Januari är ofta den kallaste",
+   "sv_word": " månaden",
+   "da_word": " måned",
+   "margin_base": 0.19387555122375488,
+   "act_N981": 23.265625,
+   "act_N1821": 1.2783203125,
+   "delta_N981_position": 2.3983813524246216,
+   "delta_N981_everywhere": 2.000038504600525,
+   "delta_N1821_position": -2.6781389713287354,
+   "delta_N1821_everywhere": -2.8338661193847656,
+   "delta_control_position": -0.9813411235809326,
+   "delta_control_everywhere": -1.0603749752044678
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad gör en lärare?",
+   "prefix": "En",
+   "sv_word": " lärare",
+   "da_word": " lærer",
+   "margin_base": 19.940181946381927,
+   "act_N981": -0.3837890625,
+   "act_N1821": -21.5625,
+   "delta_N981_position": -0.015629755333065987,
+   "delta_N981_everywhere": -4.6389177441596985e-05,
+   "delta_N1821_position": -11.325974123552442,
+   "delta_N1821_everywhere": -11.247384635731578,
+   "delta_control_position": -1.1392190912738442,
+   "delta_control_everywhere": -1.1238306425511837
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad gör en lärare?",
+   "prefix": "En lærer underviser elever i",
+   "sv_word": " skolan",
+   "da_word": " skolen",
+   "margin_base": 3.828125238418579,
+   "act_N981": -1.1787109375,
+   "act_N1821": -24.421875,
+   "delta_N981_position": -0.2187502384185791,
+   "delta_N981_everywhere": -0.2343754768371582,
+   "delta_N1821_position": -7.421875357627869,
+   "delta_N1821_everywhere": -7.406250357627869,
+   "delta_control_position": 1.343750238418579,
+   "delta_control_everywhere": 1.3125
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad gör en lärare?",
+   "prefix": "En lärare undervisar elever i",
+   "sv_word": " skolan",
+   "da_word": " skolen",
+   "margin_base": 3.46875,
+   "act_N981": 0.9404296875,
+   "act_N1821": -28.59375,
+   "delta_N981_position": 0.125,
+   "delta_N981_everywhere": 0.125,
+   "delta_N1821_position": -6.3125,
+   "delta_N1821_everywhere": -6.343749761581421,
+   "delta_control_position": 1.4375004768371582,
+   "delta_control_everywhere": 1.4062504768371582
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad laver en lærer?",
+   "prefix": "En",
+   "sv_word": " lärare",
+   "da_word": " lærer",
+   "margin_base": -17.975501090288162,
+   "act_N981": 41.0,
+   "act_N1821": 0.7021484375,
+   "delta_N981_position": 10.832622826099396,
+   "delta_N981_everywhere": 10.875832974910736,
+   "delta_N1821_position": 0.9370829612016678,
+   "delta_N1821_everywhere": 0.9526442587375641,
+   "delta_control_position": -0.8277009129524231,
+   "delta_control_everywhere": -0.7494224011898041
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad laver en lærer?",
+   "prefix": "En lærer underviser elever i",
+   "sv_word": " skolan",
+   "da_word": " skolen",
+   "margin_base": -6.765624523162842,
+   "act_N981": 52.9375,
+   "act_N1821": 1.44921875,
+   "delta_N981_position": 6.609374523162842,
+   "delta_N981_everywhere": 6.593749523162842,
+   "delta_N1821_position": 0.9062495231628418,
+   "delta_N1821_everywhere": 0.9062497615814209,
+   "delta_control_position": 0.2968742847442627,
+   "delta_control_everywhere": 0.28125
+  },
+  {
+   "fact": 11,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad laver en lærer?",
+   "prefix": "En lärare undervisar elever i",
+   "sv_word": " skolan",
+   "da_word": " skolen",
+   "margin_base": -0.7812502384185791,
+   "act_N981": 12.9140625,
+   "act_N1821": -8.59375,
+   "delta_N981_position": 2.406249761581421,
+   "delta_N981_everywhere": 2.390625238418579,
+   "delta_N1821_position": -3.656249761581421,
+   "delta_N1821_everywhere": -3.671874761581421,
+   "delta_control_position": 1.015625238418579,
+   "delta_control_everywhere": 1.015625238418579
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Var lever fiskar?",
+   "prefix": "",
+   "sv_word": "Fiskar",
+   "da_word": "Fisk",
+   "margin_base": -0.8680830001831055,
+   "act_N981": 1.7236328125,
+   "act_N1821": -9.4140625,
+   "delta_N981_position": 0.012897253036499023,
+   "delta_N981_everywhere": 0.022627592086791992,
+   "delta_N1821_position": -0.07044100761413574,
+   "delta_N1821_everywhere": -0.10197234153747559,
+   "delta_control_position": 0.10158538818359375,
+   "delta_control_everywhere": 0.11900663375854492
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Var lever fiskar?",
+   "prefix": "Fisk lever i",
+   "sv_word": " vatten",
+   "da_word": " vand",
+   "margin_base": 1.59375,
+   "act_N981": 4.08984375,
+   "act_N1821": -9.9921875,
+   "delta_N981_position": 0.234375,
+   "delta_N981_everywhere": 0.234375,
+   "delta_N1821_position": -3.156249523162842,
+   "delta_N1821_everywhere": -3.156249523162842,
+   "delta_control_position": 0.078125,
+   "delta_control_everywhere": 0.0468745231628418
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Var lever fiskar?",
+   "prefix": "Fiskar lever i",
+   "sv_word": " vatten",
+   "da_word": " vand",
+   "margin_base": 2.890625,
+   "act_N981": 1.0947265625,
+   "act_N1821": -12.3359375,
+   "delta_N981_position": 0.2812504768371582,
+   "delta_N981_everywhere": 0.28125,
+   "delta_N1821_position": -4.640625,
+   "delta_N1821_everywhere": -4.65625,
+   "delta_control_position": 0.265625,
+   "delta_control_everywhere": 0.21875
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvor lever fisk?",
+   "prefix": "",
+   "sv_word": "Fiskar",
+   "da_word": "Fisk",
+   "margin_base": -10.193800210952759,
+   "act_N981": 24.5,
+   "act_N1821": 0.53369140625,
+   "delta_N981_position": 3.0278247594833374,
+   "delta_N981_everywhere": 3.023369863629341,
+   "delta_N1821_position": 0.14956034719944,
+   "delta_N1821_everywhere": 0.14804694056510925,
+   "delta_control_position": 0.4531974792480469,
+   "delta_control_everywhere": 0.40595270693302155
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvor lever fisk?",
+   "prefix": "Fisk lever i",
+   "sv_word": " vatten",
+   "da_word": " vand",
+   "margin_base": -2.5,
+   "act_N981": 38.125,
+   "act_N1821": 1.8310546875,
+   "delta_N981_position": 5.609375,
+   "delta_N981_everywhere": 5.640625,
+   "delta_N1821_position": 0.7187504768371582,
+   "delta_N1821_everywhere": 0.734375,
+   "delta_control_position": -0.3046875,
+   "delta_control_everywhere": -0.34375
+  },
+  {
+   "fact": 12,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvor lever fisk?",
+   "prefix": "Fiskar lever i",
+   "sv_word": " vatten",
+   "da_word": " vand",
+   "margin_base": -2.0078125,
+   "act_N981": 38.6875,
+   "act_N1821": 1.9404296875,
+   "delta_N981_position": 4.90625,
+   "delta_N981_everywhere": 4.953125,
+   "delta_N1821_position": 0.6484365463256836,
+   "delta_N1821_everywhere": 0.6484375,
+   "delta_control_position": -0.5546879768371582,
+   "delta_control_everywhere": -0.578125
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "sv",
+   "context": "neutral",
+   "q": "Vad gör de flesta på natten?",
+   "prefix": "",
+   "sv_word": "På",
+   "da_word": "Om",
+   "margin_base": -1.7634062767028809,
+   "act_N981": -1.375,
+   "act_N1821": -18.46875,
+   "delta_N981_position": 0.13239336013793945,
+   "delta_N981_everywhere": 0.13243532180786133,
+   "delta_N1821_position": 2.927182197570801,
+   "delta_N1821_everywhere": 2.8484997749328613,
+   "delta_control_position": -0.2505936622619629,
+   "delta_control_everywhere": -0.16463661193847656
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "sv",
+   "context": "after_danish",
+   "q": "Vad gör de flesta på natten?",
+   "prefix": "Om natten sover de fleste",
+   "sv_word": " människor",
+   "da_word": " mennesker",
+   "margin_base": 3.1605148315429688,
+   "act_N981": 0.921875,
+   "act_N1821": -11.84375,
+   "delta_N981_position": 0.356392502784729,
+   "delta_N981_everywhere": 0.357387900352478,
+   "delta_N1821_position": -6.629840850830078,
+   "delta_N1821_everywhere": -7.124345779418945,
+   "delta_control_position": -0.036139488220214844,
+   "delta_control_everywhere": -0.0017861127853393555
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "sv",
+   "context": "after_swedish",
+   "q": "Vad gör de flesta på natten?",
+   "prefix": "På natten sover de flesta",
+   "sv_word": " människor",
+   "da_word": " mennesker",
+   "margin_base": 3.9160972833633423,
+   "act_N981": -0.82373046875,
+   "act_N1821": -16.25,
+   "delta_N981_position": 0.016884326934814453,
+   "delta_N981_everywhere": 0.0016553401947021484,
+   "delta_N1821_position": -8.591257899999619,
+   "delta_N1821_everywhere": -9.056835919618607,
+   "delta_control_position": -0.46098804473876953,
+   "delta_control_everywhere": -0.4597126245498657
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "da",
+   "context": "neutral",
+   "q": "Hvad gør de fleste om natten?",
+   "prefix": "",
+   "sv_word": "På",
+   "da_word": "Om",
+   "margin_base": 0.8852748870849609,
+   "act_N981": 38.1875,
+   "act_N1821": 0.8115234375,
+   "delta_N981_position": -3.1241888999938965,
+   "delta_N981_everywhere": -2.7798357009887695,
+   "delta_N1821_position": -0.1797018051147461,
+   "delta_N1821_everywhere": -0.14043283462524414,
+   "delta_control_position": -0.006266593933105469,
+   "delta_control_everywhere": -0.045526981353759766
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "da",
+   "context": "after_danish",
+   "q": "Hvad gør de fleste om natten?",
+   "prefix": "Om natten sover de fleste",
+   "sv_word": " människor",
+   "da_word": " mennesker",
+   "margin_base": -6.22452974319458,
+   "act_N981": 48.15625,
+   "act_N1821": 0.5576171875,
+   "delta_N981_position": 6.746645450592041,
+   "delta_N981_everywhere": 7.231175422668457,
+   "delta_N1821_position": -0.8537259101867676,
+   "delta_N1821_everywhere": -0.8015649318695068,
+   "delta_control_position": -0.5592269897460938,
+   "delta_control_everywhere": -0.5971236228942871
+  },
+  {
+   "fact": 13,
+   "prompt_lang": "da",
+   "context": "after_swedish",
+   "q": "Hvad gør de fleste om natten?",
+   "prefix": "På natten sover de flesta",
+   "sv_word": " människor",
+   "da_word": " mennesker",
+   "margin_base": -6.977570950984955,
+   "act_N981": 52.0,
+   "act_N1821": 0.75732421875,
+   "delta_N981_position": 7.398154199123383,
+   "delta_N981_everywhere": 7.903774678707123,
+   "delta_N1821_position": -0.5044851303100586,
+   "delta_N1821_everywhere": -0.4459342956542969,
+   "delta_control_position": -0.3574771285057068,
+   "delta_control_everywhere": -0.3800106644630432
+  }
+ ]
+}
