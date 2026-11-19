@@ -20,6 +20,8 @@ def walk(a, b, path, stats):
             walk(x, y, f"{path}[{i}]", stats)
     elif isinstance(a, str) and isinstance(b, str):
         stats["strings"] += 1; stats["strings_equal"] += a == b
+        if "/outputs[" in path:                                   # a generated answer (other strings are labels and settings)
+            stats["answers"] += 1; stats["answers_equal"] += a == b
     elif isinstance(a, (int, float)) and isinstance(b, (int, float)) and not isinstance(a, bool):
         stats["numbers"] += 1; d = abs(a - b); rel = d / max(1e-9, abs(a))
         stats["numbers_equal"] += d == 0
@@ -28,7 +30,7 @@ def walk(a, b, path, stats):
 
 
 def main(ref, new, stem="reproduction_check", title="Full from-scratch reproduction check"):
-    rows, tot = [], {"strings": 0, "strings_equal": 0, "numbers": 0, "numbers_equal": 0}
+    rows, tot = [], {"answers": 0, "answers_equal": 0, "strings": 0, "strings_equal": 0, "numbers": 0, "numbers_equal": 0}
     skip = ("summary", "notices_summary", "language_checks", "reproduction_check", "reproduction_check_round2", "detector_validation",
             "examples", "second_detector", "saved_output_analyses", "blind_review_items", "blind_review_key", "blind_review_result")
     for f in sorted(glob.glob(f"{ref}/**/*.json", recursive=True)):
@@ -36,9 +38,11 @@ def main(ref, new, stem="reproduction_check", title="Full from-scratch reproduct
         if os.path.basename(name)[:-5] in skip:
             continue
         g = f"{new}/{name}"
+        if os.path.dirname(name) and not os.path.isdir(os.path.join(new, name.split(os.sep)[0])):
+            continue                                              # a whole round that this rerun did not cover
         if not os.path.exists(g):
             rows.append({"file": name, "status": "not produced by the rerun"}); continue
-        st = {"strings": 0, "strings_equal": 0, "numbers": 0, "numbers_equal": 0, "max_rel_diff": 0.0, "max_rel_where": "", "missing": []}
+        st = {"answers": 0, "answers_equal": 0, "strings": 0, "strings_equal": 0, "numbers": 0, "numbers_equal": 0, "max_rel_diff": 0.0, "max_rel_where": "", "missing": []}
         walk(json.load(open(f)), json.load(open(g)), "", st)
         rows.append({"file": name, **st})
         for k in tot:
@@ -46,16 +50,17 @@ def main(ref, new, stem="reproduction_check", title="Full from-scratch reproduct
     out = {"reference": ref, "rerun": new, "total": tot, "files": rows}
     json.dump(out, open(f"results/{stem}.json", "w"), indent=1)
     L = [f"# {title}\n",
-         f"Generated answers and other strings identical: **{tot['strings_equal']:,} / {tot['strings']:,}**.  ",
+         f"Generated answers identical: **{tot['answers_equal']:,} / {tot['answers']:,}**.  ",
+         f"All stored strings identical (answers plus language labels and settings): **{tot['strings_equal']:,} / {tot['strings']:,}**.  ",
          f"Numbers bit-identical: **{tot['numbers_equal']:,} / {tot['numbers']:,}**.\n",
-         "| File | Answers identical | Numbers identical | Largest relative difference |", "|---|---|---|---|"]
+         "| File | Answers identical | All strings identical | Numbers identical | Largest relative difference |", "|---|---|---|---|---|"]
     for r in rows:
         if "status" in r:
-            L.append(f"| {r['file']} | {r['status']} | | |")
+            L.append(f"| {r['file']} | {r['status']} | | | |")
         else:
-            L.append(f"| {r['file']} | {r['strings_equal']}/{r['strings']} | {r['numbers_equal']}/{r['numbers']} | {r['max_rel_diff']:.2e} {('at ' + r['max_rel_where']) if r['max_rel_diff'] > 0 else ''} |")
+            L.append(f"| {r['file']} | {r['answers_equal']}/{r['answers']} | {r['strings_equal']}/{r['strings']} | {r['numbers_equal']}/{r['numbers']} | {r['max_rel_diff']:.2e} {('at ' + r['max_rel_where']) if r['max_rel_diff'] > 0 else ''} |")
     open(f"results/{stem}.md", "w").write("\n".join(L) + "\n")
-    print("\n".join(L[:4])); [print(r["file"], r.get("status", f"{r['strings_equal']}/{r['strings']} strings, {r['numbers_equal']}/{r['numbers']} numbers, max rel {r['max_rel_diff']:.1e}")) for r in rows]
+    print("\n".join(L[:5])); [print(r["file"], r.get("status", f"{r['strings_equal']}/{r['strings']} strings, {r['numbers_equal']}/{r['numbers']} numbers, max rel {r['max_rel_diff']:.1e}")) for r in rows]
 
 
 if __name__ == "__main__":

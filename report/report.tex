@@ -236,7 +236,7 @@ With at most 3.4 points to gain, this set says how rare the problem is there, an
 A blinded re-labelling confirmed that the English-labelled answers are English sentences (typically ``I apologize, but I don't have any specific information about \dots'').
 Factual accuracy on these questions is too low to analyse jointly (gold answer found in 8.9\% of 202 scorable questions unedited, 9.9\% under P1).
 
-\textbf{Prompting.} The Swedish instruction gives 96.3\% Swedish on MKQA but, as designed, also forces Swedish onto Danish and English users. A request-aware instruction
+\textbf{Prompting.} The Swedish instruction gives 96.3\% answers in Swedish on MKQA (a measure of answer language, not of correctness: a gold answer appears in about 10\% of answers with or without it) but, as designed, also forces Swedish onto Danish and English users. A request-aware instruction
 (``Always answer in the same language as the user's message.'') gives 78.7\% on Swedish questions, raises Danish answers to Danish questions from 47.3\% to 66.7\%, and keeps English at 99.3\%.
 
 \subsection{Is the Danish regression a lost ability or a changed default?}
@@ -362,7 +362,7 @@ Ji et al.\ (Smoothie-Qwen, 2507.05686) adjust token-level output probabilities w
 
 \section{Recommendation}
 
-\textbf{Do not deploy or pursue this kind of edit to improve Swedish.} Where it changed behaviour it did so by suppressing Danish output, it added no Swedish competence, and on human-translated questions it did not change how often the model answers in Swedish.
+\textbf{On the available evidence, SE.LLMA should not deploy this neuron ablation.} Where it changed behaviour it did so by suppressing Danish output, it added no Swedish competence, and on human-translated questions it did not change how often the model answers in Swedish. This is evidence about one edit family on four small models, not about weight editing in general.
 
 \textbf{Measure first.} Add \emph{correct answer in the requested language} to SE.LLMA's evaluation, with human-written prompts and a multi-label Scandinavian language identifier. Wrong-language rates here ranged from 0.6\% to 50\% depending on the model and the prompt set, so a single synthetic set would have misled, and did mislead me in round 1.
 

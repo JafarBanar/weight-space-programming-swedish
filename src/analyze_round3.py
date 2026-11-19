@@ -35,9 +35,12 @@ def analyse(key):
     _, _, test = mkqa3(); gold = gold_answers()
     G = [gold[x["id"]] for x in test]; scorable = np.array([len(g) > 0 for g in G])
 
-    def fact(outputs):
+    def fact_hits(outputs):
         f = np.array([any(re.search(r"(?<!\w)" + re.escape(a) + r"(?!\w)", o.lower()) for a in gs) for o, gs in zip(outputs, G)])
-        return float(f[scorable].mean())
+        return f[scorable]
+
+    def fact(outputs):
+        return float(fact_hits(outputs).mean())
     res = {c: json.load(open(f"{d}/test_{c}.json")) for c in ORDER if os.path.exists(f"{d}/test_{c}.json")}
     b = res["B0"]; out = {"model": NAMES[key], "n_test": len(test), "scorable": int(scorable.sum()), "conds": {}}
     b_wrong = 1 - b["MK_sv"]["rate"]
@@ -49,6 +52,9 @@ def analyse(key):
         x["delta"] = {l: boot_ci(b[f"MK_{l}"]["hit"], r[f"MK_{l}"]["hit"])[0] for l in ("da", "no", "en")}
         x["delta_ci"] = {l: boot_ci(b[f"MK_{l}"]["hit"], r[f"MK_{l}"]["hit"])[1] for l in ("da", "no", "en")}
         x["fact_sv"] = fact(r["MK_sv"]["outputs"]); x["degenerate_sv"] = r["MK_sv"]["degenerate"]
+        fh, bh = fact_hits(r["MK_sv"]["outputs"]), fact_hits(b["MK_sv"]["outputs"])
+        x["fact_n"] = int(fh.sum()); x["fact_delta"], x["fact_delta_ci"] = boot_ci(bh, fh)
+        x["joint_n"] = int((fh & (np.array(r["MK_sv"]["hit"])[scorable] == 1)).sum())      # gold answer found AND answered in Swedish
         if "ppl" in r:
             x["T1_sv"] = r["T1_sv"]["rate"]; x["ppl"] = r["ppl"]
             x["ppl_ratio"] = {k: r["ppl"][k] / b["ppl"][k] for k in LANGS4}
@@ -93,6 +99,14 @@ def table(S):
         L.append(f"| {LAB[c]} | {pct(x['sv'])} | {gain} | {pct(x['da'])} | {pct(x['no'])} | {pct(x['en'])} | {ppl} | "
                  f"{pct(x['pairs_native'])} / {pct(x['pairs_synthetic'])} | {pct(x['fact_sv'])} | {pct(x['T1_sv'])} | {marks} | "
                  f"{'**yes**' if v.get('works') and c != 'B0' else ('–' if c == 'B0' else 'no')} |")
+    L += ["", "Answer content on the Swedish questions with a short gold answer:", "",
+          "| Condition | Gold answer found | Change vs B0 [95% CI] | Gold answer found and answer in Swedish | Languages of the answers to Swedish questions |", "|---|---|---|---|---|"]
+    for c in ORDER:
+        if c in S["conds"]:
+            x = S["conds"][c]
+            ch = "–" if c == "B0" else f"{100 * x['fact_delta']:+.1f} [{100 * x['fact_delta_ci'][0]:+.1f}, {100 * x['fact_delta_ci'][1]:+.1f}]"
+            L.append(f"| {LAB[c]} | {x['fact_n']} / {S['scorable']} | {ch} | {x['joint_n']} / {S['scorable']} | "
+                     + ", ".join(f"{k} {v}" for k, v in sorted(x["langs_sv"].items(), key=lambda kv: -kv[1])) + " |")
     if S["robust"]:
         L += ["", "Robustness (Swedish / Danish right-language rate):", "",
               "| Condition | Sampling T=0.7, three seeds (sv) | Sampling (da) | 160-token answers sv / da | Unseen English system prompt sv / da / no / en |", "|---|---|---|---|---|"]
@@ -123,6 +137,34 @@ def figure(S, path):
     fig.tight_layout(rect=(0, 0, 1, 0.94)); fig.savefig(path, dpi=220); plt.close(fig)
 
 
+TEX = {"B0": "B0 Unedited", "P1": "P1 Prompt: always Swedish", "P2": "P2 Prompt: same language", "P3": "P3 Prompt: best of six",
+       "W0a": "W0a Neuron edit", "S2": "S2 Steering", "E1": "E1 Closed-form rank-3 edit", "R3": "R3 Random rank-3 edit",
+       "F3": "F3 Learned rank-3 edit", "F2": "F2 LoRA distillation"}
+
+
+def latex(S, path):
+    """Table rows for the report, generated from the results so that no number is typed by hand."""
+    rows = []
+    for c in ORDER:
+        if c not in S["conds"]:
+            continue
+        x = S["conds"][c]; v = x.get("verdict", {})
+        gain = "--" if c == "B0" else f"${100 * x['gain_sv']:+.1f}$ [${100 * x['gain_sv_ci'][0]:+.1f}$, ${100 * x['gain_sv_ci'][1]:+.1f}$]"
+        worst = max(x["ppl_ratio"].values()) - 1
+        marks = "--" if c == "B0" else " ".join(r"\checkmark" if v[g] else r"$\times$" for g in ("G1", "G2", "G3", "G4", "G5"))
+        works = "--" if c == "B0" else (r"\textbf{yes}" if v["works"] else "no")
+        rows.append(f"{TEX[c]} & {100 * x['sv']:.1f} & {gain} & {100 * x['da']:.1f} & {100 * x['no']:.1f} & {100 * x['en']:.1f} & "
+                    f"${100 * worst:+.1f}$ & {100 * x['pairs_native']:.1f} & {100 * x['fact_sv']:.1f} & {100 * x['T1_sv']:.1f} & {marks} & {works}\\\\")
+    open(path, "w").write("\n".join(rows) + "\n")
+    if S["robust"]:
+        rr = []
+        for c, r in S["robust"].items():
+            us = " / ".join(f"{100 * r['unseen_system'][l]:.0f}" for l in LANGS4) if r["unseen_system"] else "--"
+            rr.append(f"{TEX[c]} & {' / '.join(f'{100 * v:.0f}' for v in r['sampled']['sv'])} & {' / '.join(f'{100 * v:.0f}' for v in r['sampled']['da'])} & "
+                      f"{100 * r['long']['sv']:.0f} / {100 * r['long']['da']:.0f} & {us}\\\\")
+        open(path.replace(".tex", "_robust.tex"), "w").write("\n".join(rr) + "\n")
+
+
 def main():
     out, L = {}, ["# Round 3 summary (generated by src/analyze_round3.py)"]
     for key in NAMES:
@@ -132,7 +174,9 @@ def main():
     json.dump(out, open(f"{R}/summary.json", "w"), indent=1, ensure_ascii=False)
     open(f"{R}/summary.md", "w").write("\n".join(L) + "\n"); print("\n".join(L))
     if "qwen2.5-1.5b" in out:
-        figure(out["qwen2.5-1.5b"], "figures/fig5_round3.png")
+        figure(out["qwen2.5-1.5b"], "figures/fig5_round3.png"); latex(out["qwen2.5-1.5b"], "report/r3_table.tex")
+    if "qwen2.5-0.5b" in out:
+        latex(out["qwen2.5-0.5b"], "report/r3_table_second.tex")
 
 
 if __name__ == "__main__":

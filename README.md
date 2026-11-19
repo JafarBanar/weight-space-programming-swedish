@@ -58,8 +58,8 @@ A two-minute check that your setup reproduces the committed outputs:
 ```
 
 A full from-scratch rerun of round 1 (fresh clone, new environment, no cached results, same machine) was compared
-with the committed results: all 8,342 generated answers and labels are identical, and 36,002 of 36,003 stored numbers
-are bit-identical; the one difference is the wall-clock time of LoRA training. See
+with the committed results: all 7,160 generated answers are identical (8,342 stored strings in all, counting language
+labels and settings), and 36,002 of 36,003 stored numbers are bit-identical; the one difference is the wall-clock time of LoRA training. See
 [results/reproduction_check.md](results/reproduction_check.md). Round 2 was not rerun from scratch. To compare a rerun
 of your own:
 

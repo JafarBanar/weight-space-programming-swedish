@@ -1,0 +1,20 @@
+B0           sv->sv 0.527 | da->da 0.497 | no->no 0.530 | en->en 0.997 | T1 0.966 | ppl 52.5/99.3/103.3/44.6 | pairs 0.730/0.750
+[test_P1.json] done in 13681s
+P1           sv->sv 0.953 | da->da 0.140 | no->no 0.127 | en->en 0.877 | T1 0.997 | ppl 52.5/99.3/103.3/44.6 | pairs 0.730/0.750
+[test_P2.json] done in 10068s
+P2           sv->sv 0.807 | da->da 0.707 | no->no 0.673 | en->en 1.000 | T1 0.984 | ppl 52.5/99.3/103.3/44.6 | pairs 0.730/0.750
+[test_P3.json] done in 377s
+P3           sv->sv 0.910 | da->da 0.800 | no->no 0.700 | en->en 0.993 | T1 0.978 | ppl 52.5/99.3/103.3/44.6 | pairs 0.730/0.750
+[test_W0a.json] done in 361s
+W0a          sv->sv 0.537 | da->da 0.193 | no->no 0.487 | en->en 0.997 | T1 0.984 | ppl 51.7/170.6/118.6/44.6 | pairs 0.734/0.760
+[test_S2.json] done in 350s
+S2           sv->sv 0.633 | da->da 0.390 | no->no 0.267 | en->en 0.997 | T1 0.994 | ppl 51.4/135.4/137.8/45.1 | pairs 0.713/0.775
+[test_E1.json] done in 352s
+E1           sv->sv 0.937 | da->da 0.773 | no->no 0.790 | en->en 0.990 | T1 0.947 | ppl 53.8/99.2/106.8/44.8 | pairs 0.751/0.745
+[test_R3.json] done in 355s
+R3           sv->sv 0.643 | da->da 0.543 | no->no 0.580 | en->en 0.993 | T1 0.963 | ppl 52.6/99.5/103.8/44.8 | pairs 0.738/0.755
+[test_F3.json] done in 354s
+F3           sv->sv 0.873 | da->da 0.797 | no->no 0.680 | en->en 0.997 | T1 0.978 | ppl 52.6/99.3/103.8/44.6 | pairs 0.734/0.755
+[test_F2.json] done in 354s
+F2           sv->sv 0.900 | da->da 0.803 | no->no 0.750 | en->en 1.000 | T1 0.978 | ppl 52.7/99.6/103.2/44.6 | pairs 0.722/0.750
+TEST DONE qwen2.5-1.5b

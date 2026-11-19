@@ -2,6 +2,8 @@
  "reference": "results",
  "rerun": "../repro-check/results",
  "total": {
+  "answers": 7160,
+  "answers_equal": 7160,
   "strings": 8342,
   "strings_equal": 8342,
   "numbers": 36003,
@@ -10,6 +12,8 @@
  "files": [
   {
    "file": "dev_baseline.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 0,
    "strings_equal": 0,
    "numbers": 7,
@@ -20,6 +24,8 @@
   },
   {
    "file": "dev_neuron_activations.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 80,
    "strings_equal": 80,
    "numbers": 320,
@@ -30,6 +36,8 @@
   },
   {
    "file": "dev_steer_vectors.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 0,
    "strings_equal": 0,
    "numbers": 4608,
@@ -40,6 +48,8 @@
   },
   {
    "file": "dev_tune_S1.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 0,
    "strings_equal": 0,
    "numbers": 87,
@@ -50,6 +60,8 @@
   },
   {
    "file": "dev_tune_W1.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 0,
    "strings_equal": 0,
    "numbers": 181,
@@ -60,6 +72,8 @@
   },
   {
    "file": "notices_B0_baseline.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -70,6 +84,8 @@
   },
   {
    "file": "notices_F1_lora.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -80,6 +96,8 @@
   },
   {
    "file": "notices_P1_prompt.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -90,6 +108,8 @@
   },
   {
    "file": "notices_R0_random_seed0.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -100,6 +120,8 @@
   },
   {
    "file": "notices_R0_random_seed1.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -110,6 +132,8 @@
   },
   {
    "file": "notices_R0_random_seed2.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -120,6 +144,8 @@
   },
   {
    "file": "notices_S1_steering.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -130,6 +156,8 @@
   },
   {
    "file": "notices_W0_weights_only.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -140,6 +168,8 @@
   },
   {
    "file": "notices_W0a_only_L23N981.json",
+   "answers": 120,
+   "answers_equal": 120,
    "strings": 240,
    "strings_equal": 240,
    "numbers": 249,
@@ -150,6 +180,8 @@
   },
   {
    "file": "robustness_weight_reading.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 17,
    "strings_equal": 17,
    "numbers": 44,
@@ -160,6 +192,8 @@
   },
   {
    "file": "selected_configs.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 3,
    "strings_equal": 3,
    "numbers": 28,
@@ -170,6 +204,8 @@
   },
   {
    "file": "stage1_weight_reading.json",
+   "answers": 0,
+   "answers_equal": 0,
    "strings": 2,
    "strings_equal": 2,
    "numbers": 20420,
@@ -180,6 +216,8 @@
   },
   {
    "file": "test_B0_baseline.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 913,
@@ -190,6 +228,8 @@
   },
   {
    "file": "test_F1_lora.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 915,
@@ -200,6 +240,8 @@
   },
   {
    "file": "test_P1_prompt.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 909,
@@ -210,6 +252,8 @@
   },
   {
    "file": "test_R0_random_seed0.json",
+   "answers": 320,
+   "answers_equal": 320,
    "strings": 320,
    "strings_equal": 320,
    "numbers": 336,
@@ -220,6 +264,8 @@
   },
   {
    "file": "test_R0_random_seed1.json",
+   "answers": 320,
+   "answers_equal": 320,
    "strings": 320,
    "strings_equal": 320,
    "numbers": 336,
@@ -230,6 +276,8 @@
   },
   {
    "file": "test_R0_random_seed2.json",
+   "answers": 320,
+   "answers_equal": 320,
    "strings": 320,
    "strings_equal": 320,
    "numbers": 336,
@@ -240,6 +288,8 @@
   },
   {
    "file": "test_R0_random_seed3.json",
+   "answers": 320,
+   "answers_equal": 320,
    "strings": 320,
    "strings_equal": 320,
    "numbers": 336,
@@ -250,6 +300,8 @@
   },
   {
    "file": "test_R0_random_seed4.json",
+   "answers": 320,
+   "answers_equal": 320,
    "strings": 320,
    "strings_equal": 320,
    "numbers": 336,
@@ -260,6 +312,8 @@
   },
   {
    "file": "test_S1_steering.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 915,
@@ -270,6 +324,8 @@
   },
   {
    "file": "test_W0_weights_only.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 912,
@@ -280,6 +336,8 @@
   },
   {
    "file": "test_W0a_only_L23N981.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 911,
@@ -290,6 +348,8 @@
   },
   {
    "file": "test_W0b_only_L22N1821.json",
+   "answers": 640,
+   "answers_equal": 640,
    "strings": 640,
    "strings_equal": 640,
    "numbers": 912,
