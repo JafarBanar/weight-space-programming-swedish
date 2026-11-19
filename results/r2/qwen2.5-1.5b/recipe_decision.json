@@ -1,0 +1,30 @@
+{
+ "n_danish_answers": 44,
+ "n_swedish_answers": 62,
+ "decision": [
+  {
+   "neuron": [
+    23,
+    981
+   ],
+   "act_danish_answers": 35.84903491627086,
+   "act_swedish_answers": -0.43374540716890364,
+   "delete": true
+  },
+  {
+   "neuron": [
+    22,
+    1821
+   ],
+   "act_danish_answers": 1.042056139219891,
+   "act_swedish_answers": -19.34138067307011,
+   "delete": false
+  }
+ ],
+ "delete": [
+  [
+   23,
+   981
+  ]
+ ]
+}

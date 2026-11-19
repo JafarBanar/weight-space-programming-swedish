@@ -1,0 +1,1400 @@
+{
+ "nouns": [
+  {
+   "noun": "bil",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "bilen",
+   "definite_ok": true
+  },
+  {
+   "noun": "bok",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "boken",
+   "definite_ok": true
+  },
+  {
+   "noun": "stol",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "stolen",
+   "definite_ok": true
+  },
+  {
+   "noun": "hund",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "hunden",
+   "definite_ok": true
+  },
+  {
+   "noun": "katt",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "katten",
+   "definite_ok": true
+  },
+  {
+   "noun": "dörr",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "dörren",
+   "definite_ok": true
+  },
+  {
+   "noun": "lampa",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "lampan",
+   "definite_ok": true
+  },
+  {
+   "noun": "blomma",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "flaska",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "väska",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "klocka",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "klockan",
+   "definite_ok": true
+  },
+  {
+   "noun": "cykel",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "cykeln",
+   "definite_ok": true
+  },
+  {
+   "noun": "tidning",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "dator",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "telefon",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "penna",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "tröja",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "jacka",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "säng",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "soffa",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "kopp",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "båt",
+   "mine": "en",
+   "wiktionary": [
+    "en"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "båten",
+   "definite_ok": true
+  },
+  {
+   "noun": "hus",
+   "mine": "ett",
+   "wiktionary": [
+    "en",
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": true,
+   "definite": "huset",
+   "definite_ok": true
+  },
+  {
+   "noun": "bord",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "bordet",
+   "definite_ok": true
+  },
+  {
+   "noun": "äpple",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "äpplet",
+   "definite_ok": true
+  },
+  {
+   "noun": "barn",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "barnet",
+   "definite_ok": true
+  },
+  {
+   "noun": "fönster",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "fönstret",
+   "definite_ok": true
+  },
+  {
+   "noun": "träd",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "trädet",
+   "definite_ok": true
+  },
+  {
+   "noun": "brev",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "brevet",
+   "definite_ok": true
+  },
+  {
+   "noun": "glas",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "glaset",
+   "definite_ok": true
+  },
+  {
+   "noun": "rum",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "rummet",
+   "definite_ok": true
+  },
+  {
+   "noun": "tåg",
+   "mine": "ett",
+   "wiktionary": [
+    "en",
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": true,
+   "definite": "tåget",
+   "definite_ok": true
+  },
+  {
+   "noun": "flygplan",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "kök",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "golv",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "tak",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "taket",
+   "definite_ok": true
+  },
+  {
+   "noun": "berg",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "djur",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "piano",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false,
+   "definite": "pianot",
+   "definite_ok": true
+  },
+  {
+   "noun": "kort",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "språk",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "namn",
+   "mine": "ett",
+   "wiktionary": [
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": false
+  },
+  {
+   "noun": "fotografi",
+   "mine": "ett",
+   "wiktionary": [
+    "en",
+    "ett"
+   ],
+   "lookup_failed": false,
+   "ok": true,
+   "both_genders_listed": true
+  }
+ ],
+ "adjectives": [
+  {
+   "adj": "stor",
+   "neuter": "stort",
+   "plural": "stora",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "fin",
+   "neuter": "fint",
+   "plural": "fina",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "gammal",
+   "neuter": "gammalt",
+   "plural": "gamla",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "vacker",
+   "neuter": "vackert",
+   "plural": "vackra",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "dyr",
+   "neuter": "dyrt",
+   "plural": "dyra",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "billig",
+   "neuter": "billigt",
+   "plural": "billiga",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "ny",
+   "neuter": "nytt",
+   "plural": "nya",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "grön",
+   "neuter": "grönt",
+   "plural": "gröna",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "tung",
+   "neuter": "tungt",
+   "plural": "tunga",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  },
+  {
+   "adj": "ren",
+   "neuter": "rent",
+   "plural": "rena",
+   "lookup_failed": false,
+   "neuter_ok": true,
+   "plural_ok": true,
+   "problem": false
+  }
+ ],
+ "corpus_counts": {
+  "article_gender: ett tak": {
+   "good_cqp": "[word=\"ett\"] [word=\"tak\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"tak\"]",
+   "good": 375,
+   "bad": 1
+  },
+  "article_gender: en tröja": {
+   "good_cqp": "[word=\"en\"] [word=\"tröja\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"tröja\"]",
+   "good": 86,
+   "bad": 0
+  },
+  "article_gender: en väska": {
+   "good_cqp": "[word=\"en\"] [word=\"väska\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"väska\"]",
+   "good": 127,
+   "bad": 0
+  },
+  "article_gender: en lampa": {
+   "good_cqp": "[word=\"en\"] [word=\"lampa\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"lampa\"]",
+   "good": 143,
+   "bad": 0
+  },
+  "article_gender: en katt": {
+   "good_cqp": "[word=\"en\"] [word=\"katt\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"katt\"]",
+   "good": 366,
+   "bad": 0
+  },
+  "article_gender: ett rum": {
+   "good_cqp": "[word=\"ett\"] [word=\"rum\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"rum\"]",
+   "good": 1246,
+   "bad": 3
+  },
+  "article_gender: ett namn": {
+   "good_cqp": "[word=\"ett\"] [word=\"namn\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"namn\"]",
+   "good": 2585,
+   "bad": 1
+  },
+  "article_gender: en stol": {
+   "good_cqp": "[word=\"en\"] [word=\"stol\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"stol\"]",
+   "good": 293,
+   "bad": 0
+  },
+  "article_gender: en hund": {
+   "good_cqp": "[word=\"en\"] [word=\"hund\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"hund\"]",
+   "good": 793,
+   "bad": 1
+  },
+  "article_gender: en soffa": {
+   "good_cqp": "[word=\"en\"] [word=\"soffa\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"soffa\"]",
+   "good": 94,
+   "bad": 0
+  },
+  "article_gender: ett djur": {
+   "good_cqp": "[word=\"ett\"] [word=\"djur\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"djur\"]",
+   "good": 489,
+   "bad": 0
+  },
+  "article_gender: ett kort": {
+   "good_cqp": "[word=\"ett\"] [word=\"kort\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"kort\"]",
+   "good": 1894,
+   "bad": 8298
+  },
+  "article_gender: en tidning": {
+   "good_cqp": "[word=\"en\"] [word=\"tidning\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"tidning\"]",
+   "good": 906,
+   "bad": 0
+  },
+  "article_gender: ett flygplan": {
+   "good_cqp": "[word=\"ett\"] [word=\"flygplan\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"flygplan\"]",
+   "good": 859,
+   "bad": 2
+  },
+  "article_gender: ett äpple": {
+   "good_cqp": "[word=\"ett\"] [word=\"äpple\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"äpple\"]",
+   "good": 113,
+   "bad": 0
+  },
+  "article_gender: ett glas": {
+   "good_cqp": "[word=\"ett\"] [word=\"glas\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"glas\"]",
+   "good": 273,
+   "bad": 0
+  },
+  "article_gender: ett fönster": {
+   "good_cqp": "[word=\"ett\"] [word=\"fönster\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"fönster\"]",
+   "good": 564,
+   "bad": 1
+  },
+  "article_gender: ett berg": {
+   "good_cqp": "[word=\"ett\"] [word=\"berg\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"berg\"]",
+   "good": 3011,
+   "bad": 4
+  },
+  "article_gender: ett golv": {
+   "good_cqp": "[word=\"ett\"] [word=\"golv\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"golv\"]",
+   "good": 88,
+   "bad": 0
+  },
+  "article_gender: ett tåg": {
+   "good_cqp": "[word=\"ett\"] [word=\"tåg\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"tåg\"]",
+   "good": 787,
+   "bad": 2
+  },
+  "article_gender: en dörr": {
+   "good_cqp": "[word=\"en\"] [word=\"dörr\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"dörr\"]",
+   "good": 316,
+   "bad": 0
+  },
+  "article_gender: en båt": {
+   "good_cqp": "[word=\"en\"] [word=\"båt\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"båt\"]",
+   "good": 839,
+   "bad": 2
+  },
+  "article_gender: ett bord": {
+   "good_cqp": "[word=\"ett\"] [word=\"bord\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"bord\"]",
+   "good": 384,
+   "bad": 2
+  },
+  "article_gender: ett piano": {
+   "good_cqp": "[word=\"ett\"] [word=\"piano\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"piano\"]",
+   "good": 164,
+   "bad": 3
+  },
+  "article_gender: ett språk": {
+   "good_cqp": "[word=\"ett\"] [word=\"språk\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"språk\"]",
+   "good": 861,
+   "bad": 0
+  },
+  "article_gender: ett kök": {
+   "good_cqp": "[word=\"ett\"] [word=\"kök\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"kök\"]",
+   "good": 192,
+   "bad": 0
+  },
+  "article_gender: en flaska": {
+   "good_cqp": "[word=\"en\"] [word=\"flaska\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"flaska\"]",
+   "good": 251,
+   "bad": 0
+  },
+  "article_gender: en bok": {
+   "good_cqp": "[word=\"en\"] [word=\"bok\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"bok\"]",
+   "good": 5476,
+   "bad": 1
+  },
+  "article_gender: ett fotografi": {
+   "good_cqp": "[word=\"ett\"] [word=\"fotografi\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"fotografi\"]",
+   "good": 415,
+   "bad": 1
+  },
+  "article_gender: ett barn": {
+   "good_cqp": "[word=\"ett\"] [word=\"barn\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"barn\"]",
+   "good": 2304,
+   "bad": 3
+  },
+  "article_gender: ett brev": {
+   "good_cqp": "[word=\"ett\"] [word=\"brev\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"brev\"]",
+   "good": 3604,
+   "bad": 2
+  },
+  "double_definiteness: den ADJ båten": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"båten\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"båt\"]",
+   "good": 81,
+   "bad": 6
+  },
+  "double_definiteness: den ADJ katten": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"katten\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"katt\"]",
+   "good": 61,
+   "bad": 0
+  },
+  "double_definiteness: det ADJ brevet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"brevet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"brev\"]",
+   "good": 69,
+   "bad": 14
+  },
+  "double_definiteness: det ADJ glaset": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"glaset\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"glas\"]",
+   "good": 30,
+   "bad": 2
+  },
+  "double_definiteness: det ADJ barnet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"barnet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"barn\"]",
+   "good": 370,
+   "bad": 17
+  },
+  "double_definiteness: det ADJ äpplet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"äpplet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"äpple\"]",
+   "good": 22,
+   "bad": 0
+  },
+  "double_definiteness: det ADJ bordet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"bordet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"bord\"]",
+   "good": 37,
+   "bad": 3
+  },
+  "double_definiteness: det ADJ pianot": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"pianot\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"piano\"]",
+   "good": 11,
+   "bad": 0
+  },
+  "double_definiteness: den ADJ dörren": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"dörren\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"dörr\"]",
+   "good": 75,
+   "bad": 2
+  },
+  "double_definiteness: den ADJ hunden": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"hunden\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"hund\"]",
+   "good": 97,
+   "bad": 4
+  },
+  "double_definiteness: det ADJ fönstret": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"fönstret\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"fönster\"]",
+   "good": 78,
+   "bad": 8
+  },
+  "double_definiteness: det ADJ trädet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"trädet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"träd\"]",
+   "good": 109,
+   "bad": 3
+  },
+  "double_definiteness: den ADJ boken": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"boken\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"bok\"]",
+   "good": 739,
+   "bad": 37
+  },
+  "double_definiteness: den ADJ lampan": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"lampan\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"lampa\"]",
+   "good": 29,
+   "bad": 0
+  },
+  "double_definiteness: det ADJ taket": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"taket\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"tak\"]",
+   "good": 94,
+   "bad": 5
+  },
+  "double_definiteness: den ADJ bilen": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"bilen\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"bil\"]",
+   "good": 221,
+   "bad": 22
+  },
+  "double_definiteness: det ADJ tåget": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"tåget\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"tåg\"]",
+   "good": 63,
+   "bad": 3
+  },
+  "double_definiteness: den ADJ cykeln": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"cykeln\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"cykel\"]",
+   "good": 77,
+   "bad": 3
+  },
+  "double_definiteness: den ADJ klockan": {
+   "good_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"klockan\"]",
+   "bad_cqp": "[word=\"den\"] [pos=\"JJ\"] [word=\"klocka\"]",
+   "good": 232,
+   "bad": 5
+  },
+  "double_definiteness: det ADJ rummet": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"rummet\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"rum\"]",
+   "good": 558,
+   "bad": 34
+  },
+  "double_definiteness: det ADJ huset": {
+   "good_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"huset\"]",
+   "bad_cqp": "[word=\"det\"] [pos=\"JJ\"] [word=\"hus\"]",
+   "good": 903,
+   "bad": 26
+  },
+  "adjective_agreement: en stor": {
+   "good_cqp": "[word=\"en\"] [word=\"stor\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"stort\"] [pos=\"NN\"]",
+   "good": 31410,
+   "bad": 7
+  },
+  "adjective_agreement: ett stort": {
+   "good_cqp": "[word=\"ett\"] [word=\"stort\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"stor\"] [pos=\"NN\"]",
+   "good": 26146,
+   "bad": 5
+  },
+  "adjective_agreement: en fin": {
+   "good_cqp": "[word=\"en\"] [word=\"fin\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"fint\"] [pos=\"NN\"]",
+   "good": 503,
+   "bad": 1
+  },
+  "adjective_agreement: ett fint": {
+   "good_cqp": "[word=\"ett\"] [word=\"fint\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"fin\"] [pos=\"NN\"]",
+   "good": 200,
+   "bad": 0
+  },
+  "adjective_agreement: en gammal": {
+   "good_cqp": "[word=\"en\"] [word=\"gammal\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"gammalt\"] [pos=\"NN\"]",
+   "good": 3759,
+   "bad": 0
+  },
+  "adjective_agreement: ett gammalt": {
+   "good_cqp": "[word=\"ett\"] [word=\"gammalt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"gammal\"] [pos=\"NN\"]",
+   "good": 1254,
+   "bad": 0
+  },
+  "adjective_agreement: en vacker": {
+   "good_cqp": "[word=\"en\"] [word=\"vacker\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"vackert\"] [pos=\"NN\"]",
+   "good": 770,
+   "bad": 0
+  },
+  "adjective_agreement: ett vackert": {
+   "good_cqp": "[word=\"ett\"] [word=\"vackert\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"vacker\"] [pos=\"NN\"]",
+   "good": 257,
+   "bad": 0
+  },
+  "adjective_agreement: en dyr": {
+   "good_cqp": "[word=\"en\"] [word=\"dyr\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"dyrt\"] [pos=\"NN\"]",
+   "good": 94,
+   "bad": 0
+  },
+  "adjective_agreement: ett dyrt": {
+   "good_cqp": "[word=\"ett\"] [word=\"dyrt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"dyr\"] [pos=\"NN\"]",
+   "good": 29,
+   "bad": 0
+  },
+  "adjective_agreement: en billig": {
+   "good_cqp": "[word=\"en\"] [word=\"billig\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"billigt\"] [pos=\"NN\"]",
+   "good": 136,
+   "bad": 0
+  },
+  "adjective_agreement: ett billigt": {
+   "good_cqp": "[word=\"ett\"] [word=\"billigt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"billig\"] [pos=\"NN\"]",
+   "good": 75,
+   "bad": 0
+  },
+  "adjective_agreement: en ny": {
+   "good_cqp": "[word=\"en\"] [word=\"ny\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"nytt\"] [pos=\"NN\"]",
+   "good": 30727,
+   "bad": 2
+  },
+  "adjective_agreement: ett nytt": {
+   "good_cqp": "[word=\"ett\"] [word=\"nytt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"ny\"] [pos=\"NN\"]",
+   "good": 14471,
+   "bad": 11
+  },
+  "adjective_agreement: en grön": {
+   "good_cqp": "[word=\"en\"] [word=\"grön\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"grönt\"] [pos=\"NN\"]",
+   "good": 615,
+   "bad": 1
+  },
+  "adjective_agreement: ett grönt": {
+   "good_cqp": "[word=\"ett\"] [word=\"grönt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"grön\"] [pos=\"NN\"]",
+   "good": 201,
+   "bad": 0
+  },
+  "adjective_agreement: en tung": {
+   "good_cqp": "[word=\"en\"] [word=\"tung\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"tungt\"] [pos=\"NN\"]",
+   "good": 449,
+   "bad": 0
+  },
+  "adjective_agreement: ett tungt": {
+   "good_cqp": "[word=\"ett\"] [word=\"tungt\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"tung\"] [pos=\"NN\"]",
+   "good": 184,
+   "bad": 0
+  },
+  "adjective_agreement: en ren": {
+   "good_cqp": "[word=\"en\"] [word=\"ren\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"en\"] [word=\"rent\"] [pos=\"NN\"]",
+   "good": 775,
+   "bad": 0
+  },
+  "adjective_agreement: ett rent": {
+   "good_cqp": "[word=\"ett\"] [word=\"rent\"] [pos=\"NN\"]",
+   "bad_cqp": "[word=\"ett\"] [word=\"ren\"] [pos=\"NN\"]",
+   "good": 312,
+   "bad": 1
+  },
+  "verb_second: Igår": {
+   "good_cqp": "<sentence> [word=\"Igår\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Igår\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 1,
+   "bad": 0
+  },
+  "verb_second: Idag": {
+   "good_cqp": "<sentence> [word=\"Idag\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Idag\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 2094,
+   "bad": 3
+  },
+  "verb_second: På morgonen": {
+   "good_cqp": "<sentence> [word=\"På\"] [word=\"morgonen\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"På\"] [word=\"morgonen\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 25,
+   "bad": 0
+  },
+  "verb_second: Förra veckan": {
+   "good_cqp": "<sentence> [word=\"Förra\"] [word=\"veckan\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Förra\"] [word=\"veckan\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 1,
+   "bad": 0
+  },
+  "verb_second: I somras": {
+   "good_cqp": "<sentence> [word=\"I\"] [word=\"somras\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"I\"] [word=\"somras\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 0,
+   "bad": 0
+  },
+  "verb_second: Ibland": {
+   "good_cqp": "<sentence> [word=\"Ibland\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Ibland\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 1563,
+   "bad": 1
+  },
+  "verb_second: Sedan": {
+   "good_cqp": "<sentence> [word=\"Sedan\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Sedan\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 2283,
+   "bad": 921
+  },
+  "verb_second: Nu": {
+   "good_cqp": "<sentence> [word=\"Nu\"] [pos=\"VB\"] [pos=\"PN\"]",
+   "bad_cqp": "<sentence> [word=\"Nu\"] [pos=\"PN\"] [pos=\"VB\"]",
+   "good": 1607,
+   "bad": 11
+  },
+  "subclause_negation: om": {
+   "good_cqp": "[word=\"om\"] [pos=\"PN\"] [word=\"inte\"] [pos=\"VB\" & msd=\".*PRS.*\"]",
+   "bad_cqp": "[word=\"om\"] [pos=\"PN\"] [pos=\"VB\" & msd=\".*PRS.*\"] [word=\"inte\"]",
+   "good": 2715,
+   "bad": 25
+  },
+  "subclause_negation: när": {
+   "good_cqp": "[word=\"när\"] [pos=\"PN\"] [word=\"inte\"] [pos=\"VB\" & msd=\".*PRS.*\"]",
+   "bad_cqp": "[word=\"när\"] [pos=\"PN\"] [pos=\"VB\" & msd=\".*PRS.*\"] [word=\"inte\"]",
+   "good": 467,
+   "bad": 3
+  }
+ },
+ "topics_sv_wikipedia": {
+  "Brödbakning": false,
+  "Demokrati": true,
+  "Filosofi": true,
+  "Kärnkraft": true,
+  "Kaffe": true,
+  "Fotosyntes": true,
+  "Kryptografi": true,
+  "Evolution": true,
+  "Schack": true,
+  "Programmering": true,
+  "Längdskidåkning": true,
+  "Inflation": true,
+  "Kollektivtrafik": true,
+  "Biologisk mångfald": true,
+  "Sömn": true,
+  "Vaccination": true,
+  "Yttrandefrihet": true,
+  "Jazz": true,
+  "Global uppvärmning": true,
+  "Vänskap": true,
+  "Artificiell intelligens": true,
+  "Astronomi": true,
+  "Yoga": true,
+  "Vindkraft": true,
+  "Matematik": true,
+  "Surdeg": true,
+  "Gravitation": true,
+  "Opera": true,
+  "Kvantfysik": true,
+  "Poesi": true,
+  "Inkomstskatt": true,
+  "Bokföring": true,
+  "Fågelskådning": true,
+  "Återvinning": true,
+  "Stadsplanering": true,
+  "Träning": true,
+  "Jämställdhet": true,
+  "Distansarbete": true,
+  "Fotboll": true,
+  "Havsförsurning": true,
+  "Geologi": true,
+  "Arkitektur": true,
+  "Teater": true,
+  "Statistik": true,
+  "Solenergi": true,
+  "Källkritik": true,
+  "Trädgårdsodling": true,
+  "Näringslära": true
+ },
+ "topics_da_wikipedia": {
+  "Bogføring": false,
+  "Astronomi": true,
+  "Matematik": true,
+  "Vindkraft": true,
+  "Kvantefysik": true,
+  "Fodbold": true,
+  "Tyngdekraft": true,
+  "Yoga": true,
+  "Opera": true,
+  "Kunstig intelligens": true,
+  "Ligestilling": true,
+  "Poesi": true,
+  "Indkomstskat": true,
+  "Genbrug": true,
+  "Surdej": true,
+  "Hjemmearbejde": true,
+  "Motion": true,
+  "Byplanlægning": true,
+  "Havforsuring": true,
+  "Fuglekiggeri": true
+ },
+ "topic_usage_sv_wikipedia": {
+  "fotosyntes": 265,
+  "inflation": 558,
+  "demokrati": 3175,
+  "schack": 1179,
+  "kaffe": 1434,
+  "kärnkraft": 651,
+  "evolution": 44546,
+  "programmering": 2034,
+  "jazz": 5517,
+  "filosofi": 6034,
+  "vaccination": 207,
+  "kollektivtrafik": 1207,
+  "sömn": 580,
+  "vänskap": 2033,
+  "yttrandefrihet": 655,
+  "biologisk mångfald": 637,
+  "kryptografi": 295,
+  "brödbakning": 21,
+  "längdskidåkning": 2421,
+  "global uppvärmning": 338,
+  "gravitation": 573,
+  "fotboll": 28220,
+  "vindkraft": 316,
+  "artificiell intelligens": 792,
+  "matematik": 4830,
+  "opera": 8273,
+  "poesi": 3959,
+  "astronomi": 3070,
+  "återvinning": 345,
+  "distansarbete": 23,
+  "träning": 2654,
+  "jämställdhet": 1022,
+  "havsförsurning": 119,
+  "kvantfysik": 185,
+  "bokföring": 369,
+  "fågelskådning": 111,
+  "surdeg": 39,
+  "inkomstskatt": 317,
+  "yoga": 544,
+  "stadsplanering": 1232,
+  "geologi": 2022,
+  "arkitektur": 8229,
+  "näringslära": 121,
+  "solenergi": 269,
+  "teater": 17024,
+  "statistik": 37545,
+  "trädgårdsodling": 155,
+  "källkritik": 173
+ },
+ "topic_usage_da_wikipedia": {
+  "tyngdekraft": 163,
+  "fodbold": 11559,
+  "vindkraft": 82,
+  "kunstig intelligens": 323,
+  "matematik": 2187,
+  "opera": 3449,
+  "poesi": 1223,
+  "astronomi": 1648,
+  "genbrug": 254,
+  "hjemmearbejde": 21,
+  "motion": 2133,
+  "ligestilling": 577,
+  "havforsuring": 3,
+  "kvantefysik": 41,
+  "bogføring": 48,
+  "fuglekiggeri": 16,
+  "surdej": 25,
+  "indkomstskat": 102,
+  "yoga": 489,
+  "byplanlægning": 386
+ },
+ "languagetool_sv_prompts": {
+  "sentences": 960,
+  "matches": []
+ },
+ "languagetool_da_prompts": {
+  "sentences": 160,
+  "matches": [
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "... Beskriv fodbold med enkle ord. Beskriv fuglekiggeri med enkle ord. Beskriv genbrug med enkl...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "... Beskriv genbrug med enkle ord. Beskriv havforsuring med enkle ord. Beskriv hjemmearbejde me...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...old? Hvad er fordelene og ulemperne ved fuglekiggeri? Hvad er fordelene og ulemperne ved gen...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...rug? Hvad er fordelene og ulemperne ved havforsuring? Hvad er fordelene og ulemperne ved hje...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...? Hvad tænker du på, når du hører ordet fuglekiggeri? Hvad tænker du på, når du hører ordet ...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...? Hvad tænker du på, når du hører ordet havforsuring? Hvad tænker du på, når du hører ordet ...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...lmindelige misforståelser findes der om fuglekiggeri? Hvilke almindelige misforståelser find...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...lmindelige misforståelser findes der om havforsuring? Hvilke almindelige misforståelser find...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...neste hundrede år? Hvordan har synet på fuglekiggeri ændret sig de seneste hundrede år? Hvor...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...neste hundrede år? Hvordan har synet på havforsuring ændret sig de seneste hundrede år? Hvor...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...jeg begynde? Jeg vil gerne lære mere om fuglekiggeri. Hvor skal jeg begynde? Jeg vil gerne l...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...jeg begynde? Jeg vil gerne lære mere om havforsuring. Hvor skal jeg begynde? Jeg vil gerne l...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "...d. Nævn tre ting, der hænger sammen med fuglekiggeri. Nævn tre ting, der hænger sammen med g...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "...g. Nævn tre ting, der hænger sammen med havforsuring. Nævn tre ting, der hænger sammen med h...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "fuglekiggeri",
+    "context": "... digt om fodbold. Skriv et kort digt om fuglekiggeri. Skriv et kort digt om genbrug. Skriv e...",
+    "suggestions": [
+     "fuglekrig",
+     "fuldrigger",
+     "skrigefugl"
+    ]
+   },
+   {
+    "rule": "HUNSPELL_RULE",
+    "category": "TYPOS",
+    "flagged": "havforsuring",
+    "context": "... digt om genbrug. Skriv et kort digt om havforsuring. Skriv et kort digt om hjemmearbejde. S...",
+    "suggestions": [
+     "havforskning",
+     "havforurening",
+     "forsuring"
+    ]
+   }
+  ]
+ },
+ "languagetool_sv_good_sentences": {
+  "sentences": 237,
+  "matches": []
+ }
+}

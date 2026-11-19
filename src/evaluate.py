@@ -1,7 +1,7 @@
 """Metrics. Everything here is forward-only and deterministic (greedy decoding)."""
 import collections, re
 import torch
-from common import chat, generate, lang_of, degenerate
+from common import chat, generate, lang_of, degenerate, free_memory
 
 SV_MARK = {"är", "och", "inte", "jag", "av", "från", "också", "att", "mycket", "något", "några",
            "hur", "vad", "när", "där", "här", "till", "för"}
@@ -45,6 +45,7 @@ def sentence_logprobs(model, tok, sents, batch_size=16):
         nll = torch.nn.functional.cross_entropy(logits.transpose(1, 2), tgt, reduction="none")
         tok_lp = -nll * mask
         lps += tok_lp.sum(1).tolist(); ns += mask.sum(1).tolist()
+        free_memory()
     tok.padding_side = "left"
     return lps, ns
 

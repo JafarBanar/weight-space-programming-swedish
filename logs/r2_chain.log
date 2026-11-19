@@ -1,0 +1,6 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 308.88it/s]
+ok Qwen/Qwen2.5-0.5B-Instruct 7ae55760
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 5150.90it/s]
+ok utter-project/EuroLLM-1.7B-Instruct a25c7fa6
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 5420.55it/s]
+ok Qwen/Qwen3-1.7B 70d244cc

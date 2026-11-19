@@ -1,0 +1,15 @@
+reading: strong [(23, 981), (22, 1821)] [-9.2, -7.9]
+recipe decision: [{"neuron": [23, 981], "act_danish_answers": 35.84903491627086, "act_swedish_answers": -0.43374540716890364, "delete": true}, {"neuron": [22, 1821], "act_danish_answers": 1.042056139219891, "act_swedish_answers": -19.34138067307011, "delete": false}]
+[test_B0.json] done in 271s
+B0             T1 0.966 {'sv': 309, 'no': 8, 'da': 3} | MKQA-sv 0.500 {'sv': 150, 'en': 139, 'da': 3, 'no': 7, 'nl': 1} | da->da 0.473 | en->en 0.993/1.000 | ppl_sv 52.5 | pairs 0.730/0.750
+[test_W0a.json] done in 272s
+W0a            T1 0.984 {'sv': 315, 'no': 4, 'da': 1} | MKQA-sv 0.510 {'sv': 153, 'en': 142, 'no': 4, 'nl': 1} | da->da 0.160 | en->en 0.993/1.000 | ppl_sv 51.7 | pairs 0.734/0.760
+[test_W0.json] done in 268s
+W0             T1 0.931 {'no': 21, 'sv': 298, 'de': 1} | MKQA-sv 0.473 {'sv': 142, 'en': 150, 'no': 7, 'nl': 1} | da->da 0.153 | en->en 0.993/1.000 | ppl_sv 56.8 | pairs 0.726/0.750
+[test_P1.json] done in 276s
+P1             T1 0.997 {'sv': 319, 'no': 1} | MKQA-sv 0.963 {'sv': 289, 'en': 6, 'no': 4, 'nl': 1} | da->da 0.133 | en->en 0.907/0.725 | ppl_sv 52.5 | pairs 0.730/0.750
+[test_R_seed0.json] done in 123s
+R_seed0        T1 0.966 {'sv': 309, 'no': 8, 'da': 3} | MKQA-sv 0.497 {'sv': 149, 'en': 140, 'da': 4, 'no': 6, 'nl': 1}
+[test_R_seed1.json] done in 126s
+R_seed1        T1 0.966 {'sv': 309, 'no': 8, 'da': 3} | MKQA-sv 0.497 {'sv': 149, 'en': 140, 'da': 3, 'no': 7, 'nl': 1}
+DONE qwen2.5-1.5b

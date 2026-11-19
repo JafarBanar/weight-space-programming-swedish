@@ -41,6 +41,13 @@ def chat(tok, user, system=None, history=None):
     return tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
 
 
+def free_memory():
+    """Release cached GPU buffers. On Apple MPS the cache otherwise grows to 10+ GB over a long run
+    (it does not change any result)."""
+    if torch.backends.mps.is_available():
+        torch.mps.empty_cache()
+
+
 @torch.no_grad()
 def generate(model, tok, prompts, max_new_tokens=48, batch_size=16):
     """Greedy (deterministic) batched generation. Returns the decoded continuations."""
@@ -51,6 +58,7 @@ def generate(model, tok, prompts, max_new_tokens=48, batch_size=16):
                              temperature=None, top_p=None, top_k=None, repetition_penalty=1.0,
                              pad_token_id=tok.pad_token_id)
         outs += tok.batch_decode(gen[:, enc["input_ids"].shape[1]:], skip_special_tokens=True)
+        free_memory()
     return outs
 
 
