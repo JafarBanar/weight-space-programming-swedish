@@ -1,0 +1,4 @@
+[robustlite_F2.json] done in 627s
+F2 sampled sv/da 0.8933333333333333 0.81 | unseen system {'sv': 0.897, 'da': 0.79, 'no': 0.73, 'en': 1.0} | 160 tokens sv 0.883
+[robustlite_B0.json] done in 614s
+B0 sampled sv/da 0.56 0.49333333333333335 | unseen system {'sv': 0.81, 'da': 0.767, 'no': 0.683, 'en': 0.997} | 160 tokens sv 0.52
