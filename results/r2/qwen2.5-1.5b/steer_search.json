@@ -1,0 +1,686 @@
+{
+ "grid": [
+  {
+   "sv_rate": 0.8625,
+   "sv_langs": {
+    "sv": 69,
+    "no": 4,
+    "da": 7
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 6,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8875,
+   "sv_langs": {
+    "sv": 71,
+    "no": 3,
+    "da": 6
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 6,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 6,
+    "da": 7
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 6,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.875,
+   "sv_langs": {
+    "sv": 70,
+    "no": 4,
+    "da": 6
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 10,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8625,
+   "sv_langs": {
+    "sv": 69,
+    "no": 7,
+    "da": 4
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 10,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8625,
+   "sv_langs": {
+    "sv": 69,
+    "no": 3,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 10,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 4,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "A_instruction",
+   "layer": 14,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 10,
+    "da": 2,
+    "de": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.05,
+   "recipe": "A_instruction",
+   "layer": 14,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "no": 6,
+    "fi": 2,
+    "da": 5
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1,
+   "recipe": "A_instruction",
+   "layer": 14,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.8625,
+   "sv_langs": {
+    "sv": 69,
+    "no": 6,
+    "da": 5
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "A_instruction",
+   "layer": 18,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.9,
+   "sv_langs": {
+    "sv": 72,
+    "da": 7,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "A_instruction",
+   "layer": 18,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "fr": 5,
+    "no": 2,
+    "en": 3,
+    "da": 1,
+    "es": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "A_instruction",
+   "layer": 18,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 5,
+    "da": 7
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "A_instruction",
+   "layer": 22,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.875,
+   "sv_langs": {
+    "sv": 70,
+    "no": 4,
+    "da": 6
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "A_instruction",
+   "layer": 22,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 5,
+    "da": 7
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.05,
+   "recipe": "A_instruction",
+   "layer": 22,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 4,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "A_instruction",
+   "layer": 26,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.85,
+   "sv_langs": {
+    "sv": 68,
+    "no": 4,
+    "da": 8
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "A_instruction",
+   "layer": 26,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.875,
+   "sv_langs": {
+    "sv": 70,
+    "da": 7,
+    "no": 3
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "A_instruction",
+   "layer": 26,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "B_language",
+   "layer": 6,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "B_language",
+   "layer": 6,
+   "strength": 2
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "B_language",
+   "layer": 6,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "B_language",
+   "layer": 10,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "B_language",
+   "layer": 10,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.9875,
+   "sv_langs": {
+    "sv": 79,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.075,
+   "recipe": "B_language",
+   "layer": 10,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "B_language",
+   "layer": 14,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "B_language",
+   "layer": 14,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.9875,
+   "sv_langs": {
+    "sv": 79,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.05,
+   "recipe": "B_language",
+   "layer": 14,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "B_language",
+   "layer": 18,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1,
+   "recipe": "B_language",
+   "layer": 18,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.975,
+   "sv_langs": {
+    "sv": 78,
+    "no": 2
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.225,
+   "recipe": "B_language",
+   "layer": 18,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0,
+   "recipe": "B_language",
+   "layer": 22,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.075,
+   "recipe": "B_language",
+   "layer": 22,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.975,
+   "sv_langs": {
+    "sv": 78,
+    "no": 2
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.2,
+   "recipe": "B_language",
+   "layer": 22,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1125,
+   "recipe": "B_language",
+   "layer": 26,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.775,
+   "sv_langs": {
+    "fi": 10,
+    "sv": 62,
+    "no": 7,
+    "de": 1
+   },
+   "en_rate": 0.475,
+   "degenerate": 0.9625,
+   "recipe": "B_language",
+   "layer": 26,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8375,
+   "sv_langs": {
+    "sv": 67,
+    "fi": 13
+   },
+   "en_rate": 0.0,
+   "degenerate": 1.0,
+   "recipe": "B_language",
+   "layer": 26,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.9875,
+   "sv_langs": {
+    "sv": 79,
+    "da": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "C_drift",
+   "layer": 6,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.975,
+   "sv_langs": {
+    "sv": 78,
+    "es": 1,
+    "fi": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.05,
+   "recipe": "C_drift",
+   "layer": 6,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8125,
+   "sv_langs": {
+    "sv": 65,
+    "es": 2,
+    "fi": 4,
+    "en": 3,
+    "no": 3,
+    "fr": 2,
+    "de": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0625,
+   "recipe": "C_drift",
+   "layer": 6,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0375,
+   "recipe": "C_drift",
+   "layer": 10,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.9625,
+   "sv_langs": {
+    "sv": 77,
+    "fi": 1,
+    "en": 1,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0875,
+   "recipe": "C_drift",
+   "layer": 10,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.375,
+   "sv_langs": {
+    "sv": 30,
+    "en": 23,
+    "fi": 10,
+    "no": 6,
+    "es": 10,
+    "de": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0875,
+   "recipe": "C_drift",
+   "layer": 10,
+   "strength": 4
+  },
+  {
+   "sv_rate": 0.9875,
+   "sv_langs": {
+    "sv": 79,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "C_drift",
+   "layer": 14,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.9875,
+   "sv_langs": {
+    "sv": 79,
+    "no": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0375,
+   "recipe": "C_drift",
+   "layer": 14,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.4875,
+   "sv_langs": {
+    "en": 8,
+    "es": 21,
+    "sv": 39,
+    "none": 11,
+    "da": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1,
+   "recipe": "C_drift",
+   "layer": 14,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "C_drift",
+   "layer": 18,
+   "strength": 1
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.0125,
+   "recipe": "C_drift",
+   "layer": 18,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8,
+   "sv_langs": {
+    "sv": 64,
+    "fi": 3,
+    "en": 11,
+    "da": 1,
+    "zh": 1
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1625,
+   "recipe": "C_drift",
+   "layer": 18,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.025,
+   "recipe": "C_drift",
+   "layer": 22,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.975,
+   "sv_langs": {
+    "sv": 78,
+    "no": 2
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.075,
+   "recipe": "C_drift",
+   "layer": 22,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.8125,
+   "sv_langs": {
+    "sv": 65,
+    "en": 5,
+    "de": 1,
+    "zh": 4,
+    "no": 2,
+    "nl": 1,
+    "fr": 2
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.2625,
+   "recipe": "C_drift",
+   "layer": 22,
+   "strength": 4
+  },
+  {
+   "sv_rate": 1.0,
+   "sv_langs": {
+    "sv": 80
+   },
+   "en_rate": 1.0,
+   "degenerate": 0.1125,
+   "recipe": "C_drift",
+   "layer": 26,
+   "strength": 1
+  },
+  {
+   "sv_rate": 0.5,
+   "sv_langs": {
+    "fi": 34,
+    "sv": 40,
+    "no": 6
+   },
+   "en_rate": 0.725,
+   "degenerate": 0.9125,
+   "recipe": "C_drift",
+   "layer": 26,
+   "strength": 2
+  },
+  {
+   "sv_rate": 0.1625,
+   "sv_langs": {
+    "fi": 54,
+    "no": 13,
+    "sv": 13
+   },
+   "en_rate": 0.0,
+   "degenerate": 1.0,
+   "recipe": "C_drift",
+   "layer": 26,
+   "strength": 4
+  }
+ ],
+ "dev_prompts_run": 6760
+}

@@ -1,0 +1,60 @@
+[steer_dev_baseline.json] done in 23s
+[steer_vectors.json] done in 44s
+S2 {'recipe': 'A_instruction', 'layer': 6, 'strength': 1, 'sv_rate': 0.8625, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 6, 'strength': 2, 'sv_rate': 0.8875, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 6, 'strength': 4, 'sv_rate': 0.8375, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 10, 'strength': 1, 'sv_rate': 0.875, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 10, 'strength': 2, 'sv_rate': 0.8625, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 10, 'strength': 4, 'sv_rate': 0.8625, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 14, 'strength': 1, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'A_instruction', 'layer': 14, 'strength': 2, 'sv_rate': 0.8375, 'en_rate': 1.0, 'degenerate': 0.05}
+S2 {'recipe': 'A_instruction', 'layer': 14, 'strength': 4, 'sv_rate': 0.8375, 'en_rate': 1.0, 'degenerate': 0.1}
+S2 {'recipe': 'A_instruction', 'layer': 18, 'strength': 1, 'sv_rate': 0.8625, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'A_instruction', 'layer': 18, 'strength': 2, 'sv_rate': 0.9, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'A_instruction', 'layer': 18, 'strength': 4, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'A_instruction', 'layer': 22, 'strength': 1, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'A_instruction', 'layer': 22, 'strength': 2, 'sv_rate': 0.875, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'A_instruction', 'layer': 22, 'strength': 4, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.05}
+S2 {'recipe': 'A_instruction', 'layer': 26, 'strength': 1, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'A_instruction', 'layer': 26, 'strength': 2, 'sv_rate': 0.85, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'A_instruction', 'layer': 26, 'strength': 4, 'sv_rate': 0.875, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'B_language', 'layer': 6, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'B_language', 'layer': 6, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'B_language', 'layer': 6, 'strength': 4, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'B_language', 'layer': 10, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'B_language', 'layer': 10, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'B_language', 'layer': 10, 'strength': 4, 'sv_rate': 0.9875, 'en_rate': 1.0, 'degenerate': 0.075}
+S2 {'recipe': 'B_language', 'layer': 14, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'B_language', 'layer': 14, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'B_language', 'layer': 14, 'strength': 4, 'sv_rate': 0.9875, 'en_rate': 1.0, 'degenerate': 0.05}
+S2 {'recipe': 'B_language', 'layer': 18, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'B_language', 'layer': 18, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.1}
+S2 {'recipe': 'B_language', 'layer': 18, 'strength': 4, 'sv_rate': 0.975, 'en_rate': 1.0, 'degenerate': 0.225}
+S2 {'recipe': 'B_language', 'layer': 22, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0}
+S2 {'recipe': 'B_language', 'layer': 22, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.075}
+S2 {'recipe': 'B_language', 'layer': 22, 'strength': 4, 'sv_rate': 0.975, 'en_rate': 1.0, 'degenerate': 0.2}
+S2 {'recipe': 'B_language', 'layer': 26, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.1125}
+S2 {'recipe': 'B_language', 'layer': 26, 'strength': 2, 'sv_rate': 0.775, 'en_rate': 0.475, 'degenerate': 0.9625}
+S2 {'recipe': 'B_language', 'layer': 26, 'strength': 4, 'sv_rate': 0.8375, 'en_rate': 0.0, 'degenerate': 1.0}
+S2 {'recipe': 'C_drift', 'layer': 6, 'strength': 1, 'sv_rate': 0.9875, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'C_drift', 'layer': 6, 'strength': 2, 'sv_rate': 0.975, 'en_rate': 1.0, 'degenerate': 0.05}
+S2 {'recipe': 'C_drift', 'layer': 6, 'strength': 4, 'sv_rate': 0.8125, 'en_rate': 1.0, 'degenerate': 0.0625}
+S2 {'recipe': 'C_drift', 'layer': 10, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0375}
+S2 {'recipe': 'C_drift', 'layer': 10, 'strength': 2, 'sv_rate': 0.9625, 'en_rate': 1.0, 'degenerate': 0.0875}
+S2 {'recipe': 'C_drift', 'layer': 10, 'strength': 4, 'sv_rate': 0.375, 'en_rate': 1.0, 'degenerate': 0.0875}
+S2 {'recipe': 'C_drift', 'layer': 14, 'strength': 1, 'sv_rate': 0.9875, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'C_drift', 'layer': 14, 'strength': 2, 'sv_rate': 0.9875, 'en_rate': 1.0, 'degenerate': 0.0375}
+S2 {'recipe': 'C_drift', 'layer': 14, 'strength': 4, 'sv_rate': 0.4875, 'en_rate': 1.0, 'degenerate': 0.1}
+S2 {'recipe': 'C_drift', 'layer': 18, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'C_drift', 'layer': 18, 'strength': 2, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.0125}
+S2 {'recipe': 'C_drift', 'layer': 18, 'strength': 4, 'sv_rate': 0.8, 'en_rate': 1.0, 'degenerate': 0.1625}
+S2 {'recipe': 'C_drift', 'layer': 22, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.025}
+S2 {'recipe': 'C_drift', 'layer': 22, 'strength': 2, 'sv_rate': 0.975, 'en_rate': 1.0, 'degenerate': 0.075}
+S2 {'recipe': 'C_drift', 'layer': 22, 'strength': 4, 'sv_rate': 0.8125, 'en_rate': 1.0, 'degenerate': 0.2625}
+S2 {'recipe': 'C_drift', 'layer': 26, 'strength': 1, 'sv_rate': 1.0, 'en_rate': 1.0, 'degenerate': 0.1125}
+S2 {'recipe': 'C_drift', 'layer': 26, 'strength': 2, 'sv_rate': 0.5, 'en_rate': 0.725, 'degenerate': 0.9125}
+S2 {'recipe': 'C_drift', 'layer': 26, 'strength': 4, 'sv_rate': 0.1625, 'en_rate': 0.0, 'degenerate': 1.0}
+[steer_search.json] done in 1203s
+S2 selected: {'sv_rate': 1.0, 'sv_langs': {'sv': 80}, 'en_rate': 1.0, 'degenerate': 0.025, 'recipe': 'B_language', 'layer': 6, 'strength': 1}
+[test_S2_steering.json] done in 258s
+S2_steering    T1 0.994 {'sv': 318, 'no': 2} | MKQA-sv 0.597 {'sv': 179, 'en': 117, 'no': 2, 'nl': 1, 'da': 1} | da->da 0.387 | en->en 0.993/1.000 | ppl_sv 51.4 | pairs 0.713/0.775

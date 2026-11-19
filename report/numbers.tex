@@ -3,7 +3,10 @@
 \newcommand{\NullMinB}{22\%}
 \newcommand{\QwenThreeDel}{2}
 \newcommand{\PrefixLastRow}{Danish & after a Swedish prefix & $-3.8$ & $+28.0$ & $+3.76$ [$+2.00$, $+5.71$] & $-0.50$ [$-1.48$, $+0.34$] & $-0.09$\\}
-\newcommand{\STwoRow}{}
-\newcommand{\STwoText}{Pending.}
+\newcommand{\STwoRow}{S2 Steering, best of 54 settings & 99.4\% & 2 & 59.7\% & $+9.7$ [$+6.0$, $+13.7$] & 3 / 117 & 38.7\% & 99.3\% & 71.3 / 77.5\\}
+\newcommand{\STwoText}{Round 1 tried 9 steering settings and found nothing (83.1\%). Round 2 searched 54: three ways of building the direction, six layers, three strengths, using 6,760 dev prompts.
+Twenty-seven settings reached at least 95\% Swedish answers on the dev prompts, so \textbf{round 1 undersold steering}. The selected setting (S2) adds, after layer 6, the mean internal state of Swedish answers minus that of Danish answers.
+On fresh data it cut wrong-language answers on new templates from 11 to 2 (C6 held, with the same caveat as C1: the baseline is below the gate) and raised Swedish answers on human-translated questions by 9.7 points $[+6.0,+13.7]$, more than any neuron edit.
+It costs Danish too, less severely: Danish answers 47.3\%\up38.7\% and Danish perplexity $+36\%$. Steering is a run-time intervention, not a weight edit, and it consumed far more model feedback than the neuron recipe (6,760 against 160 dev prompts).}
 \newcommand{\ReproText}{Pending.}
-\newcommand{\CSixOutcome}{Pending}
+\newcommand{\CSixOutcome}{Held (11\up2); baseline below gate}

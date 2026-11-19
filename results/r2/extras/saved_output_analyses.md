@@ -54,6 +54,7 @@ Three templates account for 39 of the 48 unedited failures.
 | W0a | 8.9% | 49.5% | 4.5% |
 | W0 | 8.4% | 45.0% | 3.5% |
 | P1 | 9.9% | 95.0% | 9.4% |
+| P2_same_language | 7.9% | 75.2% | 6.4% |
 
 ## 5. Round-1 Danish prompts answered in Danish, with and without three imprecise topic translations
 

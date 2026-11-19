@@ -43,7 +43,7 @@
 3. **The neuron is not where the wrong choice is made.** With the answer text held fixed, zeroing neuron 981 does nothing on Swedish prompts (+0.14 nats, [−0.10, +0.48]) and shifts Danish prompts 4.5 nats towards Swedish before the first answer word. It carries a "this conversation is Danish" signal computed earlier. Weights showed what it writes, not when or with which sign it fires.
 4. **The failure depends on the prompts.** On human-translated questions the unedited model answers in English 46% of the time and in Danish or Norwegian 3%. "Svara alltid på svenska." gives 96% Swedish; "answer in the user's language" gives 79% and also raises Danish (47% → 67%) and keeps English (99%).
 5. **No edit improved Swedish competence.** Grammar-pair accuracy stayed within one point for every edit that helped; the harmful one-neuron edit lowered it (73.0% → 68.8%).
-6. **Steering.** {{S2}}
+6. **Round 1 undersold steering.** A 54-setting search (round 1 used 9) found a steering vector that cut wrong-language answers on new templates from 11 to 2 and raised Swedish answers on human-translated questions by 9.7 points [+6.0, +13.7], more than any neuron edit, with a smaller cost to Danish answers (47% → 39%).
 
 ## 5. Recommendation
 

@@ -241,6 +241,75 @@
       "double_definiteness": 0.7446808510638298
      }
     },
+    "S2_steering": {
+     "T1_sv": 0.99375,
+     "T1_ci": [
+      0.971875,
+      1.0
+     ],
+     "T1_diff": 0.028125000000000067,
+     "T1_diff_ci": [
+      -0.006250000000000089,
+      0.08125000000000004
+     ],
+     "T1_fixed": 10,
+     "T1_broken": 1,
+     "T1_dano": 2,
+     "T1_en": 0,
+     "T1_n": 320,
+     "T1_langs": {
+      "sv": 318,
+      "no": 2
+     },
+     "T1_markers": 1.0,
+     "T1_degenerate": 0.00625,
+     "MK_sv": 0.5966666666666667,
+     "MK_ci": [
+      0.54,
+      0.6533333333333333
+     ],
+     "MK_diff": 0.09666666666666668,
+     "MK_diff_ci": [
+      0.05999999999999994,
+      0.13666666666666671
+     ],
+     "MK_dano": 3,
+     "MK_en": 117,
+     "MK_n": 300,
+     "MK_langs": {
+      "sv": 179,
+      "en": 117,
+      "no": 2,
+      "nl": 1,
+      "da": 1
+     },
+     "MK_markers": 0.6366666666666667,
+     "da_da": 0.38666666666666666,
+     "da_langs": {
+      "da": 58,
+      "no": 13,
+      "sv": 31,
+      "en": 48
+     },
+     "en_en_mkqa": 0.9933333333333333,
+     "en_en_t1": 1.0,
+     "ppl": {
+      "sv": 51.4296875,
+      "en": 45.13278579711914,
+      "da": 135.41384887695312,
+      "no": 137.796630859375
+     },
+     "pairs_synthetic": 0.7130801687763713,
+     "pairs_cleaned": 0.7219730941704036,
+     "pairs_native": 0.775,
+     "pairs_synthetic_by": {
+      "article_gender": 0.5555555555555556,
+      "adjective_agreement": 0.64,
+      "verb_second": 0.72,
+      "subclause_negation": 0.8888888888888888,
+      "double_definiteness": 0.7659574468085106
+     }
+    },
     "W0": {
      "T1_sv": 0.93125,
      "T1_ci": [
@@ -397,6 +466,31 @@
       11
      ]
     }
+   },
+   "steering": {
+    "baseline": {
+     "sv_rate": 0.8625,
+     "sv_langs": {
+      "sv": 69,
+      "no": 4,
+      "da": 7
+     },
+     "en_rate": 1.0,
+     "degenerate": 0.0
+    },
+    "selected": {
+     "sv_rate": 1.0,
+     "sv_langs": {
+      "sv": 80
+     },
+     "en_rate": 1.0,
+     "degenerate": 0.025,
+     "recipe": "B_language",
+     "layer": 6,
+     "strength": 1
+    },
+    "configs": 54,
+    "dev_prompts_run": 6760
    }
   },
   "qwen2.5-0.5b": {
@@ -1401,6 +1495,24 @@
       "subclause_negation": 0.9111111111111111,
       "double_definiteness": 0.5106382978723404
      }
+    },
+    "R": {
+     "T1_sv": 0.965625,
+     "T1_diff": 0.0,
+     "MK_sv": 0.8666666666666667,
+     "MK_diff": 0.0,
+     "T1_dano": 9.0,
+     "MK_dano": 7.0,
+     "T1_en": 1.0,
+     "MK_en": 30.0,
+     "seeds_T1_sv": [
+      0.965625,
+      0.965625
+     ],
+     "seeds_T1_dano": [
+      9,
+      9
+     ]
     }
    }
   }
