@@ -1,10 +1,10 @@
 # Second language identifier: agreement with the primary detector
 
-Answers re-labelled: **27,230**. Same label from both identifiers: **94.8%**.
+Answers re-labelled: **55,150**. Same label from both identifiers: **92.3%**.
 
-Most common disagreements (primary → second): da->no (281), sv->no (236), no->sv (187), no->da (152), sv->da (103), da->sv (91), sv->en (57), en->sv (35), da->en (28), es->sq (18), no->en (17), nl->en (14).
+Most common disagreements (primary → second): da->no (1049), no->da (775), sv->no (500), no->sv (440), sv->da (202), da->sv (195), en->sv (120), da->en (119), no->en (117), sv->en (95), en->no (89), en->da (43).
 
-Right-language rate of 77 round-2 and round-3 test sets under each identifier: mean absolute difference 1.4 points, largest 10.0 points.
+Right-language rate of 169 round-2 and round-3 test sets under each identifier: mean absolute difference 1.8 points, largest 10.0 points.
 
 | File | Set | Target | n | Primary | Second |
 |---|---|---|---|---|---|
@@ -85,3 +85,95 @@ Right-language rate of 77 round-2 and round-3 test sets under each identifier: m
 | r2/qwen3-1.7b/test_R_seed0.json | MK_sv | sv | 300 | 86.7% | 86.3% |
 | r2/qwen3-1.7b/test_R_seed1.json | T1_sv | sv | 320 | 96.6% | 95.9% |
 | r2/qwen3-1.7b/test_R_seed1.json | MK_sv | sv | 300 | 86.7% | 86.7% |
+| r3/qwen2.5-0.5b/test_B0.json | MK_sv | sv | 300 | 67.3% | 69.0% |
+| r3/qwen2.5-0.5b/test_B0.json | MK_da | da | 300 | 52.7% | 49.3% |
+| r3/qwen2.5-0.5b/test_B0.json | MK_no | no | 300 | 46.7% | 44.3% |
+| r3/qwen2.5-0.5b/test_B0.json | MK_en | en | 300 | 100.0% | 100.0% |
+| r3/qwen2.5-0.5b/test_B0.json | T1_sv | sv | 320 | 84.1% | 82.2% |
+| r3/qwen2.5-0.5b/test_E1.json | MK_sv | sv | 300 | 85.0% | 80.7% |
+| r3/qwen2.5-0.5b/test_E1.json | MK_da | da | 300 | 78.7% | 73.7% |
+| r3/qwen2.5-0.5b/test_E1.json | MK_no | no | 300 | 67.7% | 63.3% |
+| r3/qwen2.5-0.5b/test_E1.json | MK_en | en | 300 | 100.0% | 100.0% |
+| r3/qwen2.5-0.5b/test_E1.json | T1_sv | sv | 320 | 85.3% | 77.2% |
+| r3/qwen2.5-0.5b/test_F2.json | MK_sv | sv | 300 | 87.0% | 86.3% |
+| r3/qwen2.5-0.5b/test_F2.json | MK_da | da | 300 | 69.7% | 71.3% |
+| r3/qwen2.5-0.5b/test_F2.json | MK_no | no | 300 | 64.7% | 63.7% |
+| r3/qwen2.5-0.5b/test_F2.json | MK_en | en | 300 | 100.0% | 99.7% |
+| r3/qwen2.5-0.5b/test_F2.json | T1_sv | sv | 320 | 88.4% | 87.8% |
+| r3/qwen2.5-0.5b/test_F3.json | MK_sv | sv | 300 | 75.0% | 74.0% |
+| r3/qwen2.5-0.5b/test_F3.json | MK_da | da | 300 | 68.7% | 67.0% |
+| r3/qwen2.5-0.5b/test_F3.json | MK_no | no | 300 | 64.0% | 60.0% |
+| r3/qwen2.5-0.5b/test_F3.json | MK_en | en | 300 | 100.0% | 100.0% |
+| r3/qwen2.5-0.5b/test_F3.json | T1_sv | sv | 320 | 87.5% | 84.4% |
+| r3/qwen2.5-0.5b/test_P3.json | MK_sv | sv | 300 | 89.0% | 91.3% |
+| r3/qwen2.5-0.5b/test_P3.json | MK_da | da | 300 | 47.0% | 38.3% |
+| r3/qwen2.5-0.5b/test_P3.json | MK_no | no | 300 | 43.7% | 39.3% |
+| r3/qwen2.5-0.5b/test_P3.json | MK_en | en | 300 | 97.3% | 97.3% |
+| r3/qwen2.5-0.5b/test_P3.json | T1_sv | sv | 320 | 99.4% | 99.7% |
+| r3/qwen2.5-0.5b/test_R3.json | MK_sv | sv | 300 | 67.0% | 66.3% |
+| r3/qwen2.5-0.5b/test_R3.json | MK_da | da | 300 | 52.7% | 50.3% |
+| r3/qwen2.5-0.5b/test_R3.json | MK_no | no | 300 | 48.0% | 43.7% |
+| r3/qwen2.5-0.5b/test_R3.json | MK_en | en | 300 | 100.0% | 100.0% |
+| r3/qwen2.5-0.5b/test_R3.json | T1_sv | sv | 320 | 86.9% | 84.4% |
+| r3/qwen2.5-1.5b/test_B0.json | MK_sv | sv | 300 | 52.7% | 53.3% |
+| r3/qwen2.5-1.5b/test_B0.json | MK_da | da | 300 | 49.7% | 46.3% |
+| r3/qwen2.5-1.5b/test_B0.json | MK_no | no | 300 | 53.0% | 53.3% |
+| r3/qwen2.5-1.5b/test_B0.json | MK_en | en | 300 | 99.7% | 100.0% |
+| r3/qwen2.5-1.5b/test_B0.json | T1_sv | sv | 320 | 96.6% | 95.9% |
+| r3/qwen2.5-1.5b/test_E1.json | MK_sv | sv | 300 | 93.7% | 94.0% |
+| r3/qwen2.5-1.5b/test_E1.json | MK_da | da | 300 | 77.3% | 69.3% |
+| r3/qwen2.5-1.5b/test_E1.json | MK_no | no | 300 | 79.0% | 77.3% |
+| r3/qwen2.5-1.5b/test_E1.json | MK_en | en | 300 | 99.0% | 99.3% |
+| r3/qwen2.5-1.5b/test_E1.json | T1_sv | sv | 320 | 94.7% | 95.0% |
+| r3/qwen2.5-1.5b/test_F2.json | MK_sv | sv | 300 | 90.0% | 89.7% |
+| r3/qwen2.5-1.5b/test_F2.json | MK_da | da | 300 | 80.3% | 72.3% |
+| r3/qwen2.5-1.5b/test_F2.json | MK_no | no | 300 | 75.0% | 68.0% |
+| r3/qwen2.5-1.5b/test_F2.json | MK_en | en | 300 | 100.0% | 99.3% |
+| r3/qwen2.5-1.5b/test_F2.json | T1_sv | sv | 320 | 97.8% | 97.2% |
+| r3/qwen2.5-1.5b/test_F3.json | MK_sv | sv | 300 | 87.3% | 87.7% |
+| r3/qwen2.5-1.5b/test_F3.json | MK_da | da | 300 | 79.7% | 71.7% |
+| r3/qwen2.5-1.5b/test_F3.json | MK_no | no | 300 | 68.0% | 70.7% |
+| r3/qwen2.5-1.5b/test_F3.json | MK_en | en | 300 | 99.7% | 99.7% |
+| r3/qwen2.5-1.5b/test_F3.json | T1_sv | sv | 320 | 97.8% | 96.6% |
+| r3/qwen2.5-1.5b/test_P1.json | MK_sv | sv | 300 | 95.3% | 96.0% |
+| r3/qwen2.5-1.5b/test_P1.json | MK_da | da | 300 | 14.0% | 6.7% |
+| r3/qwen2.5-1.5b/test_P1.json | MK_no | no | 300 | 12.7% | 8.0% |
+| r3/qwen2.5-1.5b/test_P1.json | MK_en | en | 300 | 87.7% | 87.3% |
+| r3/qwen2.5-1.5b/test_P1.json | T1_sv | sv | 320 | 99.7% | 98.1% |
+| r3/qwen2.5-1.5b/test_P2.json | MK_sv | sv | 300 | 80.7% | 82.0% |
+| r3/qwen2.5-1.5b/test_P2.json | MK_da | da | 300 | 70.7% | 63.7% |
+| r3/qwen2.5-1.5b/test_P2.json | MK_no | no | 300 | 67.3% | 62.3% |
+| r3/qwen2.5-1.5b/test_P2.json | MK_en | en | 300 | 100.0% | 99.7% |
+| r3/qwen2.5-1.5b/test_P2.json | T1_sv | sv | 320 | 98.4% | 97.5% |
+| r3/qwen2.5-1.5b/test_P3.json | MK_sv | sv | 300 | 91.0% | 90.7% |
+| r3/qwen2.5-1.5b/test_P3.json | MK_da | da | 300 | 80.0% | 72.3% |
+| r3/qwen2.5-1.5b/test_P3.json | MK_no | no | 300 | 70.0% | 68.0% |
+| r3/qwen2.5-1.5b/test_P3.json | MK_en | en | 300 | 99.3% | 99.7% |
+| r3/qwen2.5-1.5b/test_P3.json | T1_sv | sv | 320 | 97.8% | 96.6% |
+| r3/qwen2.5-1.5b/test_R3.json | MK_sv | sv | 300 | 64.3% | 65.0% |
+| r3/qwen2.5-1.5b/test_R3.json | MK_da | da | 300 | 54.3% | 50.7% |
+| r3/qwen2.5-1.5b/test_R3.json | MK_no | no | 300 | 58.0% | 57.0% |
+| r3/qwen2.5-1.5b/test_R3.json | MK_en | en | 300 | 99.3% | 99.7% |
+| r3/qwen2.5-1.5b/test_R3.json | T1_sv | sv | 320 | 96.2% | 96.2% |
+| r3/qwen2.5-1.5b/test_R3_seed301.json | MK_sv | sv | 300 | 56.3% | 56.0% |
+| r3/qwen2.5-1.5b/test_R3_seed301.json | MK_da | da | 300 | 48.0% | 45.7% |
+| r3/qwen2.5-1.5b/test_R3_seed301.json | MK_no | no | 300 | 52.0% | 52.3% |
+| r3/qwen2.5-1.5b/test_R3_seed301.json | MK_en | en | 300 | 99.7% | 100.0% |
+| r3/qwen2.5-1.5b/test_R3_seed302.json | MK_sv | sv | 300 | 52.7% | 53.0% |
+| r3/qwen2.5-1.5b/test_R3_seed302.json | MK_da | da | 300 | 49.0% | 42.7% |
+| r3/qwen2.5-1.5b/test_R3_seed302.json | MK_no | no | 300 | 52.3% | 51.7% |
+| r3/qwen2.5-1.5b/test_R3_seed302.json | MK_en | en | 300 | 99.7% | 100.0% |
+| r3/qwen2.5-1.5b/test_R3_seed303.json | MK_sv | sv | 300 | 44.7% | 44.7% |
+| r3/qwen2.5-1.5b/test_R3_seed303.json | MK_da | da | 300 | 40.7% | 40.0% |
+| r3/qwen2.5-1.5b/test_R3_seed303.json | MK_no | no | 300 | 49.7% | 49.0% |
+| r3/qwen2.5-1.5b/test_R3_seed303.json | MK_en | en | 300 | 99.7% | 99.7% |
+| r3/qwen2.5-1.5b/test_S2.json | MK_sv | sv | 300 | 63.3% | 64.7% |
+| r3/qwen2.5-1.5b/test_S2.json | MK_da | da | 300 | 39.0% | 35.0% |
+| r3/qwen2.5-1.5b/test_S2.json | MK_no | no | 300 | 26.7% | 27.0% |
+| r3/qwen2.5-1.5b/test_S2.json | MK_en | en | 300 | 99.7% | 100.0% |
+| r3/qwen2.5-1.5b/test_S2.json | T1_sv | sv | 320 | 99.4% | 99.1% |
+| r3/qwen2.5-1.5b/test_W0a.json | MK_sv | sv | 300 | 53.7% | 54.3% |
+| r3/qwen2.5-1.5b/test_W0a.json | MK_da | da | 300 | 19.3% | 10.3% |
+| r3/qwen2.5-1.5b/test_W0a.json | MK_no | no | 300 | 48.7% | 50.3% |
+| r3/qwen2.5-1.5b/test_W0a.json | MK_en | en | 300 | 99.7% | 100.0% |
+| r3/qwen2.5-1.5b/test_W0a.json | T1_sv | sv | 320 | 98.4% | 99.1% |

@@ -479,6 +479,34 @@ def main():
         return test(model, tok, key, out, D)
     if stage == "robust":
         return robust(model, tok, key, out, D, sys.argv[3:])
+    if stage == "robustlite":                                   # reduced robustness check (time limit): one sampling seed,
+        frozen = json.load(open(f"{out}/frozen.json")); conds = conditions(model, tok, key, out, frozen)   # 160 tokens for Swedish only
+        for name in sys.argv[3:]:
+            ctx, system, _ = conds[name]
+            def run(ctx=ctx, system=system):
+                res = {}
+                with ctx():
+                    for l in ("sv", "da"):
+                        outs = generate_sampled(model, tok, [chat(tok, r[l], system=system) for r in D["test"]], 11)
+                        res[f"sampled_{l}"] = [{"seed": 11, "rate": sum(lang_of(o) == l for o in outs) / len(outs), "outputs": outs}]
+                    res["unseen_system"] = {l: response_language(model, tok, [r[l] for r in D["test"]], l, system=UNSEEN_SYS) for l in LANGS4}
+                    res["long_sv"] = response_language(model, tok, [r["sv"] for r in D["test"]], "sv", system=system, max_new_tokens=160)
+                return res
+            r = cached(f"{out}/robustlite_{name}.json", run)
+            print(name, "sampled sv/da", r["sampled_sv"][0]["rate"], r["sampled_da"][0]["rate"], "| unseen system",
+                  {l: round(v["rate"], 3) for l, v in r["unseen_system"].items()}, "| 160 tokens sv", round(r["long_sv"]["rate"], 3), flush=True)
+        return
+    if stage == "randoms":                                      # exploratory, added after the test: more random edits of E1's size
+        frozen = json.load(open(f"{out}/frozen.json")); l = frozen["E1"]["layer"]
+        P, V = torch.load(f"{out}/e1_edit.pt")[l]; d = e1_delta(model, l, P, V, frozen["E1"]["strength"])[f"model.layers.{l}.mlp.down_proj"]
+        for seed in (301, 302, 303, 304):
+            def run(seed=seed):
+                gen = torch.Generator().manual_seed(seed)
+                rnd = torch.randn(d.shape[0], 3, generator=gen) @ torch.randn(3, d.shape[1], generator=gen)
+                with weight_deltas(model, {f"model.layers.{l}.mlp.down_proj": rnd * (d.norm() / rnd.norm())}):
+                    return evaluate3(model, tok, D, light=True)
+            show(f"R3_seed{seed}", cached(f"{out}/test_R3_seed{seed}.json", run))
+        return
     raise SystemExit(f"unknown stage {stage}")
 
 

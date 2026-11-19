@@ -1,0 +1,15 @@
+  warnings.warn(
+F3_lr0.0002 epoch 0 step 20 ce 0.965 kl 0.0000
+F3_lr0.0002 epoch 0 step 40 ce 0.944 kl 0.0003
+F3_lr0.0002 epoch 0 step 60 ce 0.861 kl 0.0020
+F3_lr0.0002 epoch 0 step 80 ce 0.815 kl 0.0037
+F3_lr0.0002 epoch 0 step 100 ce 0.762 kl 0.0030
+F3_lr0.0002 epoch 0 step 120 ce 0.763 kl 0.0028
+F3_lr0.0002 epoch 1 step 140 ce 0.768 kl 0.0023
+F3_lr0.0002 epoch 1 step 160 ce 0.756 kl 0.0018
+F3_lr0.0002 epoch 1 step 180 ce 0.731 kl 0.0019
+F3_lr0.0002 epoch 1 step 200 ce 0.719 kl 0.0015
+F3_lr0.0002 epoch 1 step 220 ce 0.768 kl 0.0015
+F3_lr0.0002 epoch 1 step 240 ce 0.738 kl 0.0015
+F3_lr0.0002 epoch 1 step 260 ce 0.791 kl 0.0013
+TRAINED F3_lr0.0002

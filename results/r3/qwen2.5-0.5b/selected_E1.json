@@ -1,0 +1,6 @@
+{
+ "layer": 12,
+ "strength": 1,
+ "copied_from": "qwen2.5-1.5b",
+ "passed_dev_filter": null
+}

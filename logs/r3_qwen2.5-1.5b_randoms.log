@@ -1,0 +1,7 @@
+[test_R3_seed301.json] done in 384s
+R3_seed301   sv->sv 0.563 | da->da 0.480 | no->no 0.520 | en->en 0.997
+[test_R3_seed302.json] done in 366s
+R3_seed302   sv->sv 0.527 | da->da 0.490 | no->no 0.523 | en->en 0.997
+[test_R3_seed303.json] done in 353s
+R3_seed303   sv->sv 0.447 | da->da 0.407 | no->no 0.497 | en->en 0.997
+  warnings.warn('resource_tracker: There appear to be %d '

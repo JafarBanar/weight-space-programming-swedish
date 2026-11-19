@@ -1,0 +1,13 @@
+[test_B0.json] done in 178s
+B0           sv->sv 0.673 | da->da 0.527 | no->no 0.467 | en->en 1.000 | T1 0.841 | ppl 136.1/234.2/252.9/65.0 | pairs 0.536/0.700
+[test_P3.json] done in 185s
+P3           sv->sv 0.890 | da->da 0.470 | no->no 0.437 | en->en 0.973 | T1 0.994 | ppl 136.1/234.2/252.9/65.0 | pairs 0.536/0.700
+[test_E1.json] done in 171s
+E1           sv->sv 0.850 | da->da 0.787 | no->no 0.677 | en->en 1.000 | T1 0.853 | ppl 145.9/243.7/276.3/66.1 | pairs 0.532/0.705
+[test_R3.json] done in 172s
+R3           sv->sv 0.670 | da->da 0.527 | no->no 0.480 | en->en 1.000 | T1 0.869 | ppl 137.2/237.4/255.5/65.3 | pairs 0.527/0.705
+[test_F3.json] done in 163s
+F3           sv->sv 0.750 | da->da 0.687 | no->no 0.640 | en->en 1.000 | T1 0.875 | ppl 137.4/236.4/254.7/65.4 | pairs 0.540/0.700
+[test_F2.json] done in 165s
+F2           sv->sv 0.870 | da->da 0.697 | no->no 0.647 | en->en 1.000 | T1 0.884 | ppl 136.2/230.7/249.5/65.1 | pairs 0.511/0.705
+TEST DONE qwen2.5-0.5b

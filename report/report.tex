@@ -2,6 +2,7 @@
 \usepackage[margin=2.1cm]{geometry}
 \usepackage{fontspec}
 \usepackage{float}
+\usepackage{amssymb}
 \usepackage{graphicx,booktabs,array,xcolor,enumitem,titlesec,caption,tabularx,microtype}
 \usepackage[colorlinks=true,urlcolor=blue!55!black,linkcolor=black]{hyperref}
 \setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
@@ -13,11 +14,13 @@
 \newcommand{\code}[1]{{\small\texttt{#1}}}
 \newcommand{\up}{$\rightarrow$}
 \input{numbers.tex}
+\input{r3_table.tex}
+\input{r3_table_second.tex}
 \begin{document}
 
 {\LARGE\bfseries\raggedright Weight-only screening finds neurons that control Danish output. Deleting them does not make a model answer in Swedish.\par}
 \vspace{4pt}
-{\large A two-round, pre-registered test of weight-space programming for Swedish language models\par}
+{\large A pre-registered test of weight-space programming for Swedish language models, in three rounds\par}
 \vspace{4pt}
 Jafar Banar \quad$\cdot$\quad 19 November 2026 \quad$\cdot$\quad Report for SE.LLMA
 
@@ -29,7 +32,8 @@ On \code{Qwen2.5-1.5B-Instruct} the screen nominated two neurons, and deleting e
 The pre-registered edit (delete both) missed its criteria. A one-neuron edit found afterwards looked strong, but in a second pre-registered round on fresh data
 it barely changed how often the model answers in Swedish, and it damaged Danish output in every model tested.
 The failure it targets depends on the prompts: on human-translated questions the model answers in English, not Danish, about half the time, and a one-line prompt fixes most of that.
-I recommend that SE.LLMA not use weight edits to improve Swedish, and that it measure correct answers in the requested language on its own checkpoints.
+A third round asked a separate question, whether any fix works. Two do on fresh questions in four languages: a tuned request-aware prompt, and a small LoRA that distils that behaviour into the weights. A rank-3 weight edit built in closed form from activation statistics gets the language right most often but degrades the content of the answers.
+I recommend that SE.LLMA not deploy the neuron ablation, measure correct answers in the requested language on its own checkpoints, and use request-aware prompting or distillation where answer language is a problem.
 
 \begin{table}[H]\small\centering
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.1cm}X@{}}
@@ -39,6 +43,7 @@ Stage & What the result establishes\\
 \textbf{Round 1, pre-registered} & The two-neuron edit missed its criteria: Swedish answers 85.0\%\up91.2\%, $+6.2$ points, 95\% interval $[-4.7,+18.8]$; Swedish perplexity $+8\%$.\\
 \textbf{Round 1, exploratory} & The two single-neuron deletions had large, opposite effects (96.9\% and 20.0\% Swedish answers). These are discovery estimates from data already inspected; their intervals do not account for the selection.\\
 \textbf{Round 2, pre-registered} & On new templates the unedited model was below the pre-set 5\% failure gate (3.4\%), so repair could not be tested there. On human-translated questions the one-neuron edit changed Swedish answers 50.0\%\up51.0\%. The Danish-output regression recurred (47.3\%\up16.0\%), and recurred in three further models.\\
+\textbf{Round 3, pre-registered, a different question} & Is there any fix that makes the model answer in the language of the question without damage? On 300 fresh questions in each of four languages, LoRA distillation (Swedish answers 52.7\%\up90.0\%, Danish 49.7\%\up80.3\%) and a tuned prompt pass all five pre-set checks. A closed-form rank-3 weight edit reaches 93.7\% Swedish but loses answer content. Random edits of the same size move Swedish answers by $-8$ to $+12$ points.\\
 \bottomrule
 \end{tabularx}
 \caption{Chronology. Rounds are separated because the evidence they give is of different kinds.}\label{tab:chrono}
@@ -323,6 +328,72 @@ A detector-free count of function words gives the same ranking of conditions, bu
 \subsection{Reproduction}
 \ReproText
 
+\ReproTwoText
+
+\section{Round 3: is there a fix that works?}\label{sec:r3}
+
+Rounds 1 and 2 answer the assignment's question about weight-only edits. Round 3 asks a different one, pre-registered separately (\code{PREREGISTRATION\_ROUND3.md}): since the real failure is answering in English, can \emph{any} method make the model answer in the language of the question, for Swedish, Danish, Norwegian and English, with no damage? And how much model feedback does each method need?
+
+\textbf{Data.} 700 MKQA questions not used in round 2: 300 to build methods, 100 for development choices, 300 for a single test, each in four professionally translated versions. Every choice was frozen and committed before the test questions were run.
+
+\textbf{Methods}, ordered by how much they learn from running the model:
+\begin{itemize}
+\item \textbf{W0a}, the weight-screened neuron edit of rounds 1 and 2, and \textbf{S2}, the round-2 steering vector, both unchanged.
+\item \textbf{E1, a closed-form conditional edit.} In the output matrix of one MLP (layer 14) I add a rank-3 update $\sum_k v_k p_k^{\top}$. Each $p_k$ is a ridge-regression probe that reads ``the user writes in language $k$'' from that MLP's hidden activations, and each $v_k$ is the average difference in the residual stream between answers in language $k$ and answers in English. It writes the rule ``if the question is Swedish, push towards a Swedish answer'' into the weights. It uses activation statistics from 1,998 forward passes and nine development runs to choose layer and strength, and no gradient descent. The form is that of rank-one model editing (ROME), applied to a behaviour instead of a fact.
+\item \textbf{R3}, a control: a random rank-3 update of the same matrix with the same norm.
+\item \textbf{F3, a learned edit of the same shape}: rank-3 LoRA on the same matrix (31,488 trainable numbers), trained by gradient descent.
+\item \textbf{F2, LoRA distillation}: rank 8 on the attention projections of all layers (1.09 million numbers), trained for 278 steps.
+\item \textbf{P1--P3}, system prompts: Swedish-only, the round-2 request-aware prompt, and the best of six request-aware prompts on development data.
+\end{itemize}
+F2 and F3 are trained on the model's own answers given under an instruction that names the language, to reproduce them without the instruction (``prompt baking''). A second loss term keeps their predictions on natural text in the four languages close to the unedited model's.
+
+\textbf{Pre-registered definition of ``works''.} G1: at least 90\% Swedish answers to Swedish questions, with an interval for the gain that excludes zero. G2: Danish, Norwegian and English each lose at most 2.5 points. G3: perplexity rises at most 5\% in each language and grammar-pair accuracy moves under 3 points. G4: answers containing the gold answer fall by at most 2 points. G5: Swedish answers on the round-2 template prompts fall by at most 1 point.
+
+\begin{table}[H]\footnotesize\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrlrrrrrrrcl@{}}
+\toprule
+ & \multicolumn{5}{c}{Answers in the language of the question (\%)} & Largest & Native & Gold & Templates & & \\
+Condition & Swedish & Gain vs B0 [95\% CI] & Danish & Norw. & English & PPL rise (\%) & pairs (\%) & found (\%) & Swedish (\%) & G1--G5 & Works\\
+\midrule
+\RThreeRows
+\bottomrule
+\end{tabular}}
+\caption{Round 3 on 300 fresh test questions per language, \code{Qwen2.5-1.5B-Instruct}, greedy decoding, default system prompt except for P1--P3. ``Gold found'' is the share of the 213 Swedish questions with a short gold answer whose answer contains it. All rows are generated from the saved outputs.}\label{tab:r3}
+\end{table}
+
+\begin{center}
+\includegraphics[width=0.80\textwidth]{../figures/fig5_round3.png}
+\end{center}
+
+\begin{enumerate}
+\item \textbf{Two methods pass all five checks.} LoRA distillation (F2) raises Swedish answers from 52.7\% to 90.0\%, Danish from 49.7\% to 80.3\% and Norwegian from 53.0\% to 75.0\%, keeps English at 100\%, and moves no perplexity by more than 0.4\%. The tuned prompt (P3) does about as well (91.0 / 80.0 / 70.0 / 99.3) with no change to the model. F2 meets the 90\% level exactly (270 of 300), with no margin, and is at 89.7\% under a second language identifier (below).
+\item \textbf{The closed-form edit gets the language and loses content.} E1 has the highest Swedish rate of any language-aware method (93.7\%, $+41.0$ points) and the best Norwegian rate, from a rank-3 change to one matrix built without gradients. It fails G4 and G5: answers containing the gold answer fall from 21 to 13 of 213 ($-3.8$ points $[-7.5, 0.0]$), Swedish on template prompts falls 1.9 points, and its Swedish reads worse (invented words such as ``populjoner'', Norwegian function words). It changes which language is written and degrades what is written.
+\item \textbf{Random edits of the same size are not neutral, in either direction.} The pre-registered control R3 raised Swedish answers by 11.7 points $[+7.7, +16.0]$ and lowered gold answers from 21 to 13. Because that was surprising, I ran three more random edits after the test (exploratory): they changed Swedish answers by $+3.7$, $0.0$ and $-8.0$ points and left 17, 21 and 20 gold answers. E1's 41 points are far outside this range, so its language effect is real. But one random control would have misled me, in one direction or the other, and the article's experiments have none.
+\item \textbf{Gradient feedback buys safety more than strength.} At identical shape, the learned edit F3 reaches a lower Swedish rate than the closed-form E1 (87.3\% against 93.7\%, missing G1) but leaves perplexity, gold answers and template prompts untouched. With more parameters, F2 also reaches 90\%.
+\item \textbf{The earlier results replicate on fresh questions.} The neuron edit W0a again leaves Swedish unchanged (52.7\%\up53.7\%) and cuts Danish answers (49.7\%\up19.3\%); steering again helps Swedish (63.3\%) at the cost of Danish and Norwegian. The Swedish-only prompt gives 95.3\% Swedish and, as designed, 14\% Danish.
+\item \textbf{None of this is new Swedish competence.} Native grammar pairs stay at 74.5--75.5\% and Swedish perplexity within 0.4\% for the passing methods. Counting only answers that are both in Swedish and contain the gold answer, the unedited model manages 11 of 213, P3 16 and F2 21. The fixes change which language the model chooses; the Swedish it then writes is as limited as before.
+\end{enumerate}
+
+\subsection{Robustness, a second model and a second language identifier}
+\RThreeRobust
+
+\RThreeSecond
+
+\begin{table}[H]\footnotesize\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrlrrrrrrrcl@{}}
+\toprule
+Condition & Swedish & Gain vs B0 [95\% CI] & Danish & Norw. & English & PPL rise (\%) & Native pairs (\%) & Gold found (\%) & Templates (\%) & G1--G5 & Works\\
+\midrule
+\RThreeRowsSecond
+\bottomrule
+\end{tabular}}
+\caption{The same frozen methods on \code{Qwen2.5-0.5B-Instruct}, with no retuning. Columns as in Table~\ref{tab:r3}.}
+\end{table}
+
+\RThreeDetector
+
 \section{Scorecard}
 
 \begin{table}[H]\footnotesize\centering
@@ -343,13 +414,20 @@ S-read & Strong outlier in each new model & 2 of 3\\
 S-drift & New models drift at least 5\% on new templates & 1 of 3\\
 S-fix & Recipe halves Danish/Norwegian answers where they occur & 1 of 1 eligible\\
 C6 & A larger steering search halves wrong-language answers on new templates & \CSixOutcome\\
+\midrule
+R3-P3 & The tuned prompt passes G1--G5 (prior 25\%) & Passed\\
+R3-E1 & The closed-form rank-3 edit passes G1--G5 (prior 20\%) & Not met (G4 content, G5 templates)\\
+R3-F3 & The learned rank-3 edit passes G1--G5 (prior 35\%) & Not met (G1: 87.3\% Swedish)\\
+R3-F2 & LoRA distillation passes G1--G5 (prior 55\%) & Passed (G1 at exactly 90.0\%; 89.7\% under the second identifier)\\
+R3-any & At least one weight-changing method passes (prior 60\%) & Held (F2)\\
+R3-2nd & The weight methods pass on a second model without retuning (prior 45\%) & \RThreeSecondOutcome\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \section{Related work and ways forward}
 
-A short survey (papers opened and checked; the fuller survey was cut short) places these results:
+A survey from paper abstracts (the papers themselves were not read in full) places these results:
 \begin{itemize}
 \item \textbf{Wrong-language answers are common and prompt-dependent.} Marchisio et al.\ (arXiv 2406.20052) benchmark this ``language confusion'' and report that it is ``partially mitigated via few-shot prompting, multilingual SFT and preference tuning''.
 Their benchmark has no Scandinavian language and measures drift to English. NorEval (arXiv 2504.07749) reports language switching in 23 of 100 hand-checked Norwegian outputs.
@@ -357,6 +435,11 @@ Their benchmark has no Scandinavian language and measures drift to English. NorE
 Published sets number hundreds to thousands of neurons, and single-neuron effects shrink with model size (Gurnee et al., 2305.01610). I found no prior work that identifies language neurons from weights alone.
 \item \textbf{Fixes that avoid removing a language.} Nie et al.\ (2505.16538) locate ``confusion points'' in the final layers and edit neurons chosen by comparison with a multilingually tuned counterpart. Sterz et al.\ (ReCoVeR, 2509.14814) build steering vectors from a multi-parallel corpus and report retained task performance.
 Ji et al.\ (Smoothie-Qwen, 2507.05686) adjust token-level output probabilities without retraining.
+\item \textbf{Fine-tuning and decoding fixes for language confusion.} Lee et al.\ (2505.19116) add a penalty for unwanted output to supervised fine-tuning (ORPO); Choo et al.\ (TLPO, 2604.26553) argue that sequence-level tuning can degrade general ability and update at token level instead; Zhang et al.\ (Language Confusion Gate, 2510.17555) and Ukarapol et al.\ (2606.08994) filter or boost tokens at decoding time without changing the model. Round 3's distillation belongs to the first group and is simpler than any of them.
+\item \textbf{Putting a prompt into the weights.} Bhargava et al.\ (Prompt Baking, 2409.13697) minimise the divergence between a prompted model and a re-weighted unprompted one and report that prompts ``can be readily baked into weight updates''; Ye et al.\ (2602.12275) distil system prompts on the student's own trajectories. F2 and F3 are this idea applied to an instruction about answer language.
+\item \textbf{Conditional steering and rank-one editing.} Lee et al.\ (CAST, 2409.05907) apply a steering vector only when a condition on the hidden state holds (``if input is about \ldots\ then refuse''), at run time. Meng et al.\ (ROME, 2202.05262; MEMIT, 2210.07229) write a key--value pair into an MLP output matrix in closed form from activation statistics. E1 combines the two: a conditional steering rule stored as a low-rank weight update.
+\item \textbf{Reading weights without running the model.} Dar et al.\ (2209.02535) interpret all transformer parameters by projecting them into vocabulary space, the method behind the screen used here. Avrahamy et al.\ (ROTATE, 2604.06005) decompose MLP neuron weights into sparse ``vocabulary channels'' with no forward pass and report that ablating single channels is selective. Their decomposition covers the input side of a neuron, which is the information my screen lacked when it could not tell which sign a neuron fires with; it is the natural upgrade to the screen.
+\item \textbf{Swedish adaptation.} Borggren, Kunz and Kuhlmann (2608.30609) adapt models to Swedish journalism by continued pre-training and find benefits ``only when paired with experience replay to mitigate forgetting'', and that an existing Swedish benchmark largely misses the gains. The regulariser in F2 plays the role of their replay, and their second finding supports measuring the specific behaviour directly.
 \item \textbf{Measurement.} Fedorova et al.\ (SLIDE, 2502.06692) show that Scandinavian sentences often cannot be assigned to a single language and provide multi-label identification, which would replace the detector used here.
 \end{itemize}
 
@@ -366,27 +449,29 @@ Ji et al.\ (Smoothie-Qwen, 2507.05686) adjust token-level output probabilities w
 
 \textbf{Measure first.} Add \emph{correct answer in the requested language} to SE.LLMA's evaluation, with human-written prompts and a multi-label Scandinavian language identifier. Wrong-language rates here ranged from 0.6\% to 50\% depending on the model and the prompt set, so a single synthetic set would have misled, and did mislead me in round 1.
 
-\textbf{Then the cheap and the standard fixes.} Request-aware prompting recovered most Swedish answers without harming Danish or English. Fine-tuning on real Swedish text is what SE.LLMA already plans; the 80-example LoRA here suggests that little data is needed for answer language, and its perplexity cost shows why the data should be real Swedish.
+\textbf{Then the fixes that passed a held-out test.} Where the deployment controls the system prompt, use a request-aware instruction and choose it on development data: of six plausible wordings one lowered Swedish answers to 6\% and the best gave 91\%. Where it does not, distil the instructed behaviour into the weights with a small LoRA and a regulariser on natural text; here 300 questions per language and 15 minutes on a laptop moved Swedish answers from 53\% to 90\% and improved Danish and Norwegian with no measurable cost. Both change the choice of language only. Better Swedish still requires training on real Swedish text, which is what SE.LLMA already plans.
+
+\textbf{Do not ship the closed-form edit.} It is the most interesting result for weight-space programming, because a rank-3 change to one matrix, computed without gradients, moved Swedish answers by 41 points. But it lowered answer content on one model and raised perplexity on the other. Any claim that a small edit is safe needs several matched random edits and a content check beside it: single random edits of this size moved Swedish answers by 12 points up and 8 points down.
 
 \textbf{Most informative next experiment.} A prospective test of weight screening as a diagnostic. Screen base models and their Swedish fine-tunes \emph{before} measuring them, and check (1) whether the screen predicts which checkpoints drift into a sibling language, and (2) whether fine-tuning changes the neurons it flags.
 This would test ``auditing without evaluation'', the article's most valuable claim, on checkpoints where the answer is not yet known. A second, mechanistic step is to find where the wrong ``this is Danish'' signal is computed, upstream of layer 22.
 
 \section{Limitations}
 \begin{itemize}
-\item \textbf{Four small models}, greedy decoding, 48-token answers, one seed. Neuron indices are specific to each checkpoint. Larger models were not tested, and the literature suggests single-neuron effects weaken with size.
+\item \textbf{Four small models}, mostly greedy decoding and 48-token answers (round 3 adds sampling and 160-token answers for the main conditions). Neuron indices are specific to each checkpoint. Larger models were not tested, and the literature suggests single-neuron effects weaken with size.
 \item \textbf{The discovery estimate is inflated by selection.} The 96.9\% of round 1 was found after looking at the data. Its confirmation set had too little baseline failure to settle efficacy on the original model; the only confirmatory evidence of efficacy is from Qwen2.5-0.5B.
 \item \textbf{The screen is not statistically specific} (11\% of control directions match its strongest score), and its other candidates were not tested.
-\item \textbf{No native speaker has reviewed the synthetic material.} Checks against Wiktionary, corpus counts and a spell-checker, and the use of human-translated and native text in round 2, reduce but do not remove this.
-\item \textbf{Language labels are automatic}, audited only by an AI agent on 48 answers. Mixed answers are not scored as such.
+\item \textbf{No native speaker has reviewed the synthetic material.} Checks against Wiktionary, corpus counts and a spell-checker reduce but do not remove this. Round 3 rests only on professionally translated questions and native treebank text, and \code{NATIVE\_REVIEW.md} lists all synthetic material once for a Swedish speaker to check; it has not been filled in.
+\item \textbf{Language labels are automatic}, audited by an AI agent on 48 answers and cross-checked with a second identifier (Section~\ref{sec:r3}). Mixed answers are not scored as such, and the two identifiers disagree mostly on Danish against Norwegian.
 \item \textbf{MKQA is translated open-domain QA}; its 46\% English rate belongs to this checkpoint and prompt format. Short factual answers were rare (median answer length about 30 words), so labels are not driven by names and dates, but the estimate should not be read as a general rate.
-\item \textbf{LoRA was not rerun in round 2}, and it was trained on the model's own Swedish.
+\item \textbf{Round 3 has its own limits.} F2 sits on the 90\% line and would miss it under the second identifier. Round 3 was run once and has not been rerun from scratch. The training targets are the model's own instructed answers, so the fix inherits the model's weak Swedish. Answer correctness is measured by string match on about 20 hits out of 213, so G4 can detect only large losses. The development and test questions come from the same dataset and format; transfer to other formats is tested only by the template prompts and one unseen system prompt.
 \end{itemize}
 
 \section{Reproducibility and AI use}
-Code, both pre-registrations with their commit history, every raw model output and per-item score are in the repository. \code{./run\_all.sh} reproduces round 1 and \code{./run\_round2.sh} round 2; the analysis scripts rebuild all tables and figures from the committed results in seconds.
+Code, both pre-registrations with their commit history, every raw model output and per-item score are in the repository. \code{./run\_all.sh} reproduces round 1, \code{./run\_round2.sh} round 2 and \code{./run\_round3.sh} round 3; the analysis scripts rebuild all tables and figures from the committed results in seconds.
 Model revisions, library versions and seeds are pinned.
 
 An AI coding agent (Claude Code) did the weight screening, wrote the code, ran the experiments and drafted this report. A second AI assistant reviewed the plan and the round-1 results;
-its review led to the fixed-prefix test, the calibrated null, the per-template table, the request-aware prompt and several corrections of wording. Details are in \code{AI\_USAGE.md}.
+its review led to the fixed-prefix test, the calibrated null, the per-template table, the request-aware prompt and several corrections of wording. A third assistant checked the repository after round 2 and corrected the reproduction count and the wording of the recommendation. Details are in \code{AI\_USAGE.md}.
 
 \end{document}

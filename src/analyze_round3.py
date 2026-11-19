@@ -69,6 +69,13 @@ def analyse(key):
                  "G5": bool(x["T1_sv"] >= b["T1_sv"]["rate"] - 0.01)}
             v["works"] = all(v.values()); x["verdict"] = v
         out["conds"][c] = x
+    rnd = []                                                    # random edits of E1's size: the pre-registered one plus extra seeds
+    for f in ["test_R3.json"] + sorted(x for x in os.listdir(d) if x.startswith("test_R3_seed")):
+        if os.path.exists(f"{d}/{f}"):
+            r = json.load(open(f"{d}/{f}"))
+            rnd.append({"file": f, **{l: r[f"MK_{l}"]["rate"] - b[f"MK_{l}"]["rate"] for l in LANGS4},
+                        "fact_n": int(fact_hits(r["MK_sv"]["outputs"]).sum())})
+    out["random_edits"] = rnd
     for name in ("frozen", "train_F2"):
         if os.path.exists(f"{d}/{name}.json"):
             out[name] = json.load(open(f"{d}/{name}.json"))
@@ -107,6 +114,10 @@ def table(S):
             ch = "–" if c == "B0" else f"{100 * x['fact_delta']:+.1f} [{100 * x['fact_delta_ci'][0]:+.1f}, {100 * x['fact_delta_ci'][1]:+.1f}]"
             L.append(f"| {LAB[c]} | {x['fact_n']} / {S['scorable']} | {ch} | {x['joint_n']} / {S['scorable']} | "
                      + ", ".join(f"{k} {v}" for k, v in sorted(x["langs_sv"].items(), key=lambda kv: -kv[1])) + " |")
+    if len(S["random_edits"]) > 1:
+        L += ["", "Random rank-3 edits of the same matrix and norm as E1 (change vs B0 in points; the first is the pre-registered control, the rest were added after the test):", "",
+              "| Edit | Swedish | Danish | Norwegian | English | Gold answer found |", "|---|---|---|---|---|---|"]
+        L += [f"| {r['file'][5:-5]} | {100 * r['sv']:+.1f} | {100 * r['da']:+.1f} | {100 * r['no']:+.1f} | {100 * r['en']:+.1f} | {r['fact_n']} / {S['scorable']} |" for r in S["random_edits"]]
     if S["robust"]:
         L += ["", "Robustness (Swedish / Danish right-language rate):", "",
               "| Condition | Sampling T=0.7, three seeds (sv) | Sampling (da) | 160-token answers sv / da | Unseen English system prompt sv / da / no / en |", "|---|---|---|---|---|"]
@@ -119,22 +130,28 @@ def table(S):
 
 def figure(S, path):
     conds = [c for c in ORDER if c in S["conds"]]
-    fig, ax = plt.subplots(figsize=(7.2, 0.42 * len(conds) + 1.3))
+    fig, ax = plt.subplots(figsize=(7.2, 0.40 * len(conds) + 1.25))
     y = np.arange(len(conds))[::-1]
-    for l, dy in zip(LANGS4, (0.24, 0.08, -0.08, -0.24)):
+    for l, dy in zip(LANGS4, (0.21, 0.07, -0.07, -0.21)):
         v = [100 * S["conds"][c][l] for c in conds]
-        ax.scatter(v, y + dy, s=42, color=COL[l], edgecolor="white", linewidth=1.2, zorder=3, label=f"{LANGNAME[l]} question → {LANGNAME[l]} answer")
+        ax.scatter(v, y + dy, s=38, color=COL[l], edgecolor="white", linewidth=1.1, zorder=3, clip_on=False,
+                   label=f"{LANGNAME[l]} question → {LANGNAME[l]} answer")
     for yi, c in zip(y, conds):
-        ax.text(101.5, yi, "works" if S["conds"][c].get("verdict", {}).get("works") and c != "B0" else "", va="center", fontsize=8, color=INK, fontweight="bold")
+        if S["conds"][c].get("verdict", {}).get("works") and c != "B0":
+            ax.text(104, yi, "passes all\nfive checks", va="center", fontsize=7.5, color=INK, fontweight="bold")
         ax.axhline(yi - 0.5, color=GRID, lw=0.5)
     ax.set_yticks(y); ax.set_yticklabels([LAB[c] for c in conds], fontsize=8)
-    ax.set_xlim(0, 100); ax.set_xlabel("Answers in the language of the question (%)", fontsize=8.5)
+    ax.set_ylim(-0.5, len(conds) - 0.5); ax.set_xlim(0, 100)
+    ax.set_xlabel("Answers in the language of the question (%)", fontsize=8.5)
     ax.xaxis.grid(True, color=GRID, lw=0.6); ax.set_axisbelow(True); ax.tick_params(length=0, labelsize=8)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-    ax.legend(frameon=False, fontsize=7.5, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2)
-    fig.suptitle(f"Round 3 on {S['n_test']} fresh human-translated questions per language", x=0.01, y=0.995, ha="left", fontsize=10, fontweight="bold")
-    fig.tight_layout(rect=(0, 0, 1, 0.94)); fig.savefig(path, dpi=220); plt.close(fig)
+    for sp in ("top", "right", "left"):
+        ax.spines[sp].set_visible(False)
+    top = 1 - 0.95 / fig.get_figheight()
+    fig.subplots_adjust(left=0.33, right=0.86, bottom=0.11, top=top)
+    ax.legend(frameon=False, fontsize=7.5, loc="lower left", bbox_to_anchor=(-0.02, 1.0), ncol=2, handletextpad=0.2, columnspacing=1.2)
+    fig.text(0.01, 1 - 0.22 / fig.get_figheight(), f"Round 3 on {S['n_test']} fresh human-translated questions per language",
+             ha="left", va="center", fontsize=10, fontweight="bold")
+    fig.savefig(path, dpi=220); plt.close(fig)
 
 
 TEX = {"B0": "B0 Unedited", "P1": "P1 Prompt: always Swedish", "P2": "P2 Prompt: same language", "P3": "P3 Prompt: best of six",
@@ -142,7 +159,7 @@ TEX = {"B0": "B0 Unedited", "P1": "P1 Prompt: always Swedish", "P2": "P2 Prompt:
        "F3": "F3 Learned rank-3 edit", "F2": "F2 LoRA distillation"}
 
 
-def latex(S, path):
+def latex(S, path, macro):
     """Table rows for the report, generated from the results so that no number is typed by hand."""
     rows = []
     for c in ORDER:
@@ -155,14 +172,14 @@ def latex(S, path):
         works = "--" if c == "B0" else (r"\textbf{yes}" if v["works"] else "no")
         rows.append(f"{TEX[c]} & {100 * x['sv']:.1f} & {gain} & {100 * x['da']:.1f} & {100 * x['no']:.1f} & {100 * x['en']:.1f} & "
                     f"${100 * worst:+.1f}$ & {100 * x['pairs_native']:.1f} & {100 * x['fact_sv']:.1f} & {100 * x['T1_sv']:.1f} & {marks} & {works}\\\\")
-    open(path, "w").write("\n".join(rows) + "\n")
+    open(path, "w").write("\\newcommand{\\" + macro + "}{%\n" + "\n".join(rows) + "\n}\n")
     if S["robust"]:
         rr = []
         for c, r in S["robust"].items():
             us = " / ".join(f"{100 * r['unseen_system'][l]:.0f}" for l in LANGS4) if r["unseen_system"] else "--"
             rr.append(f"{TEX[c]} & {' / '.join(f'{100 * v:.0f}' for v in r['sampled']['sv'])} & {' / '.join(f'{100 * v:.0f}' for v in r['sampled']['da'])} & "
                       f"{100 * r['long']['sv']:.0f} / {100 * r['long']['da']:.0f} & {us}\\\\")
-        open(path.replace(".tex", "_robust.tex"), "w").write("\n".join(rr) + "\n")
+        open(path.replace(".tex", "_robust.tex"), "w").write("\\newcommand{\\" + macro + "Robust}{%\n" + "\n".join(rr) + "\n}\n")
 
 
 def main():
@@ -174,9 +191,9 @@ def main():
     json.dump(out, open(f"{R}/summary.json", "w"), indent=1, ensure_ascii=False)
     open(f"{R}/summary.md", "w").write("\n".join(L) + "\n"); print("\n".join(L))
     if "qwen2.5-1.5b" in out:
-        figure(out["qwen2.5-1.5b"], "figures/fig5_round3.png"); latex(out["qwen2.5-1.5b"], "report/r3_table.tex")
+        figure(out["qwen2.5-1.5b"], "figures/fig5_round3.png"); latex(out["qwen2.5-1.5b"], "report/r3_table.tex", "RThreeRows")
     if "qwen2.5-0.5b" in out:
-        latex(out["qwen2.5-0.5b"], "report/r3_table_second.tex")
+        latex(out["qwen2.5-0.5b"], "report/r3_table_second.tex", "RThreeRowsSecond")
 
 
 if __name__ == "__main__":

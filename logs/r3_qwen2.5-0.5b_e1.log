@@ -1,0 +1,5 @@
+E1 statistics and probes built from 1953 sequences in 115s
+E1 layer 5: mean probe output (rows sv/da/no probe; cols sv/da/no/en/pre-user positions) [[0.65, 0.16, 0.18, 0.07, 0.0], [0.15, 0.5, 0.3, 0.08, 0.0], [0.16, 0.3, 0.48, 0.07, 0.0]]
+E1 layer 9: mean probe output (rows sv/da/no probe; cols sv/da/no/en/pre-user positions) [[0.59, 0.19, 0.22, 0.06, -0.0], [0.18, 0.47, 0.3, 0.09, 0.0], [0.2, 0.29, 0.43, 0.09, 0.0]]
+E1 layer 12: mean probe output (rows sv/da/no probe; cols sv/da/no/en/pre-user positions) [[0.59, 0.19, 0.22, 0.04, 0.0], [0.18, 0.48, 0.3, 0.06, 0.0], [0.21, 0.29, 0.44, 0.07, 0.0]]
+E1 copied from the primary model, no retuning: {'layer': 12, 'strength': 1, 'copied_from': 'qwen2.5-1.5b', 'passed_dev_filter': None}

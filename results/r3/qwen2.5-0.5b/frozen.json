@@ -1,0 +1,50 @@
+{
+ "P3": {
+  "sv": 0.87,
+  "sv_langs": {
+   "sv": 87,
+   "en": 8,
+   "da": 4,
+   "no": 1
+  },
+  "da": 0.73,
+  "da_langs": {
+   "da": 73,
+   "en": 9,
+   "no": 18
+  },
+  "no": 0.64,
+  "no_langs": {
+   "no": 64,
+   "sv": 8,
+   "da": 15,
+   "en": 12,
+   "fr": 1
+  },
+  "en": 0.98,
+  "en_langs": {
+   "en": 98,
+   "sv": 1,
+   "de": 1
+  },
+  "mean": 0.8049999999999999,
+  "degenerate": 0.0075,
+  "system": "You are a helpful assistant. The user may write in any language, including Swedish, Danish and Norwegian. Never translate your answer into English; respond in the user's own language.",
+  "order": 5,
+  "ppl_sv_dev": 62.51932144165039,
+  "passed_dev_filter": true
+ },
+ "E1": {
+  "layer": 12,
+  "strength": 1,
+  "copied_from": "qwen2.5-1.5b",
+  "passed_dev_filter": null
+ },
+ "F3": {
+  "adapter": "F3_lr0.0002_ep1.pt"
+ },
+ "F2": {
+  "adapter": "F2_ep2.pt"
+ },
+ "copied_from": "qwen2.5-1.5b"
+}

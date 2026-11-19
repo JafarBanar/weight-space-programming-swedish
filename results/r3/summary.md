@@ -29,3 +29,34 @@ Answer content on the Swedish questions with a short gold answer:
 | E1 Closed-form rank-3 edit | 13 / 213 | -3.8 [-7.5, +0.0] | 12 / 213 | sv 281, no 11, en 7, da 1 |
 | F3 Learned rank-3 edit, same matrix | 22 / 213 | +0.5 [-2.8, +3.8] | 18 / 213 | sv 262, en 23, no 9, da 1, zh 1, fr 1, de 1, es 1, nl 1 |
 | F2 LoRA distillation | 28 / 213 | +3.3 [-0.9, +7.5] | 21 / 213 | sv 270, en 18, no 7, da 3, zh 1, nl 1 |
+
+Random rank-3 edits of the same matrix and norm as E1 (change vs B0 in points; the first is the pre-registered control, the rest were added after the test):
+
+| Edit | Swedish | Danish | Norwegian | English | Gold answer found |
+|---|---|---|---|---|---|
+| R3 | +11.7 | +4.7 | +5.0 | -0.3 | 13 / 213 |
+| R3_seed301 | +3.7 | -1.7 | -1.0 | +0.0 | 17 / 213 |
+| R3_seed302 | +0.0 | -0.7 | -0.7 | +0.0 | 21 / 213 |
+| R3_seed303 | -8.0 | -9.0 | -3.3 | +0.0 | 20 / 213 |
+
+### Qwen2.5-0.5B-Instruct (300 fresh test questions per language; 213 Swedish questions have a short gold answer)
+
+| Condition | Swedish→Swedish | Gain vs B0 [95% CI] | Danish→Danish | Norwegian→Norwegian | English→English | PPL change sv / da / no / en | Grammar pairs native / synthetic | Gold answer found (sv) | T1 Swedish | G1 G2 G3 G4 G5 | Works |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| B0 Unedited | 67.3% | – | 52.7% | 46.7% | 100.0% | +0.0% / +0.0% / +0.0% / +0.0% | 70.0% / 53.6% | 2.3% | 84.1% | – | – |
+| P3 Prompt: best of six on dev | 89.0% | +21.7 [+15.7, +27.7] | 47.0% | 43.7% | 97.3% | +0.0% / +0.0% / +0.0% / +0.0% | 70.0% / 53.6% | 4.2% | 99.4% | ✓ ✗ ✓ ✓ ✓ | no |
+| R3 Random rank-3 edit, same size | 67.0% | -0.3 [-4.3, +3.7] | 52.7% | 48.0% | 100.0% | +0.8% / +1.3% / +1.0% / +0.5% | 70.5% / 52.7% | 2.8% | 86.9% | ✗ ✓ ✓ ✓ ✓ | no |
+| E1 Closed-form rank-3 edit | 85.0% | +17.7 [+11.7, +23.7] | 78.7% | 67.7% | 100.0% | +7.2% / +4.0% / +9.2% / +1.8% | 70.5% / 53.2% | 4.2% | 85.3% | ✓ ✓ ✗ ✓ ✓ | no |
+| F3 Learned rank-3 edit, same matrix | 75.0% | +7.7 [+2.0, +13.7] | 68.7% | 64.0% | 100.0% | +1.0% / +0.9% / +0.7% / +0.6% | 70.0% / 54.0% | 3.3% | 87.5% | ✗ ✓ ✓ ✓ ✓ | no |
+| F2 LoRA distillation | 87.0% | +19.7 [+13.7, +25.7] | 69.7% | 64.7% | 100.0% | +0.0% / -1.5% / -1.4% / +0.2% | 70.5% / 51.1% | 2.3% | 88.4% | ✓ ✓ ✓ ✓ ✓ | **yes** |
+
+Answer content on the Swedish questions with a short gold answer:
+
+| Condition | Gold answer found | Change vs B0 [95% CI] | Gold answer found and answer in Swedish | Languages of the answers to Swedish questions |
+|---|---|---|---|---|
+| B0 Unedited | 5 / 213 | – | 2 / 213 | sv 202, en 70, no 20, da 6, zh 1, es 1 |
+| P3 Prompt: best of six on dev | 9 / 213 | +1.9 [+0.5, +3.8] | 7 / 213 | sv 267, en 16, no 13, da 4 |
+| R3 Random rank-3 edit, same size | 6 / 213 | +0.5 [+0.0, +1.4] | 3 / 213 | sv 201, en 75, no 18, da 3, zh 1, de 1, es 1 |
+| E1 Closed-form rank-3 edit | 9 / 213 | +1.9 [+0.0, +4.2] | 8 / 213 | sv 255, no 25, en 11, da 6, de 1, es 1, nl 1 |
+| F3 Learned rank-3 edit, same matrix | 7 / 213 | +0.9 [+0.0, +2.3] | 5 / 213 | sv 225, en 35, no 21, da 11, es 5, zh 1, de 1, none 1 |
+| F2 LoRA distillation | 5 / 213 | +0.0 [-1.4, +1.4] | 4 / 213 | sv 261, en 17, no 16, da 6 |

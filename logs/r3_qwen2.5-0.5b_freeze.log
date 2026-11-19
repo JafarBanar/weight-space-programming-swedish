@@ -1,0 +1,1 @@
+frozen (copied from the primary model): {'E1': {'layer': 12, 'strength': 1, 'copied_from': 'qwen2.5-1.5b', 'passed_dev_filter': None}, 'F3': {'adapter': 'F3_lr0.0002_ep1.pt'}, 'F2': {'adapter': 'F2_ep2.pt'}, 'copied_from': 'qwen2.5-1.5b'}

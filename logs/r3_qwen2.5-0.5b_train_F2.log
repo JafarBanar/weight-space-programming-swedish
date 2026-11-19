@@ -1,0 +1,15 @@
+  warnings.warn(
+F2 epoch 0 step 20 ce 0.848 kl 0.0091
+F2 epoch 0 step 40 ce 0.729 kl 0.0227
+F2 epoch 0 step 60 ce 0.694 kl 0.0179
+F2 epoch 0 step 80 ce 0.685 kl 0.0132
+F2 epoch 0 step 100 ce 0.630 kl 0.0148
+F2 epoch 0 step 120 ce 0.633 kl 0.0152
+F2 epoch 1 step 140 ce 0.617 kl 0.0122
+F2 epoch 1 step 160 ce 0.573 kl 0.0111
+F2 epoch 1 step 180 ce 0.569 kl 0.0110
+F2 epoch 1 step 200 ce 0.572 kl 0.0114
+F2 epoch 1 step 220 ce 0.602 kl 0.0120
+F2 epoch 1 step 240 ce 0.564 kl 0.0120
+F2 epoch 1 step 260 ce 0.609 kl 0.0107
+TRAINED F2
